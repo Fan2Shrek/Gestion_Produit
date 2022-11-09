@@ -1,0 +1,12 @@
+C:\Users\pierr\source\repos\Gestion_Produit\GestionBO\bin\Debug\net6.0\GestionBO.deps.json
+C:\Users\pierr\source\repos\Gestion_Produit\GestionBO\bin\Debug\net6.0\GestionBO.dll
+C:\Users\pierr\source\repos\Gestion_Produit\GestionBO\bin\Debug\net6.0\GestionBO.pdb
+C:\Users\pierr\source\repos\Gestion_Produit\GestionBO\obj\Debug\net6.0\GestionBO.csproj.AssemblyReference.cache
+C:\Users\pierr\source\repos\Gestion_Produit\GestionBO\obj\Debug\net6.0\GestionBO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pierr\source\repos\Gestion_Produit\GestionBO\obj\Debug\net6.0\GestionBO.AssemblyInfoInputs.cache
+C:\Users\pierr\source\repos\Gestion_Produit\GestionBO\obj\Debug\net6.0\GestionBO.AssemblyInfo.cs
+C:\Users\pierr\source\repos\Gestion_Produit\GestionBO\obj\Debug\net6.0\GestionBO.csproj.CoreCompileInputs.cache
+C:\Users\pierr\source\repos\Gestion_Produit\GestionBO\obj\Debug\net6.0\GestionBO.dll
+C:\Users\pierr\source\repos\Gestion_Produit\GestionBO\obj\Debug\net6.0\refint\GestionBO.dll
+C:\Users\pierr\source\repos\Gestion_Produit\GestionBO\obj\Debug\net6.0\GestionBO.pdb
+C:\Users\pierr\source\repos\Gestion_Produit\GestionBO\obj\Debug\net6.0\ref\GestionBO.dll
