@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\GesitonBLL\\GestionBLL.csproj",
+      "projectUniqueName": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj",
       "projectName": "GestionBLL",
-      "projectPath": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\GesitonBLL\\GestionBLL.csproj",
+      "projectPath": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj",
       "packagesPath": "C:\\Users\\pierr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\GesitonBLL\\obj\\",
+      "outputPath": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\GestionBLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pierr\\AppData\\Roaming\\NuGet\\NuGet.Config",

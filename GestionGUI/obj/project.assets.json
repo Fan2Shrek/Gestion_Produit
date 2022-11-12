@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\Connexion\\GestionGUI.csproj",
+      "projectUniqueName": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\GestionGUI\\GestionGUI.csproj",
       "projectName": "GestionGUI",
-      "projectPath": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\Connexion\\GestionGUI.csproj",
+      "projectPath": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\GestionGUI\\GestionGUI.csproj",
       "packagesPath": "C:\\Users\\pierr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\Connexion\\obj\\",
+      "outputPath": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\GestionGUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pierr\\AppData\\Roaming\\NuGet\\NuGet.Config",

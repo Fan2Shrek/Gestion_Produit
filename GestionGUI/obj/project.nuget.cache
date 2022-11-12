@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LWHcMKgJmWBVEvlINoQfFVYln3LbkVv6YylTWhA5x2kkWhGHQZAj49PYw2aLSw1WtDe0xoH3yCYrMeEfakSoJw==",
+  "dgSpecHash": "W27PVTrTOJ2we9q6J0Z1M3hyaqwSspMKv2ChWRUKk9iDqFRBU/73NekHpEM1wbVfuJR8s50o0IltYtPF88NEew==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\Connexion\\GestionGUI.csproj",
+  "projectFilePath": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\GestionGUI\\GestionGUI.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
