@@ -33,6 +33,7 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtBoxUsername = new System.Windows.Forms.TextBox();
             this.txtBoxPassword = new System.Windows.Forms.TextBox();
+            this.btnConnexion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblConnexion
@@ -81,12 +82,23 @@
             this.txtBoxPassword.Size = new System.Drawing.Size(150, 20);
             this.txtBoxPassword.TabIndex = 4;
             // 
+            // btnConnexion
+            // 
+            this.btnConnexion.Location = new System.Drawing.Point(318, 296);
+            this.btnConnexion.Name = "btnConnexion";
+            this.btnConnexion.Size = new System.Drawing.Size(150, 53);
+            this.btnConnexion.TabIndex = 6;
+            this.btnConnexion.Text = "Connexion";
+            this.btnConnexion.UseVisualStyleBackColor = true;
+            this.btnConnexion.Click += new System.EventHandler(this.btnConnexion_Click);
+            // 
             // ConnexionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnConnexion);
             this.Controls.Add(this.txtBoxPassword);
             this.Controls.Add(this.txtBoxUsername);
             this.Controls.Add(this.lblPassword);
@@ -106,5 +118,6 @@
         private Label lblPassword;
         private TextBox txtBoxUsername;
         private TextBox txtBoxPassword;
+        private Button btnConnexion;
     }
 }

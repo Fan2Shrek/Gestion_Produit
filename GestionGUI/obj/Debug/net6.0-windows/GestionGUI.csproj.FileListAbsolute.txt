@@ -16,3 +16,35 @@ C:\Users\pierr\source\repos\Gestion_Produit\Connexion\obj\Debug\net6.0-windows\r
 C:\Users\pierr\source\repos\Gestion_Produit\Connexion\obj\Debug\net6.0-windows\GestionGUI.pdb
 C:\Users\pierr\source\repos\Gestion_Produit\Connexion\obj\Debug\net6.0-windows\GestionGUI.genruntimeconfig.cache
 C:\Users\pierr\source\repos\Gestion_Produit\Connexion\obj\Debug\net6.0-windows\ref\GestionGUI.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\GestionGUI.exe
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\GestionGUI.dll.config
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\GestionGUI.deps.json
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\GestionGUI.runtimeconfig.json
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\GestionGUI.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\GestionGUI.pdb
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.csproj.AssemblyReference.cache
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\Connexion.ConnexionForm.resources
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.Properties.Resources.resources
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.csproj.GenerateResource.cache
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.AssemblyInfoInputs.cache
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.AssemblyInfo.cs
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.csproj.CoreCompileInputs.cache
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\refint\GestionGUI.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.pdb
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.genruntimeconfig.cache
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\ref\GestionGUI.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\GestionBLL.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\GestionBO.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\GestionDAL.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\GestionBLL.pdb
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\GestionBO.pdb
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\GestionDAL.pdb
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.csproj.CopyComplete
