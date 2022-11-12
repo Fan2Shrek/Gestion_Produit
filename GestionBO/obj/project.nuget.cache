@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7XI2fxKKepQbM7iia3CnB9acQj/fQZRtbvSEtNqJnlfazDsVkRV0Ycli6JSHawKovWskyjhKP+OzlSWLvbrm4Q==",
+  "dgSpecHash": "/EFrUM3B2UtLooozGezLiZgBMWjT9s1X5D36BEjqmuE5Ssn33bg4ghBq+f/oC/1n0aXCZCrLfH7pKX7NyPCefg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\GestionBO\\GestionBO.csproj",
+  "projectFilePath": "C:\\Users\\pierr\\source\\repos\\temp\\GestionBO\\GestionBO.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

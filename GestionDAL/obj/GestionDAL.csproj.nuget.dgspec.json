@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj": {}
+    "C:\\Users\\pierr\\source\\repos\\temp\\GestionDAL\\GestionDAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj": {
+    "C:\\Users\\pierr\\source\\repos\\temp\\GestionDAL\\GestionDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj",
+        "projectUniqueName": "C:\\Users\\pierr\\source\\repos\\temp\\GestionDAL\\GestionDAL.csproj",
         "projectName": "GestionDAL",
-        "projectPath": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj",
+        "projectPath": "C:\\Users\\pierr\\source\\repos\\temp\\GestionDAL\\GestionDAL.csproj",
         "packagesPath": "C:\\Users\\pierr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pierr\\source\\repos\\Gestion_Produit\\GestionDAL\\obj\\",
+        "outputPath": "C:\\Users\\pierr\\source\\repos\\temp\\GestionDAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pierr\\AppData\\Roaming\\NuGet\\NuGet.Config",
