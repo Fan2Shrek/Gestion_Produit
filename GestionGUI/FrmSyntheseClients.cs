@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace GestionGUI
 {
-    public partial class SyntheseClientsForm : Form
+    public partial class FrmSyntheseClients : Form
     {
-        public SyntheseClientsForm()
+        public FrmSyntheseClients()
         {
             InitializeComponent();
         }
 
         private void syntheseProduit_Click(object sender, EventArgs e)
         {
-            ListeProduitsForms FrmListesProduit;
-            FrmListesProduit = new ListeProduitsForms();
+            FrmListeProduits FrmListesProduit;
+            FrmListesProduit = new FrmListeProduits();
             FrmListesProduit.ShowDialog(); // ouverture du formulaire list produit
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace GestionGUI
 {
-    partial class SyntheseClientsForm
+    partial class FrmSyntheseClients
     {
         /// <summary>
         /// Required designer variable.

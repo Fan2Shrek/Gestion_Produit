@@ -31,8 +31,8 @@ namespace Connexion
 
         private void temp_Click(object sender, EventArgs e)
         {
-            SyntheseClientsForm FrmSyntheseClients;
-            FrmSyntheseClients = new SyntheseClientsForm();
+            FrmSyntheseClients FrmSyntheseClients;
+            FrmSyntheseClients = new FrmSyntheseClients();
             FrmSyntheseClients.ShowDialog(); // ouverture du formulaire list produit
         }
     }
