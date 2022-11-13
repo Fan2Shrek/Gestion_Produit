@@ -1,5 +1,6 @@
 using GestionBLL;
 using GestionBO;
+using GestionGUI;
 
 namespace Connexion
 {
@@ -21,6 +22,18 @@ namespace Connexion
             {
                 this.BackColor= Color.White;
             }
+        }
+
+        private void txtBoxUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void temp_Click(object sender, EventArgs e)
+        {
+            SyntheseClientsForm FrmSyntheseClients;
+            FrmSyntheseClients = new SyntheseClientsForm();
+            FrmSyntheseClients.ShowDialog(); // ouverture du formulaire list produit
         }
     }
 }

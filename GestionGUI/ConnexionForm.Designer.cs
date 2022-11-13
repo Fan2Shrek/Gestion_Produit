@@ -34,15 +34,16 @@
             this.txtBoxUsername = new System.Windows.Forms.TextBox();
             this.txtBoxPassword = new System.Windows.Forms.TextBox();
             this.btnConnexion = new System.Windows.Forms.Button();
+            this.temp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblConnexion
             // 
             this.lblConnexion.AutoSize = true;
             this.lblConnexion.Font = new System.Drawing.Font("Segoe UI", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblConnexion.Location = new System.Drawing.Point(278, 40);
+            this.lblConnexion.Location = new System.Drawing.Point(292, 82);
             this.lblConnexion.Name = "lblConnexion";
-            this.lblConnexion.Size = new System.Drawing.Size(241, 59);
+            this.lblConnexion.Size = new System.Drawing.Size(303, 72);
             this.lblConnexion.TabIndex = 0;
             this.lblConnexion.Text = "Connexion";
             // 
@@ -50,9 +51,9 @@
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUsername.Location = new System.Drawing.Point(186, 187);
+            this.lblUsername.Location = new System.Drawing.Point(163, 277);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(82, 20);
+            this.lblUsername.Size = new System.Drawing.Size(106, 25);
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "Username :";
             // 
@@ -60,50 +61,66 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPassword.Location = new System.Drawing.Point(186, 250);
+            this.lblPassword.Location = new System.Drawing.Point(163, 415);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(77, 20);
+            this.lblPassword.Size = new System.Drawing.Size(100, 25);
             this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Password :";
             // 
             // txtBoxUsername
             // 
             this.txtBoxUsername.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxUsername.Location = new System.Drawing.Point(318, 187);
+            this.txtBoxUsername.Location = new System.Drawing.Point(424, 277);
+            this.txtBoxUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxUsername.Name = "txtBoxUsername";
-            this.txtBoxUsername.Size = new System.Drawing.Size(150, 20);
+            this.txtBoxUsername.Size = new System.Drawing.Size(171, 23);
             this.txtBoxUsername.TabIndex = 3;
+            this.txtBoxUsername.TextChanged += new System.EventHandler(this.txtBoxUsername_TextChanged);
             // 
             // txtBoxPassword
             // 
             this.txtBoxPassword.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxPassword.Location = new System.Drawing.Point(318, 250);
+            this.txtBoxPassword.Location = new System.Drawing.Point(424, 415);
+            this.txtBoxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxPassword.Name = "txtBoxPassword";
-            this.txtBoxPassword.Size = new System.Drawing.Size(150, 20);
+            this.txtBoxPassword.Size = new System.Drawing.Size(171, 23);
             this.txtBoxPassword.TabIndex = 4;
             // 
             // btnConnexion
             // 
-            this.btnConnexion.Location = new System.Drawing.Point(318, 296);
+            this.btnConnexion.Location = new System.Drawing.Point(716, 520);
+            this.btnConnexion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnConnexion.Name = "btnConnexion";
-            this.btnConnexion.Size = new System.Drawing.Size(150, 53);
+            this.btnConnexion.Size = new System.Drawing.Size(155, 47);
             this.btnConnexion.TabIndex = 6;
             this.btnConnexion.Text = "Connexion";
             this.btnConnexion.UseVisualStyleBackColor = true;
             this.btnConnexion.Click += new System.EventHandler(this.btnConnexion_Click);
             // 
+            // temp
+            // 
+            this.temp.Location = new System.Drawing.Point(779, 117);
+            this.temp.Name = "temp";
+            this.temp.Size = new System.Drawing.Size(94, 29);
+            this.temp.TabIndex = 7;
+            this.temp.Text = "temp";
+            this.temp.UseVisualStyleBackColor = true;
+            this.temp.Click += new System.EventHandler(this.temp_Click);
+            // 
             // ConnexionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.temp);
             this.Controls.Add(this.btnConnexion);
             this.Controls.Add(this.txtBoxPassword);
             this.Controls.Add(this.txtBoxUsername);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblConnexion);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ConnexionForm";
             this.Text = "Connexion";
             this.ResumeLayout(false);
@@ -119,5 +136,6 @@
         private TextBox txtBoxUsername;
         private TextBox txtBoxPassword;
         private Button btnConnexion;
+        private Button temp;
     }
 }
