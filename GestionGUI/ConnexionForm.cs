@@ -1,6 +1,7 @@
 using GestionBLL;
 using GestionBO;
 using GestionGUI;
+using System.Configuration;
 
 namespace Connexion
 {
@@ -9,14 +10,15 @@ namespace Connexion
         public ConnexionForm()
         {
             InitializeComponent();
+            UtilisateurBLL.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Utilisateur"]);
         }
 
         private void btnConnexion_Click(object sender, EventArgs e)
         {
             string nom = txtBoxUsername.Text;
-            string password = txtBoxUsername.Text;
+            string password = txtBoxPassword.Text;
 
-            Utilisateur uti = UtilisateurBLL.nomUtilisateur(nom);
+            Utilisateur? uti = UtilisateurBLL.nomUtilisateur(nom);
 
             if (uti != null && uti.Password == password)
             {

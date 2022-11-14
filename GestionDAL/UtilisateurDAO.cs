@@ -29,12 +29,19 @@ namespace GestionDAL
             SqlDataReader monReader = cmd.ExecuteReader();
             monReader.Read();
 
-            int id;
-            int.TryParse(monReader["code_utilisateur"].ToString(), out id);
-            string nom = monReader["login_utilisateur"].ToString();
-            string password = monReader["mot_de_passe_utilisateur"].ToString();
-           
-            return new Utilisateur(id, nom, password);
+            try
+            {
+                int id;
+                int.TryParse(monReader["code_utilisateur"].ToString(), out id);
+                string nom = monReader["login_utilisateur"].ToString();
+                string password = monReader["mot_de_passe_utilisateur"].ToString();
+                return new Utilisateur(id, nom, password);
+
+            }
+            catch (ArgumentException e)
+            {
+                return null;
+            }
         }
     }
 }

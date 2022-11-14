@@ -46,8 +46,9 @@ namespace GestionDAL
             if (connection == null)
             {
                 connection = new SqlConnection();
+                connection.ConnectionString = chaineConnexion;
+
             }
-            connection.ConnectionString = chaineConnexion;
 
             // Si la connexion est fermée, on l’ouvre
             if (connection.State == System.Data.ConnectionState.Closed)
