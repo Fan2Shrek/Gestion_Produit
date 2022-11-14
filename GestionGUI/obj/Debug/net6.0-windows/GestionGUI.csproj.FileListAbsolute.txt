@@ -48,3 +48,15 @@ C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\Gesti
 C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\GestionBO.pdb
 C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\GestionDAL.pdb
 C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.csproj.CopyComplete
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.FrmListeProduits.resources
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.FrmSyntheseClients.resources
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\Microsoft.Win32.SystemEvents.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\System.Drawing.Common.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\System.Security.Cryptography.ProtectedData.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\System.Security.Permissions.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\System.Windows.Extensions.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Windows.Extensions.dll

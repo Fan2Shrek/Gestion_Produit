@@ -1,5 +1,6 @@
 ﻿using GestionDAL;
 using GestionBO;
+using System.Configuration;
 
 namespace GestionBLL
 {
@@ -21,12 +22,6 @@ namespace GestionBLL
         {
             string chaine = chset.ConnectionString;
             ConnexionBD.GetConnexionBD().SetchaineConnexion(chaine);
-        }
-
-        // Méthode qui renvoit une List d'objets Utilisateur en faisant appel à la méthode GetUtilisateurs() de la DAL
-        public static List<Utilisateur> GetUtilisateurs()
-        {
-            return UtilisateurDAO.GetUtilisateurs();
         }
 
         public static Utilisateur nomUtilisateur(string name)
