@@ -22,7 +22,16 @@ namespace Connexion
 
             if (uti != null && uti.Password == password)
             {
-                this.BackColor= Color.White;
+                this.Hide()
+;               FrmSyntheseClients FrmSyntheseClients;
+                FrmSyntheseClients = new FrmSyntheseClients();
+                FrmSyntheseClients.Closed += (s, args) => this.Close();
+                FrmSyntheseClients.ShowDialog(); // ouverture du formulaire list produit
+                this.Close();
+            }
+            else
+            {
+                lblErreur.ForeColor = Color.Red;
             }
         }
 

@@ -16,7 +16,7 @@ namespace GestionDAL
             return unUtilisateurDAO;
         }
 
-        public static Utilisateur getUserByName(string name)
+        public static Utilisateur? getUserByName(string name)
         {
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
 
@@ -29,17 +29,19 @@ namespace GestionDAL
             SqlDataReader monReader = cmd.ExecuteReader();
             monReader.Read();
 
-            try
+            if (monReader.HasRows)
             {
                 int id;
                 int.TryParse(monReader["code_utilisateur"].ToString(), out id);
                 string nom = monReader["login_utilisateur"].ToString();
                 string password = monReader["mot_de_passe_utilisateur"].ToString();
-                return new Utilisateur(id, nom, password);
+                monReader.Close();
 
+                return new Utilisateur(id, nom, password);
             }
-            catch (ArgumentException e)
+            else
             {
+                monReader.Close();
                 return null;
             }
         }
