@@ -18,3 +18,18 @@ C:\Code\Project csharp\Gestion_Produit\GestionDAL\obj\Debug\net6.0\GestionDAL.dl
 C:\Code\Project csharp\Gestion_Produit\GestionDAL\obj\Debug\net6.0\refint\GestionDAL.dll
 C:\Code\Project csharp\Gestion_Produit\GestionDAL\obj\Debug\net6.0\GestionDAL.pdb
 C:\Code\Project csharp\Gestion_Produit\GestionDAL\obj\Debug\net6.0\ref\GestionDAL.dll
+C:\Users\admin\Desktop\Gestion_Produit\GestionDAL\bin\Debug\net6.0\GestionDAL.deps.json
+C:\Users\admin\Desktop\Gestion_Produit\GestionDAL\bin\Debug\net6.0\GestionDAL.dll
+C:\Users\admin\Desktop\Gestion_Produit\GestionDAL\bin\Debug\net6.0\GestionDAL.pdb
+C:\Users\admin\Desktop\Gestion_Produit\GestionDAL\bin\Debug\net6.0\GestionBO.dll
+C:\Users\admin\Desktop\Gestion_Produit\GestionDAL\bin\Debug\net6.0\GestionBO.pdb
+C:\Users\admin\Desktop\Gestion_Produit\GestionDAL\obj\Debug\net6.0\GestionDAL.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\Gestion_Produit\GestionDAL\obj\Debug\net6.0\GestionDAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\Gestion_Produit\GestionDAL\obj\Debug\net6.0\GestionDAL.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\Gestion_Produit\GestionDAL\obj\Debug\net6.0\GestionDAL.AssemblyInfo.cs
+C:\Users\admin\Desktop\Gestion_Produit\GestionDAL\obj\Debug\net6.0\GestionDAL.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\Gestion_Produit\GestionDAL\obj\Debug\net6.0\GestionDAL.csproj.CopyComplete
+C:\Users\admin\Desktop\Gestion_Produit\GestionDAL\obj\Debug\net6.0\GestionDAL.dll
+C:\Users\admin\Desktop\Gestion_Produit\GestionDAL\obj\Debug\net6.0\refint\GestionDAL.dll
+C:\Users\admin\Desktop\Gestion_Produit\GestionDAL\obj\Debug\net6.0\GestionDAL.pdb
+C:\Users\admin\Desktop\Gestion_Produit\GestionDAL\obj\Debug\net6.0\ref\GestionDAL.dll
