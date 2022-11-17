@@ -31,5 +31,12 @@ namespace GestionBLL
         {
             return ProduitDAO.GetProduit();
         }
+
+        // Méthode qui renvoi l’objet Produit en l'ajoutant à la
+        // BD avec la méthode AjoutProduit de la DAL
+        public static int CreerProduit(Produit ut)
+        {
+            return ProduitDAO.AjoutProduit(ut);
+        }
     }
 }
