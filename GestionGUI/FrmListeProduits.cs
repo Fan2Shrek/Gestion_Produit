@@ -18,22 +18,22 @@ namespace GestionGUI
 
             // Création d'une en-tête de colonne pour la colonne 1
             DataGridViewTextBoxColumn CodeColumn = new DataGridViewTextBoxColumn();
-            CodeColumn.DataPropertyName = "code_produit";
+            CodeColumn.DataPropertyName = "Code";
             CodeColumn.HeaderText = "Code";
 
             // Création d'une en-tête de colonne pour la colonne 2
             DataGridViewTextBoxColumn LibelleColumn = new DataGridViewTextBoxColumn();
-            LibelleColumn.DataPropertyName = "libelle_produit";
+            LibelleColumn.DataPropertyName = "Libelle";
             LibelleColumn.HeaderText = "Libelle";
 
             // Création d'une en-tête de colonne pour la colonne 3
             DataGridViewTextBoxColumn PrixColumn = new DataGridViewTextBoxColumn();
-            PrixColumn.DataPropertyName = "prix_vente_ht_produit";
+            PrixColumn.DataPropertyName = "Prix";
             PrixColumn.HeaderText = "Prix";
 
             // Création d'une en-tête de colonne pour la colonne 4
             DataGridViewTextBoxColumn CodeCategorieColumn = new DataGridViewTextBoxColumn();
-            CodeCategorieColumn.DataPropertyName = "code_categorie";
+            CodeCategorieColumn.DataPropertyName = "Categorie";
             CodeCategorieColumn.HeaderText = "Catégorie";
 
             // Ajout des 2 en-têtes de colonne au datagridview

@@ -19,9 +19,12 @@ namespace GestionGUI
 
         private void syntheseProduit_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FrmListeProduits FrmListesProduit;
             FrmListesProduit = new FrmListeProduits();
+            FrmListesProduit.Closed += (s, args) => this.Close();
             FrmListesProduit.ShowDialog(); // ouverture du formulaire list produit
+            this.Close();
         }
     }
 }

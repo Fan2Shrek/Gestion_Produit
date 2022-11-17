@@ -24,7 +24,7 @@ namespace GestionDAL
             int code;
             string libelle;
             float prix;
-            int codeCatagorie;
+            string codeCatagorie;
 
             Produit unProduit;
 
@@ -36,14 +36,16 @@ namespace GestionDAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = " SELECT * FROM produit";
+            cmd.CommandText = " SELECT code_produit, libelle_produit, prix_vente_ht_produit, " +
+                "libelle_categorie FROM produit, " +
+                "categorie WHERE produit.code_categorie = categorie.code_categorie";
             SqlDataReader monReader = cmd.ExecuteReader();
 
             // Remplissage de la liste
             while (monReader.Read())
             {
                 code = Int32.Parse(monReader["code_produit"].ToString());
-                codeCatagorie = Int32.Parse(monReader["code_categorie"].ToString());
+                codeCatagorie = monReader["libelle_categorie"].ToString();
                 prix = float.Parse(monReader["prix_vente_ht_produit"].ToString());
 
                 if (monReader["libelle_produit"] == DBNull.Value)
@@ -81,7 +83,7 @@ namespace GestionDAL
             cmd.Parameters["@prix"].Value = unProduit.Prix;
 
             cmd.Parameters.Add(new SqlParameter("@codeCategorie", System.Data.SqlDbType.Int));
-            cmd.Parameters["@codeCategorie"].Value = unProduit.CodeCategorie;
+            cmd.Parameters["@codeCategorie"].Value = unProduit.Categorie;
 
             SqlDataReader monReader = cmd.ExecuteReader();
 
