@@ -834,6 +834,7 @@
     "net6.0-windows7.0": [
       "GestionBLL >= 1.0.0",
       "GestionBO >= 1.0.0",
+      "GestionDAL >= 1.0.0",
       "System.Configuration.ConfigurationManager >= 7.0.0"
     ]
   },
@@ -869,6 +870,9 @@
             },
             "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {
               "projectPath": "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj"
+            },
+            "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj"
             }
           }
         }

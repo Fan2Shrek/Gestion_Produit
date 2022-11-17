@@ -24,7 +24,9 @@ namespace GestionDAL
             int code;
             string libelle;
             float prix;
-            string codeCatagorie;
+            string lib_categorie;
+            int code_cat;
+            Categorie codeCatagorie;
 
             Produit unProduit;
 
@@ -36,8 +38,7 @@ namespace GestionDAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = " SELECT code_produit, libelle_produit, prix_vente_ht_produit, " +
-                "libelle_categorie FROM produit, " +
+            cmd.CommandText = " SELECT * FROM produit," +
                 "categorie WHERE produit.code_categorie = categorie.code_categorie";
             SqlDataReader monReader = cmd.ExecuteReader();
 
@@ -45,7 +46,8 @@ namespace GestionDAL
             while (monReader.Read())
             {
                 code = Int32.Parse(monReader["code_produit"].ToString());
-                codeCatagorie = monReader["libelle_categorie"].ToString();
+                lib_categorie = monReader["libelle_categorie"].ToString();
+                code_cat = Int32.Parse(monReader["code_categorie"].ToString());
                 prix = float.Parse(monReader["prix_vente_ht_produit"].ToString());
 
                 if (monReader["libelle_produit"] == DBNull.Value)
@@ -57,7 +59,7 @@ namespace GestionDAL
                     libelle = monReader["libelle_produit"].ToString();
                 }
 
-                unProduit = new Produit(code, libelle, prix, codeCatagorie);
+                unProduit = new Produit(code, libelle, prix, new Categorie(code_cat, lib_categorie));
                 lesProduits.Add(unProduit);
             }
 
@@ -83,9 +85,9 @@ namespace GestionDAL
             cmd.Parameters["@prix"].Value = unProduit.Prix;
 
             cmd.Parameters.Add(new SqlParameter("@codeCategorie", System.Data.SqlDbType.Int));
-            cmd.Parameters["@codeCategorie"].Value = unProduit.Categorie;
+            cmd.Parameters["@codeCategorie"].Value = unProduit.Categorie.Code;
 
-            SqlDataReader monReader = cmd.ExecuteReader();
+            // SqlDataReader monReader = cmd.ExecuteReader();
 
             nbEnr = cmd.ExecuteNonQuery();
 

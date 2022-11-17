@@ -31,7 +31,12 @@
             this.lblProduit = new System.Windows.Forms.Label();
             this.retSynt = new System.Windows.Forms.Button();
             this.dgvProduit = new System.Windows.Forms.DataGridView();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Libelle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ajouterProduit = new System.Windows.Forms.Button();
+            this.actualiserProduit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduit)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,12 +63,45 @@
             // dgvProduit
             // 
             this.dgvProduit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Code,
+            this.Libelle,
+            this.Prix,
+            this.Categorie});
             this.dgvProduit.Location = new System.Drawing.Point(42, 183);
             this.dgvProduit.Name = "dgvProduit";
             this.dgvProduit.RowHeadersWidth = 51;
             this.dgvProduit.RowTemplate.Height = 29;
             this.dgvProduit.Size = new System.Drawing.Size(554, 500);
             this.dgvProduit.TabIndex = 3;
+            // 
+            // Code
+            // 
+            this.Code.HeaderText = "Code";
+            this.Code.MinimumWidth = 6;
+            this.Code.Name = "Code";
+            this.Code.Width = 125;
+            // 
+            // Libelle
+            // 
+            this.Libelle.HeaderText = "Libelle";
+            this.Libelle.MinimumWidth = 6;
+            this.Libelle.Name = "Libelle";
+            this.Libelle.Width = 125;
+            // 
+            // Prix
+            // 
+            this.Prix.HeaderText = "Prix";
+            this.Prix.MinimumWidth = 6;
+            this.Prix.Name = "Prix";
+            this.Prix.Width = 125;
+            // 
+            // Categorie
+            // 
+            this.Categorie.HeaderText = "Categorie";
+            this.Categorie.MinimumWidth = 6;
+            this.Categorie.Name = "Categorie";
+            this.Categorie.Width = 125;
             // 
             // ajouterProduit
             // 
@@ -75,12 +113,23 @@
             this.ajouterProduit.UseVisualStyleBackColor = true;
             this.ajouterProduit.Click += new System.EventHandler(this.ajouterProdui_Click);
             // 
+            // actualiserProduit
+            // 
+            this.actualiserProduit.Location = new System.Drawing.Point(263, 762);
+            this.actualiserProduit.Name = "actualiserProduit";
+            this.actualiserProduit.Size = new System.Drawing.Size(94, 29);
+            this.actualiserProduit.TabIndex = 5;
+            this.actualiserProduit.Text = "Actualiser";
+            this.actualiserProduit.UseVisualStyleBackColor = true;
+            this.actualiserProduit.Click += new System.EventHandler(this.actualiserProduit_Click);
+            // 
             // FrmListeProduits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1232, 803);
+            this.Controls.Add(this.actualiserProduit);
             this.Controls.Add(this.ajouterProduit);
             this.Controls.Add(this.dgvProduit);
             this.Controls.Add(this.retSynt);
@@ -100,5 +149,10 @@
         private Button retSynt;
         private DataGridView dgvProduit;
         private Button ajouterProduit;
+        private DataGridViewTextBoxColumn Code;
+        private DataGridViewTextBoxColumn Libelle;
+        private DataGridViewTextBoxColumn Prix;
+        private DataGridViewTextBoxColumn Categorie;
+        private Button actualiserProduit;
     }
 }

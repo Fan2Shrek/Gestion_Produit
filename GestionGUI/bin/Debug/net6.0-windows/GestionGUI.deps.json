@@ -10,6 +10,7 @@
         "dependencies": {
           "GestionBLL": "1.0.0",
           "GestionBO": "1.0.0",
+          "GestionDAL": "1.0.0",
           "System.Configuration.ConfigurationManager": "7.0.0"
         },
         "runtime": {

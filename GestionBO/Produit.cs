@@ -5,9 +5,9 @@
         private int code;
         private string libelle;
         private float prix;
-        private string categorie;
+        private Categorie categorie;
 
-        public Produit(int code, string libelle, float prix, string categorie)
+        public Produit(int code, string libelle, float prix, Categorie categorie)
         {
             this.code = code;
             this.libelle = libelle;
@@ -18,6 +18,6 @@
         public int Code { get => code; set => code = value; }
         public string Libelle { get => libelle; set => libelle = value; }
         public float Prix { get => prix; set => prix = value; }
-        public string Categorie { get => categorie; set => categorie = value; }
+        public Categorie Categorie { get => categorie; set => categorie = value; }
     }
 }

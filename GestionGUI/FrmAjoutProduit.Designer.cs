@@ -1,4 +1,7 @@
-﻿namespace GestionGUI
+﻿using GestionBO;
+using GestionDAL;
+
+namespace GestionGUI
 {
     partial class FrmAjoutProduit
     {
@@ -37,6 +40,9 @@
             this.lblLibelleProAdd = new System.Windows.Forms.Label();
             this.lblPrixAddPro = new System.Windows.Forms.Label();
             this.lblCatAddPro = new System.Windows.Forms.Label();
+            this.lblErrorLibellé = new System.Windows.Forms.Label();
+            this.lblErrorPrix = new System.Windows.Forms.Label();
+            this.lblErrorCategorie = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblProduit2
@@ -51,23 +57,24 @@
             // 
             // btnRetourInPro
             // 
-            this.btnRetourInPro.Location = new System.Drawing.Point(12, 712);
+            this.btnRetourInPro.Location = new System.Drawing.Point(12, 762);
             this.btnRetourInPro.Name = "btnRetourInPro";
             this.btnRetourInPro.Size = new System.Drawing.Size(94, 29);
             this.btnRetourInPro.TabIndex = 3;
             this.btnRetourInPro.Text = "Retour";
             this.btnRetourInPro.UseVisualStyleBackColor = true;
+            this.btnRetourInPro.Click += new System.EventHandler(this.btnRetourInPro_Click);
             // 
             // libelleProAdd
             // 
-            this.libelleProAdd.Location = new System.Drawing.Point(388, 359);
+            this.libelleProAdd.Location = new System.Drawing.Point(388, 305);
             this.libelleProAdd.Name = "libelleProAdd";
             this.libelleProAdd.Size = new System.Drawing.Size(186, 27);
             this.libelleProAdd.TabIndex = 4;
             // 
             // PrixProAdd
             // 
-            this.PrixProAdd.Location = new System.Drawing.Point(654, 359);
+            this.PrixProAdd.Location = new System.Drawing.Point(654, 305);
             this.PrixProAdd.Name = "PrixProAdd";
             this.PrixProAdd.Size = new System.Drawing.Size(183, 27);
             this.PrixProAdd.TabIndex = 9;
@@ -76,34 +83,34 @@
             // 
             this.CategorieProAdd.FormattingEnabled = true;
             this.CategorieProAdd.ItemHeight = 20;
-            this.CategorieProAdd.Location = new System.Drawing.Point(388, 541);
+            this.CategorieProAdd.Location = new System.Drawing.Point(388, 504);
             this.CategorieProAdd.Name = "CategorieProAdd";
-            this.CategorieProAdd.Size = new System.Drawing.Size(186, 44);
+            this.CategorieProAdd.Size = new System.Drawing.Size(186, 104);
             this.CategorieProAdd.TabIndex = 6;
             // 
             // addPro
             // 
-            this.addPro.Location = new System.Drawing.Point(743, 556);
+            this.addPro.Location = new System.Drawing.Point(743, 579);
             this.addPro.Name = "addPro";
             this.addPro.Size = new System.Drawing.Size(94, 29);
             this.addPro.TabIndex = 7;
             this.addPro.Text = "Ajouter";
             this.addPro.UseVisualStyleBackColor = true;
+            this.addPro.Click += new System.EventHandler(this.addPro_Click);
             // 
             // lblLibelleProAdd
             // 
             this.lblLibelleProAdd.AutoSize = true;
-            this.lblLibelleProAdd.Location = new System.Drawing.Point(388, 318);
+            this.lblLibelleProAdd.Location = new System.Drawing.Point(388, 259);
             this.lblLibelleProAdd.Name = "lblLibelleProAdd";
             this.lblLibelleProAdd.Size = new System.Drawing.Size(60, 20);
             this.lblLibelleProAdd.TabIndex = 8;
             this.lblLibelleProAdd.Text = "Libellé :";
-            this.lblLibelleProAdd.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblPrixAddPro
             // 
             this.lblPrixAddPro.AutoSize = true;
-            this.lblPrixAddPro.Location = new System.Drawing.Point(654, 318);
+            this.lblPrixAddPro.Location = new System.Drawing.Point(654, 259);
             this.lblPrixAddPro.Name = "lblPrixAddPro";
             this.lblPrixAddPro.Size = new System.Drawing.Size(40, 20);
             this.lblPrixAddPro.TabIndex = 10;
@@ -112,18 +119,51 @@
             // lblCatAddPro
             // 
             this.lblCatAddPro.AutoSize = true;
-            this.lblCatAddPro.Location = new System.Drawing.Point(388, 500);
+            this.lblCatAddPro.Location = new System.Drawing.Point(388, 455);
             this.lblCatAddPro.Name = "lblCatAddPro";
             this.lblCatAddPro.Size = new System.Drawing.Size(81, 20);
             this.lblCatAddPro.TabIndex = 11;
-            this.lblCatAddPro.Text = "Catégorié :";
+            this.lblCatAddPro.Text = "Catégorie :";
+            // 
+            // lblErrorLibellé
+            // 
+            this.lblErrorLibellé.AutoSize = true;
+            this.lblErrorLibellé.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblErrorLibellé.Location = new System.Drawing.Point(388, 353);
+            this.lblErrorLibellé.Name = "lblErrorLibellé";
+            this.lblErrorLibellé.Size = new System.Drawing.Size(162, 20);
+            this.lblErrorLibellé.TabIndex = 12;
+            this.lblErrorLibellé.Text = "Veuillez saisir un libellé";
+            // 
+            // lblErrorPrix
+            // 
+            this.lblErrorPrix.AutoSize = true;
+            this.lblErrorPrix.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblErrorPrix.Location = new System.Drawing.Point(654, 353);
+            this.lblErrorPrix.Name = "lblErrorPrix";
+            this.lblErrorPrix.Size = new System.Drawing.Size(146, 20);
+            this.lblErrorPrix.TabIndex = 13;
+            this.lblErrorPrix.Text = "Veuillez saisir un prix";
+            // 
+            // lblErrorCategorie
+            // 
+            this.lblErrorCategorie.AutoSize = true;
+            this.lblErrorCategorie.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblErrorCategorie.Location = new System.Drawing.Point(388, 632);
+            this.lblErrorCategorie.Name = "lblErrorCategorie";
+            this.lblErrorCategorie.Size = new System.Drawing.Size(192, 20);
+            this.lblErrorCategorie.TabIndex = 14;
+            this.lblErrorCategorie.Text = "Veuillez saisir une catégorie";
             // 
             // FrmAjoutProduit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1232, 753);
+            this.ClientSize = new System.Drawing.Size(1232, 803);
+            this.Controls.Add(this.lblErrorCategorie);
+            this.Controls.Add(this.lblErrorPrix);
+            this.Controls.Add(this.lblErrorLibellé);
             this.Controls.Add(this.lblCatAddPro);
             this.Controls.Add(this.lblPrixAddPro);
             this.Controls.Add(this.lblLibelleProAdd);
@@ -161,5 +201,8 @@
         private Label lblLibelleProAdd;
         private Label lblPrixAddPro;
         private Label lblCatAddPro;
+        private Label lblErrorLibellé;
+        private Label lblErrorPrix;
+        private Label lblErrorCategorie;
     }
 }
