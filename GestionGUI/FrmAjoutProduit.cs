@@ -51,7 +51,7 @@ namespace GestionGUI
                 lblErrorLibellé.ForeColor = System.Drawing.SystemColors.ControlDark;
             }
 
-            if (prix == "")
+            if(prix == "")
             {
                 lblErrorPrix.ForeColor = Color.Red;
                 saisie = false;
@@ -61,7 +61,7 @@ namespace GestionGUI
                 lblErrorPrix.ForeColor = System.Drawing.SystemColors.ControlDark;
             }
 
-            if (categorie == "")
+            if(categorie == "")
             {
                 lblErrorCategorie.ForeColor = Color.Red;
                 saisie = false;
@@ -71,7 +71,7 @@ namespace GestionGUI
                 lblErrorCategorie.ForeColor = System.Drawing.SystemColors.ControlDark;
             }
 
-            if (saisie)
+            if(saisie)
             {
                 float temp;
                 float.TryParse(PrixProAdd.Text, out temp);

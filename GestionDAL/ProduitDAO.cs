@@ -87,8 +87,6 @@ namespace GestionDAL
             cmd.Parameters.Add(new SqlParameter("@codeCategorie", System.Data.SqlDbType.Int));
             cmd.Parameters["@codeCategorie"].Value = unProduit.Categorie.Code;
 
-            // SqlDataReader monReader = cmd.ExecuteReader();
-
             nbEnr = cmd.ExecuteNonQuery();
 
             // Fermeture de la connexion

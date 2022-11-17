@@ -26,5 +26,15 @@ namespace GestionGUI
             FrmListesProduit.ShowDialog(); // ouverture du formulaire list produit
             this.Close();
         }
+
+        private void FrmSyntheseClients_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deconnexion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

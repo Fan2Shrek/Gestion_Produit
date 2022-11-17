@@ -21,16 +21,22 @@ namespace GestionGUI
 
         private void retSynt_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FrmSyntheseClients FrmSyntheseClients;
             FrmSyntheseClients = new FrmSyntheseClients();
-            FrmSyntheseClients.ShowDialog(); // ouverture du formulaire synthexe client (retour)
+            FrmSyntheseClients.Closed += (s, args) => this.Close();
+            FrmSyntheseClients.ShowDialog(); // retour synthese
+            this.Close();
         }
 
         private void ajouterProdui_Click(object sender, EventArgs e)
         {
-            FrmAjoutProduit FrmListePro;
-            FrmListePro = new FrmAjoutProduit();
-            FrmListePro.ShowDialog(); // btn ajouter produit
+            this.Hide();
+            FrmAjoutProduit FrmAjoutProduit;
+            FrmAjoutProduit = new FrmAjoutProduit();
+            FrmAjoutProduit.Closed += (s, args) => this.Close();
+            FrmAjoutProduit.ShowDialog(); // ouverture du formulaire ajout produit
+            this.Close();
         }
 
         private void FrmListeProduits_Load(object sender, EventArgs e)
