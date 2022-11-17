@@ -38,5 +38,17 @@ namespace GestionBLL
         {
             return ProduitDAO.AjoutProduit(ut);
         }
+
+        // Méthode qui modifie un nouveau Produit avec la méthode UpdateProduit de la DAL
+        public static int ModifierProduit(Produit prod)
+        {
+            return ProduitDAO.UpdateProduit(prod);
+        }
+
+        // Méthode qui supprime un Produit avec la méthode DeleteProduit de la DAL
+        public static int SupprimerProduit(int id)
+        {
+            return ProduitDAO.DeleteProduit(id);
+        }
     }
 }

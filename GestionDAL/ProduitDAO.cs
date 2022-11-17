@@ -94,5 +94,36 @@ namespace GestionDAL
             return nbEnr;
         }
 
+        // Cette méthode modifie un utilisateur passé en paramètre dans la BD
+        public static int UpdateProduit(Produit unProduit)
+        {
+            int nbEnr;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "UPDATE T_produit SET libelle_produit = '"
+            + unProduit.Libelle + "', prix_vente_ht_produit = '"
+            + unProduit.Prix + "', code_categorie = '"
+            + unProduit.Categorie + "' WHERE code_produit = " + unProduit.Code;
+            nbEnr = cmd.ExecuteNonQuery();
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }
+
+        public static int DeleteProduit(int id)
+        {
+            int nbEnr;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "DELETE FROM T_produit WHERE code_produit = " + id;
+            nbEnr = cmd.ExecuteNonQuery();
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }
     }
 }
