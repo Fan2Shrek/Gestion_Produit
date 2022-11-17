@@ -74,5 +74,23 @@ namespace GestionGUI
         {
 
         }
+
+        private void modifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Supprimer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvProduit_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            panel1.Show();
+            textCode.Text = dgvProduit.CurrentRow.Cells[0].Value.ToString();
+            textLibelle.Text = dgvProduit.CurrentRow.Cells[1].Value.ToString();
+            textPrix.Text = dgvProduit.CurrentRow.Cells[2].Value.ToString();
+        }
     }
 }
