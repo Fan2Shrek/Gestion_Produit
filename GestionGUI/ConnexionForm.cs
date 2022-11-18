@@ -42,9 +42,12 @@ namespace Connexion
 
         private void temp_Click(object sender, EventArgs e)
         {
-            FrmSyntheseClients FrmSyntheseClients;
-            FrmSyntheseClients = new FrmSyntheseClients();
-            FrmSyntheseClients.ShowDialog(); // ouverture du formulaire list produit
+            this.Hide();
+            FrmListeProduits FrmListeProduits;
+            FrmListeProduits = new FrmListeProduits();
+            FrmListeProduits.Closed += (s, args) => this.Close();
+            FrmListeProduits.ShowDialog(); // ouverture du formulaire list produit
+            this.Close();
         }
     }
 }

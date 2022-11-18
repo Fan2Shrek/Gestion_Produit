@@ -105,3 +105,4 @@ C:\Users\admin\Desktop\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\Gesti
 C:\Users\admin\Desktop\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.genruntimeconfig.cache
 C:\Users\admin\Desktop\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\ref\GestionGUI.dll
 C:\Users\admin\Desktop\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.FrmAjoutProduit.resources
+C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.FrmAjoutProduit.resources

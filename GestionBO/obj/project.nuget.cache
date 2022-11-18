@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b5BZ8w7zWZQ3RGvS0frdFezjrQb/srOmGx/VoQAjguvozokGRjMg6g7AVAmcB1sNt4udKtLP9+BmC4Qr/N4iIQ==",
+  "dgSpecHash": "Df17YzqusebrV5zu4LuZ3Er2b4fS5IrpH3Qb0vMmY2Ump8MYxx37DJEnmjTbWr0bRs7M9JKqHB7Y4CpCO/Zdow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj",
+  "projectFilePath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\GestionBO.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

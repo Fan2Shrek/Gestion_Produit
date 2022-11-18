@@ -94,5 +94,50 @@ namespace GestionDAL
             return nbEnr;
         }
 
+        // Cette méthode modifie un utilisateur passé en paramètre dans la BD
+        public static int UpdateProduit(Produit unProduit)
+        {
+            int nbEnr;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "UPDATE produit SET libelle_produit = @libelle," +
+                "prix_vente_ht_produit = @prix," +
+                "code_categorie = @codeCategorie " +
+                "WHERE code_produit = @codeProduit";
+            cmd.Parameters.Add(new SqlParameter("@libelle", System.Data.SqlDbType.NVarChar, 255));
+            cmd.Parameters["@libelle"].Value = unProduit.Libelle;
+
+            cmd.Parameters.Add(new SqlParameter("@prix", System.Data.SqlDbType.Float));
+            cmd.Parameters["@prix"].Value = unProduit.Prix;
+
+            cmd.Parameters.Add(new SqlParameter("@codeCategorie", System.Data.SqlDbType.Int));
+            cmd.Parameters["@codeCategorie"].Value = unProduit.Categorie.Code;
+
+            cmd.Parameters.Add(new SqlParameter("@codeProduit", System.Data.SqlDbType.Int));
+            cmd.Parameters["@codeProduit"].Value = unProduit.Code;
+
+            cmd.Connection = maConnexion;
+
+            nbEnr = cmd.ExecuteNonQuery();
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }
+
+        public static int DeleteProduit(int id)
+        {
+            int nbEnr;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "DELETE FROM produit WHERE code_produit = " + id;
+            nbEnr = cmd.ExecuteNonQuery();
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }
     }
 }

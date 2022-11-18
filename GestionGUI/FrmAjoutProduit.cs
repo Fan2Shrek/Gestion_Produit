@@ -86,6 +86,12 @@ namespace GestionGUI
                         // Appel de la méthode CreerProduit de la couche BLL
                         ProduitBLL.CreerProduit(pro);
 
+
+                        this.Hide();
+                        FrmListeProduits FrmListeProduits;
+                        FrmListeProduits = new FrmListeProduits();
+                        FrmListeProduits.Closed += (s, args) => this.Close();
+                        FrmListeProduits.ShowDialog(); // ouverture du formulaire list produit
                         this.Close();
 
                         break;

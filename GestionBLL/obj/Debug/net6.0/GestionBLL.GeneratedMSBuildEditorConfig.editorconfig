@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GestionBLL
-build_property.ProjectDir = C:\Users\admin\Desktop\Gestion_Produit\GestionBLL\
+build_property.ProjectDir = C:\Code\Project csharp\Gestion_Produit\GestionBLL\

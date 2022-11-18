@@ -1,6 +1,6 @@
 ﻿using GestionBLL;
 using GestionBO;
-using GestionGUI;
+using GestionDAL;
 using System.Configuration;
 using System.Drawing;
 
@@ -16,6 +16,13 @@ namespace GestionGUI
             foreach (Produit pro in ProduitBLL.GetProduit())
             {
                 dgvProduit.Rows.Add(pro.Code, pro.Libelle, pro.Prix, pro.Categorie.Libelle);
+            }
+
+
+
+            foreach (Categorie cate in CategorieDAO.GetCategorie())
+            {
+                this.listCategorie.Items.Add(cate.Libelle);
             }
         }
 
@@ -44,6 +51,14 @@ namespace GestionGUI
 
         }
 
+        private void dgvProduit_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            panel1.Show();
+            textCode.Text = dgvProduit.CurrentRow.Cells[0].Value.ToString();
+            textLibelle.Text = dgvProduit.CurrentRow.Cells[1].Value.ToString();
+            textPrix.Text = dgvProduit.CurrentRow.Cells[2].Value.ToString();
+        }
+
         private void actualiserProduit_Click(object sender, EventArgs e)
         {
             dgvProduit.Rows.Clear();
@@ -52,6 +67,76 @@ namespace GestionGUI
             {
                 dgvProduit.Rows.Add(pro.Code, pro.Libelle, pro.Prix, pro.Categorie.Libelle);
             }
+        }
+
+        private void Modifier_Click(object sender, EventArgs e)
+        {
+            string libelle = textLibelle.Text;
+            string prix = textPrix.Text;
+            string categorie = listCategorie.Text;
+            bool saisie = true;
+
+            if (libelle == "")
+            {
+                lblErrorLibellé.ForeColor = Color.Red;
+                saisie = false;
+            }
+            else
+            {
+                lblErrorLibellé.ForeColor = System.Drawing.SystemColors.ControlDark;
+            }
+
+            if (prix == "")
+            {
+                lblErrorPrix.ForeColor = Color.Red;
+                saisie = false;
+            }
+            else
+            {
+                lblErrorPrix.ForeColor = System.Drawing.SystemColors.ControlDark;
+            }
+
+            if (categorie == "")
+            {
+                lblErrorCategorie.ForeColor = Color.Red;
+                saisie = false;
+            }
+            else
+            {
+                lblErrorCategorie.ForeColor = System.Drawing.SystemColors.ControlDark;
+            }
+
+            if (saisie)
+            {
+                float temp;
+                float.TryParse(textPrix.Text, out temp);
+                int id;
+
+                int.TryParse(textCode.Text, out id);
+
+                foreach (Categorie cate in CategorieBLL.GetCategorie())
+                {
+                    if (cate.Libelle == listCategorie.Text)
+                    {
+                        // Création de l'objet produit avec le nom récupéré dans la GUI
+                        Produit pro = new Produit(id, libelle, temp, cate);
+
+                        // Appel de la méthode CreerProduit de la couche BLL
+                        ProduitBLL.ModifierProduit(pro);
+
+                        break;
+                    }
+                };
+
+            }
+        }
+
+        private void Supprimer_Click(object sender, EventArgs e)
+        {
+            int id;
+
+            int.TryParse(textCode.Text, out id);
+            ProduitBLL.SupprimerProduit(id);
         }
     }
 }
