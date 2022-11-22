@@ -36,5 +36,15 @@ namespace GestionGUI
         {
 
         }
+
+        private void btnClient_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmListeClients FrmListeClients;
+            FrmListeClients = new FrmListeClients();
+            FrmListeClients.Closed += (s, args) => this.Close();
+            FrmListeClients.ShowDialog(); // ouverture du formulaire list client
+            this.Close();
+        }
     }
 }
