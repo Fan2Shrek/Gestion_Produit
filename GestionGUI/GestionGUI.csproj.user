@@ -4,9 +4,6 @@
     <Compile Update="ConnexionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmAjoutProduit.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FrmListeProduits.cs">
       <SubType>Form</SubType>
     </Compile>

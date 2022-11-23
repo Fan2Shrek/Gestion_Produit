@@ -30,16 +30,6 @@ namespace GestionGUI
             this.Close();
         }
 
-        private void ajouterProdui_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmAjoutProduit FrmAjoutProduit;
-            FrmAjoutProduit = new FrmAjoutProduit();
-            FrmAjoutProduit.Closed += (s, args) => this.Close();
-            FrmAjoutProduit.ShowDialog(); // ouverture du formulaire ajout produit
-            this.Close();
-        }
-
         private void FrmListeProduits_Load(object sender, EventArgs e)
         {
 
