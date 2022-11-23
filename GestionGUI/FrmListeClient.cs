@@ -132,5 +132,10 @@ namespace GestionGUI
             int.TryParse(textCode.Text, out id);
             ProduitBLL.SupprimerProduit(id);
         }
+
+        private void listCategorie_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

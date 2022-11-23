@@ -107,3 +107,4 @@ C:\Users\admin\Desktop\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\ref\G
 C:\Users\admin\Desktop\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.FrmAjoutProduit.resources
 C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.FrmAjoutProduit.resources
 C:\Code\Project csharp\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.FrmListeClients.resources
+C:\Users\admin\Desktop\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.FrmListeClients.resources
