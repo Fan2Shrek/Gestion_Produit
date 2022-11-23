@@ -131,6 +131,72 @@ namespace GestionGUI
             }
         }
 
+        private void addPro_Click(object sender, EventArgs e)
+        {
+            string libelle = textLibelle.Text;
+            string prix = textPrix.Text;
+            string categorie = listCategorie.Text;
+            bool saisie = true;
+
+            if (libelle == "")
+            {
+                lblErrorLibellé.ForeColor = Color.Red;
+                saisie = false;
+            }
+            else
+            {
+                lblErrorLibellé.ForeColor = System.Drawing.SystemColors.ControlDark;
+            }
+
+            if (prix == "")
+            {
+                lblErrorPrix.ForeColor = Color.Red;
+                saisie = false;
+            }
+            else
+            {
+                lblErrorPrix.ForeColor = System.Drawing.SystemColors.ControlDark;
+            }
+
+            if (categorie == "")
+            {
+                lblErrorCategorie.ForeColor = Color.Red;
+                saisie = false;
+            }
+            else
+            {
+                lblErrorCategorie.ForeColor = System.Drawing.SystemColors.ControlDark;
+            }
+
+            if (saisie)
+            {
+                float temp;
+                float.TryParse(textPrix.Text, out temp);
+
+                foreach (Categorie cate in CategorieBLL.GetCategorie())
+                {
+                    if (cate.Libelle == listCategorie.Text)
+                    {
+                        // Création de l'objet produit avec le nom récupéré dans la GUI
+                        Produit pro = new Produit(0, textLibelle.Text, temp, cate);
+
+                        // Appel de la méthode CreerProduit de la couche BLL
+                        ProduitBLL.CreerProduit(pro);
+
+
+                        this.Hide();
+                        FrmListeProduits FrmListeProduits;
+                        FrmListeProduits = new FrmListeProduits();
+                        FrmListeProduits.Closed += (s, args) => this.Close();
+                        FrmListeProduits.ShowDialog(); // ouverture du formulaire list produit
+                        this.Close();
+
+                        break;
+                    }
+                };
+            }
+        }
+
         private void Supprimer_Click(object sender, EventArgs e)
         {
             int id;
