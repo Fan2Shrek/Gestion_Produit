@@ -284,6 +284,7 @@
             this.Supprimer.TabIndex = 7;
             this.Supprimer.Text = "Supprimer";
             this.Supprimer.UseVisualStyleBackColor = true;
+            this.Supprimer.Click += new System.EventHandler(this.Supprimer_Click);
             // 
             // Modifier
             // 
@@ -294,6 +295,7 @@
             this.Modifier.TabIndex = 6;
             this.Modifier.Text = "Modifier";
             this.Modifier.UseVisualStyleBackColor = true;
+            this.Modifier.Click += new System.EventHandler(this.Modifier_Click);
             // 
             // FrmListeProduits
             // 

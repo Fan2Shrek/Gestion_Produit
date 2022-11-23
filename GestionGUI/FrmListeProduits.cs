@@ -114,6 +114,13 @@ namespace GestionGUI
                         // Appel de la méthode CreerProduit de la couche BLL
                         ProduitBLL.ModifierProduit(pro);
 
+                        this.Hide();
+                        FrmListeProduits FrmListeProduits;
+                        FrmListeProduits = new FrmListeProduits();
+                        FrmListeProduits.Closed += (s, args) => this.Close();
+                        FrmListeProduits.ShowDialog(); // ouverture du formulaire list produit
+                        this.Close();
+
                         break;
                     }
                 };
@@ -193,6 +200,13 @@ namespace GestionGUI
 
             int.TryParse(textCode.Text, out id);
             ProduitBLL.SupprimerProduit(id);
+
+            this.Hide();
+            FrmListeProduits FrmListeProduits;
+            FrmListeProduits = new FrmListeProduits();
+            FrmListeProduits.Closed += (s, args) => this.Close();
+            FrmListeProduits.ShowDialog(); // ouverture du formulaire list produit
+            this.Close();
         }
     }
 }
