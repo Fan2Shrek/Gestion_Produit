@@ -38,9 +38,9 @@ namespace GestionGUI
         private void dgvProduit_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             panel1.Show();
-            textCode.Text = dgvClient.CurrentRow.Cells[0].Value.ToString();
-            textLibelle.Text = dgvClient.CurrentRow.Cells[1].Value.ToString();
-            textPrix.Text = dgvClient.CurrentRow.Cells[2].Value.ToString();
+            textCodeCli.Text = dgvClient.CurrentRow.Cells[0].Value.ToString();
+            textNomCli.Text = dgvClient.CurrentRow.Cells[1].Value.ToString();
+            textPrenomCli.Text = dgvClient.CurrentRow.Cells[2].Value.ToString();
         }
 
         private void actualiserProduit_Click(object sender, EventArgs e)
@@ -55,8 +55,8 @@ namespace GestionGUI
 
         private void Modifier_Click(object sender, EventArgs e)
         {
-            string libelle = textLibelle.Text;
-            string prix = textPrix.Text;
+            string libelle = textNomCli.Text;
+            string prix = textPrenomCli.Text;
             string categorie = listCategorie.Text;
             bool saisie = true;
 
@@ -93,10 +93,10 @@ namespace GestionGUI
             if (saisie)
             {
                 float temp;
-                float.TryParse(textPrix.Text, out temp);
+                float.TryParse(textPrenomCli.Text, out temp);
                 int id;
 
-                int.TryParse(textCode.Text, out id);
+                int.TryParse(textCodeCli.Text, out id);
 
                 foreach (Categorie cate in CategorieBLL.GetCategorie())
                 {
@@ -119,11 +119,21 @@ namespace GestionGUI
         {
             int id;
 
-            int.TryParse(textCode.Text, out id);
+            int.TryParse(textCodeCli.Text, out id);
             ProduitBLL.SupprimerProduit(id);
         }
 
         private void listCategorie_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textTelCli_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textCodeCli_TextChanged(object sender, EventArgs e)
         {
 
         }

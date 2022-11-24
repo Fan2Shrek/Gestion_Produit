@@ -28,34 +28,299 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblProduit = new System.Windows.Forms.Label();
             this.retSynt = new System.Windows.Forms.Button();
-            this.dgvClient = new System.Windows.Forms.DataGridView();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actualiserProduit = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblErrorCategorie = new System.Windows.Forms.Label();
-            this.lblErrorPrix = new System.Windows.Forms.Label();
-            this.lblErrorLibellé = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblLibelleProAdd = new System.Windows.Forms.Label();
-            this.lblCatAddPro = new System.Windows.Forms.Label();
-            this.listCategorie = new System.Windows.Forms.ListBox();
+            this.dgvClient = new System.Windows.Forms.DataGridView();
+            this.Telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textCodeCli = new System.Windows.Forms.TextBox();
+            this.textNomCli = new System.Windows.Forms.TextBox();
             this.LabelDetails = new System.Windows.Forms.Label();
-            this.textPrix = new System.Windows.Forms.TextBox();
-            this.textLibelle = new System.Windows.Forms.TextBox();
-            this.textCode = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblEmailCli = new System.Windows.Forms.Label();
+            this.lblTelCli = new System.Windows.Forms.Label();
+            this.lblRueFactCli = new System.Windows.Forms.Label();
+            this.lblCodePostalFactuCli = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCodeCli = new System.Windows.Forms.Label();
             this.Supprimer = new System.Windows.Forms.Button();
             this.Modifier = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblPrenomCli = new System.Windows.Forms.Label();
+            this.textPrenomCli = new System.Windows.Forms.TextBox();
+            this.textTelCli = new System.Windows.Forms.TextBox();
+            this.lblFaxCli = new System.Windows.Forms.Label();
+            this.textRueFactuCli = new System.Windows.Forms.TextBox();
+            this.textEmailCli = new System.Windows.Forms.TextBox();
+            this.lblProduit = new System.Windows.Forms.Label();
+            this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textCPFactuCli = new System.Windows.Forms.TextBox();
+            this.lblNomCli = new System.Windows.Forms.Label();
+            this.textFaxCli = new System.Windows.Forms.TextBox();
+            this.lblErrorClient = new System.Windows.Forms.Label();
+            this.lblVilleFactuCli = new System.Windows.Forms.Label();
+            this.textVilleFactCli = new System.Windows.Forms.TextBox();
+            this.lblRueLivraisonCli = new System.Windows.Forms.Label();
+            this.textRueLivraisonCli = new System.Windows.Forms.TextBox();
+            this.lblCodePostalLivraiCli = new System.Windows.Forms.Label();
+            this.textRueLivraiCli = new System.Windows.Forms.TextBox();
+            this.lblVilleLivraiCli = new System.Windows.Forms.Label();
+            this.textVilleLivraiCli = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClient)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // retSynt
+            // 
+            this.retSynt.Location = new System.Drawing.Point(21, 752);
+            this.retSynt.Name = "retSynt";
+            this.retSynt.Size = new System.Drawing.Size(94, 29);
+            this.retSynt.TabIndex = 2;
+            this.retSynt.Text = "Retour";
+            this.retSynt.UseVisualStyleBackColor = true;
+            this.retSynt.Click += new System.EventHandler(this.retSynt_Click);
+            // 
+            // actualiserProduit
+            // 
+            this.actualiserProduit.Location = new System.Drawing.Point(21, 173);
+            this.actualiserProduit.Name = "actualiserProduit";
+            this.actualiserProduit.Size = new System.Drawing.Size(94, 29);
+            this.actualiserProduit.TabIndex = 5;
+            this.actualiserProduit.Text = "Actualiser";
+            this.actualiserProduit.UseVisualStyleBackColor = true;
+            this.actualiserProduit.Click += new System.EventHandler(this.actualiserProduit_Click);
+            // 
+            // dgvClient
+            // 
+            this.dgvClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClient.Location = new System.Drawing.Point(21, 230);
+            this.dgvClient.Name = "dgvClient";
+            this.dgvClient.RowHeadersWidth = 51;
+            this.dgvClient.RowTemplate.Height = 29;
+            this.dgvClient.Size = new System.Drawing.Size(554, 500);
+            this.dgvClient.TabIndex = 3;
+            this.dgvClient.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduit_CellClick);
+            // 
+            // Telephone
+            // 
+            this.Telephone.HeaderText = "Telephone";
+            this.Telephone.MinimumWidth = 6;
+            this.Telephone.Name = "Telephone";
+            this.Telephone.Width = 125;
+            // 
+            // Code
+            // 
+            this.Code.HeaderText = "Code";
+            this.Code.MinimumWidth = 6;
+            this.Code.Name = "Code";
+            this.Code.Width = 125;
+            // 
+            // Prenom
+            // 
+            this.Prenom.HeaderText = "Prenom";
+            this.Prenom.MinimumWidth = 6;
+            this.Prenom.Name = "Prenom";
+            this.Prenom.Width = 125;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            this.Email.Width = 125;
+            // 
+            // textCodeCli
+            // 
+            this.textCodeCli.Enabled = false;
+            this.textCodeCli.Location = new System.Drawing.Point(27, 172);
+            this.textCodeCli.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textCodeCli.Name = "textCodeCli";
+            this.textCodeCli.Size = new System.Drawing.Size(170, 27);
+            this.textCodeCli.TabIndex = 8;
+            this.textCodeCli.TextChanged += new System.EventHandler(this.textCodeCli_TextChanged);
+            // 
+            // textNomCli
+            // 
+            this.textNomCli.Location = new System.Drawing.Point(27, 354);
+            this.textNomCli.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textNomCli.Name = "textNomCli";
+            this.textNomCli.Size = new System.Drawing.Size(170, 27);
+            this.textNomCli.TabIndex = 9;
+            // 
+            // LabelDetails
+            // 
+            this.LabelDetails.AutoSize = true;
+            this.LabelDetails.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LabelDetails.Location = new System.Drawing.Point(229, 19);
+            this.LabelDetails.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelDetails.Name = "LabelDetails";
+            this.LabelDetails.Size = new System.Drawing.Size(177, 67);
+            this.LabelDetails.TabIndex = 12;
+            this.LabelDetails.Text = "Détails";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(63, 560);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 29);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Ajouter";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lblEmailCli
+            // 
+            this.lblEmailCli.AutoSize = true;
+            this.lblEmailCli.Location = new System.Drawing.Point(27, 426);
+            this.lblEmailCli.Name = "lblEmailCli";
+            this.lblEmailCli.Size = new System.Drawing.Size(53, 20);
+            this.lblEmailCli.TabIndex = 21;
+            this.lblEmailCli.Text = "Email :";
+            // 
+            // lblTelCli
+            // 
+            this.lblTelCli.AutoSize = true;
+            this.lblTelCli.Location = new System.Drawing.Point(229, 149);
+            this.lblTelCli.Name = "lblTelCli";
+            this.lblTelCli.Size = new System.Drawing.Size(85, 20);
+            this.lblTelCli.TabIndex = 22;
+            this.lblTelCli.Text = "Téléphone :";
+            // 
+            // lblRueFactCli
+            // 
+            this.lblRueFactCli.AutoSize = true;
+            this.lblRueFactCli.Location = new System.Drawing.Point(229, 331);
+            this.lblRueFactCli.Name = "lblRueFactCli";
+            this.lblRueFactCli.Size = new System.Drawing.Size(117, 20);
+            this.lblRueFactCli.TabIndex = 26;
+            this.lblRueFactCli.Text = "Rue facturation :";
+            // 
+            // lblCodePostalFactuCli
+            // 
+            this.lblCodePostalFactuCli.AutoSize = true;
+            this.lblCodePostalFactuCli.Location = new System.Drawing.Point(229, 426);
+            this.lblCodePostalFactuCli.Name = "lblCodePostalFactuCli";
+            this.lblCodePostalFactuCli.Size = new System.Drawing.Size(172, 20);
+            this.lblCodePostalFactuCli.TabIndex = 20;
+            this.lblCodePostalFactuCli.Text = "Code postal facturation :";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblErrorClient);
+            this.panel1.Controls.Add(this.textVilleLivraiCli);
+            this.panel1.Controls.Add(this.lblVilleLivraiCli);
+            this.panel1.Controls.Add(this.textRueLivraiCli);
+            this.panel1.Controls.Add(this.lblCodePostalLivraiCli);
+            this.panel1.Controls.Add(this.textRueLivraisonCli);
+            this.panel1.Controls.Add(this.lblRueLivraisonCli);
+            this.panel1.Controls.Add(this.textVilleFactCli);
+            this.panel1.Controls.Add(this.lblVilleFactuCli);
+            this.panel1.Controls.Add(this.textCPFactuCli);
+            this.panel1.Controls.Add(this.lblCodePostalFactuCli);
+            this.panel1.Controls.Add(this.textRueFactuCli);
+            this.panel1.Controls.Add(this.lblRueFactCli);
+            this.panel1.Controls.Add(this.textFaxCli);
+            this.panel1.Controls.Add(this.textTelCli);
+            this.panel1.Controls.Add(this.lblFaxCli);
+            this.panel1.Controls.Add(this.lblTelCli);
+            this.panel1.Controls.Add(this.lblEmailCli);
+            this.panel1.Controls.Add(this.textEmailCli);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.lblPrenomCli);
+            this.panel1.Controls.Add(this.lblCodeCli);
+            this.panel1.Controls.Add(this.lblNomCli);
+            this.panel1.Controls.Add(this.LabelDetails);
+            this.panel1.Controls.Add(this.textPrenomCli);
+            this.panel1.Controls.Add(this.textNomCli);
+            this.panel1.Controls.Add(this.textCodeCli);
+            this.panel1.Controls.Add(this.Supprimer);
+            this.panel1.Controls.Add(this.Modifier);
+            this.panel1.Location = new System.Drawing.Point(599, 173);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(612, 608);
+            this.panel1.TabIndex = 7;
+            // 
+            // lblCodeCli
+            // 
+            this.lblCodeCli.AutoSize = true;
+            this.lblCodeCli.Location = new System.Drawing.Point(27, 149);
+            this.lblCodeCli.Name = "lblCodeCli";
+            this.lblCodeCli.Size = new System.Drawing.Size(51, 20);
+            this.lblCodeCli.TabIndex = 15;
+            this.lblCodeCli.Text = "Code :";
+            // 
+            // Supprimer
+            // 
+            this.Supprimer.Location = new System.Drawing.Point(456, 562);
+            this.Supprimer.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Supprimer.Name = "Supprimer";
+            this.Supprimer.Size = new System.Drawing.Size(103, 27);
+            this.Supprimer.TabIndex = 7;
+            this.Supprimer.Text = "Supprimer";
+            this.Supprimer.UseVisualStyleBackColor = true;
+            this.Supprimer.Click += new System.EventHandler(this.Supprimer_Click);
+            // 
+            // Modifier
+            // 
+            this.Modifier.Location = new System.Drawing.Point(262, 561);
+            this.Modifier.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Modifier.Name = "Modifier";
+            this.Modifier.Size = new System.Drawing.Size(101, 27);
+            this.Modifier.TabIndex = 6;
+            this.Modifier.Text = "Modifier";
+            this.Modifier.UseVisualStyleBackColor = true;
+            this.Modifier.Click += new System.EventHandler(this.Modifier_Click);
+            // 
+            // lblPrenomCli
+            // 
+            this.lblPrenomCli.AutoSize = true;
+            this.lblPrenomCli.Location = new System.Drawing.Point(27, 331);
+            this.lblPrenomCli.Name = "lblPrenomCli";
+            this.lblPrenomCli.Size = new System.Drawing.Size(67, 20);
+            this.lblPrenomCli.TabIndex = 16;
+            this.lblPrenomCli.Text = "Prénom :";
+            // 
+            // textPrenomCli
+            // 
+            this.textPrenomCli.Location = new System.Drawing.Point(27, 262);
+            this.textPrenomCli.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textPrenomCli.Name = "textPrenomCli";
+            this.textPrenomCli.Size = new System.Drawing.Size(170, 27);
+            this.textPrenomCli.TabIndex = 10;
+            // 
+            // textTelCli
+            // 
+            this.textTelCli.Location = new System.Drawing.Point(229, 172);
+            this.textTelCli.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textTelCli.Name = "textTelCli";
+            this.textTelCli.Size = new System.Drawing.Size(172, 27);
+            this.textTelCli.TabIndex = 24;
+            this.textTelCli.TextChanged += new System.EventHandler(this.textTelCli_TextChanged);
+            // 
+            // lblFaxCli
+            // 
+            this.lblFaxCli.AutoSize = true;
+            this.lblFaxCli.Location = new System.Drawing.Point(229, 239);
+            this.lblFaxCli.Name = "lblFaxCli";
+            this.lblFaxCli.Size = new System.Drawing.Size(37, 20);
+            this.lblFaxCli.TabIndex = 23;
+            this.lblFaxCli.Text = "Fax :";
+            // 
+            // textRueFactuCli
+            // 
+            this.textRueFactuCli.Location = new System.Drawing.Point(229, 354);
+            this.textRueFactuCli.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textRueFactuCli.Name = "textRueFactuCli";
+            this.textRueFactuCli.Size = new System.Drawing.Size(172, 27);
+            this.textRueFactuCli.TabIndex = 27;
+            // 
+            // textEmailCli
+            // 
+            this.textEmailCli.Location = new System.Drawing.Point(27, 449);
+            this.textEmailCli.Name = "textEmailCli";
+            this.textEmailCli.Size = new System.Drawing.Size(174, 27);
+            this.textEmailCli.TabIndex = 20;
             // 
             // lblProduit
             // 
@@ -67,40 +332,6 @@
             this.lblProduit.TabIndex = 1;
             this.lblProduit.Text = "Gestion des clients";
             // 
-            // retSynt
-            // 
-            this.retSynt.Location = new System.Drawing.Point(12, 762);
-            this.retSynt.Name = "retSynt";
-            this.retSynt.Size = new System.Drawing.Size(94, 29);
-            this.retSynt.TabIndex = 2;
-            this.retSynt.Text = "Retour";
-            this.retSynt.UseVisualStyleBackColor = true;
-            this.retSynt.Click += new System.EventHandler(this.retSynt_Click);
-            // 
-            // dgvClient
-            // 
-            this.dgvClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Code,
-            this.Nom,
-            this.Prenom,
-            this.Telephone,
-            this.Email});
-            this.dgvClient.Location = new System.Drawing.Point(58, 237);
-            this.dgvClient.Name = "dgvClient";
-            this.dgvClient.RowHeadersWidth = 51;
-            this.dgvClient.RowTemplate.Height = 29;
-            this.dgvClient.Size = new System.Drawing.Size(554, 500);
-            this.dgvClient.TabIndex = 3;
-            this.dgvClient.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduit_CellClick);
-            // 
-            // Code
-            // 
-            this.Code.HeaderText = "Code";
-            this.Code.MinimumWidth = 6;
-            this.Code.Name = "Code";
-            this.Code.Width = 125;
-            // 
             // Nom
             // 
             this.Nom.HeaderText = "Nom";
@@ -108,203 +339,107 @@
             this.Nom.Name = "Nom";
             this.Nom.Width = 125;
             // 
-            // Prenom
+            // textCPFactuCli
             // 
-            this.Prenom.HeaderText = "Prenom";
-            this.Prenom.MinimumWidth = 6;
-            this.Prenom.Name = "Prenom";
-            this.Prenom.Width = 125;
+            this.textCPFactuCli.Location = new System.Drawing.Point(229, 449);
+            this.textCPFactuCli.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textCPFactuCli.Name = "textCPFactuCli";
+            this.textCPFactuCli.Size = new System.Drawing.Size(172, 27);
+            this.textCPFactuCli.TabIndex = 28;
             // 
-            // Telephone
+            // lblNomCli
             // 
-            this.Telephone.HeaderText = "Telephone";
-            this.Telephone.MinimumWidth = 6;
-            this.Telephone.Name = "Telephone";
-            this.Telephone.Width = 125;
+            this.lblNomCli.AutoSize = true;
+            this.lblNomCli.Location = new System.Drawing.Point(27, 239);
+            this.lblNomCli.Name = "lblNomCli";
+            this.lblNomCli.Size = new System.Drawing.Size(49, 20);
+            this.lblNomCli.TabIndex = 14;
+            this.lblNomCli.Text = "Nom :";
             // 
-            // Email
+            // textFaxCli
             // 
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 6;
-            this.Email.Name = "Email";
-            this.Email.Width = 125;
+            this.textFaxCli.Location = new System.Drawing.Point(229, 262);
+            this.textFaxCli.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textFaxCli.Name = "textFaxCli";
+            this.textFaxCli.Size = new System.Drawing.Size(172, 27);
+            this.textFaxCli.TabIndex = 25;
             // 
-            // actualiserProduit
+            // lblErrorClient
             // 
-            this.actualiserProduit.Location = new System.Drawing.Point(58, 183);
-            this.actualiserProduit.Name = "actualiserProduit";
-            this.actualiserProduit.Size = new System.Drawing.Size(94, 29);
-            this.actualiserProduit.TabIndex = 5;
-            this.actualiserProduit.Text = "Actualiser";
-            this.actualiserProduit.UseVisualStyleBackColor = true;
-            this.actualiserProduit.Click += new System.EventHandler(this.actualiserProduit_Click);
+            this.lblErrorClient.AutoSize = true;
+            this.lblErrorClient.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblErrorClient.Location = new System.Drawing.Point(201, 509);
+            this.lblErrorClient.Name = "lblErrorClient";
+            this.lblErrorClient.Size = new System.Drawing.Size(242, 20);
+            this.lblErrorClient.TabIndex = 37;
+            this.lblErrorClient.Text = "Veuillez renseigner tous les champs";
             // 
-            // panel1
+            // lblVilleFactuCli
             // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.lblErrorCategorie);
-            this.panel1.Controls.Add(this.lblErrorPrix);
-            this.panel1.Controls.Add(this.lblErrorLibellé);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.lblLibelleProAdd);
-            this.panel1.Controls.Add(this.lblCatAddPro);
-            this.panel1.Controls.Add(this.listCategorie);
-            this.panel1.Controls.Add(this.LabelDetails);
-            this.panel1.Controls.Add(this.textPrix);
-            this.panel1.Controls.Add(this.textLibelle);
-            this.panel1.Controls.Add(this.textCode);
-            this.panel1.Controls.Add(this.Supprimer);
-            this.panel1.Controls.Add(this.Modifier);
-            this.panel1.Location = new System.Drawing.Point(676, 237);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(498, 500);
-            this.panel1.TabIndex = 7;
+            this.lblVilleFactuCli.AutoSize = true;
+            this.lblVilleFactuCli.Location = new System.Drawing.Point(423, 149);
+            this.lblVilleFactuCli.Name = "lblVilleFactuCli";
+            this.lblVilleFactuCli.Size = new System.Drawing.Size(121, 20);
+            this.lblVilleFactuCli.TabIndex = 29;
+            this.lblVilleFactuCli.Text = "Ville facturation :";
             // 
-            // lblErrorCategorie
+            // textVilleFactCli
             // 
-            this.lblErrorCategorie.AutoSize = true;
-            this.lblErrorCategorie.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblErrorCategorie.Location = new System.Drawing.Point(326, 363);
-            this.lblErrorCategorie.Name = "lblErrorCategorie";
-            this.lblErrorCategorie.Size = new System.Drawing.Size(121, 20);
-            this.lblErrorCategorie.TabIndex = 15;
-            this.lblErrorCategorie.Text = "Catég. incorrecte";
+            this.textVilleFactCli.Location = new System.Drawing.Point(423, 172);
+            this.textVilleFactCli.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textVilleFactCli.Name = "textVilleFactCli";
+            this.textVilleFactCli.Size = new System.Drawing.Size(172, 27);
+            this.textVilleFactCli.TabIndex = 30;
             // 
-            // lblErrorPrix
+            // lblRueLivraisonCli
             // 
-            this.lblErrorPrix.AutoSize = true;
-            this.lblErrorPrix.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblErrorPrix.Location = new System.Drawing.Point(70, 363);
-            this.lblErrorPrix.Name = "lblErrorPrix";
-            this.lblErrorPrix.Size = new System.Drawing.Size(95, 20);
-            this.lblErrorPrix.TabIndex = 18;
-            this.lblErrorPrix.Text = "Prix incorrect";
+            this.lblRueLivraisonCli.AutoSize = true;
+            this.lblRueLivraisonCli.Location = new System.Drawing.Point(423, 239);
+            this.lblRueLivraisonCli.Name = "lblRueLivraisonCli";
+            this.lblRueLivraisonCli.Size = new System.Drawing.Size(100, 20);
+            this.lblRueLivraisonCli.TabIndex = 31;
+            this.lblRueLivraisonCli.Text = "Rue livraison :";
             // 
-            // lblErrorLibellé
+            // textRueLivraisonCli
             // 
-            this.lblErrorLibellé.AutoSize = true;
-            this.lblErrorLibellé.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblErrorLibellé.Location = new System.Drawing.Point(326, 217);
-            this.lblErrorLibellé.Name = "lblErrorLibellé";
-            this.lblErrorLibellé.Size = new System.Drawing.Size(115, 20);
-            this.lblErrorLibellé.TabIndex = 17;
-            this.lblErrorLibellé.Text = "Libellé incorrect";
+            this.textRueLivraisonCli.Location = new System.Drawing.Point(423, 262);
+            this.textRueLivraisonCli.Name = "textRueLivraisonCli";
+            this.textRueLivraisonCli.Size = new System.Drawing.Size(172, 27);
+            this.textRueLivraisonCli.TabIndex = 21;
             // 
-            // label2
+            // lblCodePostalLivraiCli
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 267);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 20);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Prix :";
+            this.lblCodePostalLivraiCli.AutoSize = true;
+            this.lblCodePostalLivraiCli.Location = new System.Drawing.Point(423, 331);
+            this.lblCodePostalLivraiCli.Name = "lblCodePostalLivraiCli";
+            this.lblCodePostalLivraiCli.Size = new System.Drawing.Size(155, 20);
+            this.lblCodePostalLivraiCli.TabIndex = 32;
+            this.lblCodePostalLivraiCli.Text = "Code postal livraison :";
             // 
-            // label1
+            // textRueLivraiCli
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 136);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Code :";
+            this.textRueLivraiCli.Location = new System.Drawing.Point(423, 354);
+            this.textRueLivraiCli.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textRueLivraiCli.Name = "textRueLivraiCli";
+            this.textRueLivraiCli.Size = new System.Drawing.Size(172, 27);
+            this.textRueLivraiCli.TabIndex = 33;
             // 
-            // lblLibelleProAdd
+            // lblVilleLivraiCli
             // 
-            this.lblLibelleProAdd.AutoSize = true;
-            this.lblLibelleProAdd.Location = new System.Drawing.Point(326, 136);
-            this.lblLibelleProAdd.Name = "lblLibelleProAdd";
-            this.lblLibelleProAdd.Size = new System.Drawing.Size(60, 20);
-            this.lblLibelleProAdd.TabIndex = 14;
-            this.lblLibelleProAdd.Text = "Libellé :";
+            this.lblVilleLivraiCli.AutoSize = true;
+            this.lblVilleLivraiCli.Location = new System.Drawing.Point(423, 426);
+            this.lblVilleLivraiCli.Name = "lblVilleLivraiCli";
+            this.lblVilleLivraiCli.Size = new System.Drawing.Size(104, 20);
+            this.lblVilleLivraiCli.TabIndex = 34;
+            this.lblVilleLivraiCli.Text = "Ville livraison :";
             // 
-            // lblCatAddPro
+            // textVilleLivraiCli
             // 
-            this.lblCatAddPro.AutoSize = true;
-            this.lblCatAddPro.Location = new System.Drawing.Point(326, 267);
-            this.lblCatAddPro.Name = "lblCatAddPro";
-            this.lblCatAddPro.Size = new System.Drawing.Size(81, 20);
-            this.lblCatAddPro.TabIndex = 12;
-            this.lblCatAddPro.Text = "Catégorie :";
-            // 
-            // listCategorie
-            // 
-            this.listCategorie.FormattingEnabled = true;
-            this.listCategorie.ItemHeight = 20;
-            this.listCategorie.Location = new System.Drawing.Point(326, 303);
-            this.listCategorie.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.listCategorie.Name = "listCategorie";
-            this.listCategorie.Size = new System.Drawing.Size(103, 44);
-            this.listCategorie.TabIndex = 13;
-            this.listCategorie.SelectedIndexChanged += new System.EventHandler(this.listCategorie_SelectedIndexChanged);
-            // 
-            // LabelDetails
-            // 
-            this.LabelDetails.AutoSize = true;
-            this.LabelDetails.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabelDetails.Location = new System.Drawing.Point(165, 21);
-            this.LabelDetails.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LabelDetails.Name = "LabelDetails";
-            this.LabelDetails.Size = new System.Drawing.Size(177, 67);
-            this.LabelDetails.TabIndex = 12;
-            this.LabelDetails.Text = "Détails";
-            // 
-            // textPrix
-            // 
-            this.textPrix.Location = new System.Drawing.Point(71, 303);
-            this.textPrix.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textPrix.Name = "textPrix";
-            this.textPrix.Size = new System.Drawing.Size(101, 27);
-            this.textPrix.TabIndex = 10;
-            // 
-            // textLibelle
-            // 
-            this.textLibelle.Location = new System.Drawing.Point(326, 172);
-            this.textLibelle.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textLibelle.Name = "textLibelle";
-            this.textLibelle.Size = new System.Drawing.Size(103, 27);
-            this.textLibelle.TabIndex = 9;
-            // 
-            // textCode
-            // 
-            this.textCode.Enabled = false;
-            this.textCode.Location = new System.Drawing.Point(71, 172);
-            this.textCode.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textCode.Name = "textCode";
-            this.textCode.Size = new System.Drawing.Size(101, 27);
-            this.textCode.TabIndex = 8;
-            // 
-            // Supprimer
-            // 
-            this.Supprimer.Location = new System.Drawing.Point(326, 444);
-            this.Supprimer.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Supprimer.Name = "Supprimer";
-            this.Supprimer.Size = new System.Drawing.Size(103, 27);
-            this.Supprimer.TabIndex = 7;
-            this.Supprimer.Text = "Supprimer";
-            this.Supprimer.UseVisualStyleBackColor = true;
-            this.Supprimer.Click += new System.EventHandler(this.Supprimer_Click);
-            // 
-            // Modifier
-            // 
-            this.Modifier.Location = new System.Drawing.Point(194, 444);
-            this.Modifier.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Modifier.Name = "Modifier";
-            this.Modifier.Size = new System.Drawing.Size(101, 27);
-            this.Modifier.TabIndex = 6;
-            this.Modifier.Text = "Modifier";
-            this.Modifier.UseVisualStyleBackColor = true;
-            this.Modifier.Click += new System.EventHandler(this.Modifier_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(71, 442);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Ajouter";
-            this.button1.UseVisualStyleBackColor = true;
+            this.textVilleLivraiCli.Location = new System.Drawing.Point(423, 449);
+            this.textVilleLivraiCli.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textVilleLivraiCli.Name = "textVilleLivraiCli";
+            this.textVilleLivraiCli.Size = new System.Drawing.Size(172, 27);
+            this.textVilleLivraiCli.TabIndex = 35;
             // 
             // FrmListeClients
             // 
@@ -330,30 +465,44 @@
 
         #endregion
 
-        private Label lblProduit;
         private Button retSynt;
-        private DataGridView dgvClient;
         private Button actualiserProduit;
-        private Panel panel1;
-        private Label lblErrorCategorie;
-        private Label lblErrorPrix;
-        private Label lblErrorLibellé;
-        private Label label2;
-        private Label label1;
-        private Label lblLibelleProAdd;
-        private Label lblCatAddPro;
-        private ListBox listCategorie;
+        private DataGridView dgvClient;
+        private DataGridViewTextBoxColumn Telephone;
+        private DataGridViewTextBoxColumn Code;
+        private DataGridViewTextBoxColumn Prenom;
+        private DataGridViewTextBoxColumn Email;
+        private TextBox textCodeCli;
+        private TextBox textNomCli;
         private Label LabelDetails;
-        private TextBox textPrix;
-        private TextBox textLibelle;
-        private TextBox textCode;
+        private Button button1;
+        private Label lblEmailCli;
+        private Label lblTelCli;
+        private Label lblRueFactCli;
+        private Label lblCodePostalFactuCli;
+        private Panel panel1;
+        private Label lblErrorClient;
+        private TextBox textCPFactuCli;
+        private TextBox textRueFactuCli;
+        private TextBox textFaxCli;
+        private TextBox textTelCli;
+        private Label lblFaxCli;
+        private TextBox textEmailCli;
+        private Label lblPrenomCli;
+        private Label lblCodeCli;
+        private Label lblNomCli;
+        private TextBox textPrenomCli;
         private Button Supprimer;
         private Button Modifier;
-        private DataGridViewTextBoxColumn Code;
+        private Label lblProduit;
         private DataGridViewTextBoxColumn Nom;
-        private DataGridViewTextBoxColumn Prenom;
-        private DataGridViewTextBoxColumn Telephone;
-        private DataGridViewTextBoxColumn Email;
-        private Button button1;
+        private TextBox textVilleLivraiCli;
+        private Label lblVilleLivraiCli;
+        private TextBox textRueLivraiCli;
+        private Label lblCodePostalLivraiCli;
+        private TextBox textRueLivraisonCli;
+        private Label lblRueLivraisonCli;
+        private TextBox textVilleFactCli;
+        private Label lblVilleFactuCli;
     }
 }
