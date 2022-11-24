@@ -60,17 +60,18 @@
             // 
             this.lblProduit.AutoSize = true;
             this.lblProduit.Font = new System.Drawing.Font("Segoe UI", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblProduit.Location = new System.Drawing.Point(350, 64);
+            this.lblProduit.Location = new System.Drawing.Point(306, 48);
             this.lblProduit.Name = "lblProduit";
-            this.lblProduit.Size = new System.Drawing.Size(552, 72);
+            this.lblProduit.Size = new System.Drawing.Size(443, 59);
             this.lblProduit.TabIndex = 1;
             this.lblProduit.Text = "Gestion des produits";
             // 
             // retSynt
             // 
-            this.retSynt.Location = new System.Drawing.Point(12, 762);
+            this.retSynt.Location = new System.Drawing.Point(10, 572);
+            this.retSynt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.retSynt.Name = "retSynt";
-            this.retSynt.Size = new System.Drawing.Size(94, 29);
+            this.retSynt.Size = new System.Drawing.Size(82, 22);
             this.retSynt.TabIndex = 2;
             this.retSynt.Text = "Retour";
             this.retSynt.UseVisualStyleBackColor = true;
@@ -84,11 +85,12 @@
             this.Libelle,
             this.Prix,
             this.Categorie});
-            this.dgvProduit.Location = new System.Drawing.Point(42, 230);
+            this.dgvProduit.Location = new System.Drawing.Point(23, 172);
+            this.dgvProduit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvProduit.Name = "dgvProduit";
             this.dgvProduit.RowHeadersWidth = 51;
             this.dgvProduit.RowTemplate.Height = 29;
-            this.dgvProduit.Size = new System.Drawing.Size(554, 500);
+            this.dgvProduit.Size = new System.Drawing.Size(557, 375);
             this.dgvProduit.TabIndex = 3;
             this.dgvProduit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduit_CellClick);
             // 
@@ -122,9 +124,10 @@
             // 
             // actualiserProduit
             // 
-            this.actualiserProduit.Location = new System.Drawing.Point(42, 183);
+            this.actualiserProduit.Location = new System.Drawing.Point(23, 137);
+            this.actualiserProduit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.actualiserProduit.Name = "actualiserProduit";
-            this.actualiserProduit.Size = new System.Drawing.Size(94, 29);
+            this.actualiserProduit.Size = new System.Drawing.Size(82, 22);
             this.actualiserProduit.TabIndex = 5;
             this.actualiserProduit.Text = "Actualiser";
             this.actualiserProduit.UseVisualStyleBackColor = true;
@@ -147,17 +150,18 @@
             this.panel1.Controls.Add(this.textCode);
             this.panel1.Controls.Add(this.Supprimer);
             this.panel1.Controls.Add(this.Modifier);
-            this.panel1.Location = new System.Drawing.Point(685, 230);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel1.Location = new System.Drawing.Point(615, 172);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(498, 500);
+            this.panel1.Size = new System.Drawing.Size(436, 375);
             this.panel1.TabIndex = 8;
             // 
             // addPro
             // 
-            this.addPro.Location = new System.Drawing.Point(71, 442);
+            this.addPro.Location = new System.Drawing.Point(62, 332);
+            this.addPro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addPro.Name = "addPro";
-            this.addPro.Size = new System.Drawing.Size(94, 29);
+            this.addPro.Size = new System.Drawing.Size(82, 22);
             this.addPro.TabIndex = 19;
             this.addPro.Text = "Ajouter";
             this.addPro.UseVisualStyleBackColor = true;
@@ -167,9 +171,9 @@
             // 
             this.lblErrorCategorie.AutoSize = true;
             this.lblErrorCategorie.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblErrorCategorie.Location = new System.Drawing.Point(326, 363);
+            this.lblErrorCategorie.Location = new System.Drawing.Point(285, 272);
             this.lblErrorCategorie.Name = "lblErrorCategorie";
-            this.lblErrorCategorie.Size = new System.Drawing.Size(121, 20);
+            this.lblErrorCategorie.Size = new System.Drawing.Size(97, 15);
             this.lblErrorCategorie.TabIndex = 15;
             this.lblErrorCategorie.Text = "Catég. incorrecte";
             // 
@@ -177,9 +181,9 @@
             // 
             this.lblErrorPrix.AutoSize = true;
             this.lblErrorPrix.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblErrorPrix.Location = new System.Drawing.Point(70, 363);
+            this.lblErrorPrix.Location = new System.Drawing.Point(61, 272);
             this.lblErrorPrix.Name = "lblErrorPrix";
-            this.lblErrorPrix.Size = new System.Drawing.Size(95, 20);
+            this.lblErrorPrix.Size = new System.Drawing.Size(77, 15);
             this.lblErrorPrix.TabIndex = 18;
             this.lblErrorPrix.Text = "Prix incorrect";
             // 
@@ -187,100 +191,100 @@
             // 
             this.lblErrorLibellé.AutoSize = true;
             this.lblErrorLibellé.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblErrorLibellé.Location = new System.Drawing.Point(326, 217);
+            this.lblErrorLibellé.Location = new System.Drawing.Point(285, 163);
             this.lblErrorLibellé.Name = "lblErrorLibellé";
-            this.lblErrorLibellé.Size = new System.Drawing.Size(115, 20);
+            this.lblErrorLibellé.Size = new System.Drawing.Size(91, 15);
             this.lblErrorLibellé.TabIndex = 17;
             this.lblErrorLibellé.Text = "Libellé incorrect";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 267);
+            this.label2.Location = new System.Drawing.Point(62, 200);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 20);
+            this.label2.Size = new System.Drawing.Size(33, 15);
             this.label2.TabIndex = 16;
             this.label2.Text = "Prix :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 136);
+            this.label1.Location = new System.Drawing.Point(62, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.Size = new System.Drawing.Size(41, 15);
             this.label1.TabIndex = 15;
             this.label1.Text = "Code :";
             // 
             // lblLibelleProAdd
             // 
             this.lblLibelleProAdd.AutoSize = true;
-            this.lblLibelleProAdd.Location = new System.Drawing.Point(326, 136);
+            this.lblLibelleProAdd.Location = new System.Drawing.Point(285, 102);
             this.lblLibelleProAdd.Name = "lblLibelleProAdd";
-            this.lblLibelleProAdd.Size = new System.Drawing.Size(60, 20);
+            this.lblLibelleProAdd.Size = new System.Drawing.Size(47, 15);
             this.lblLibelleProAdd.TabIndex = 14;
             this.lblLibelleProAdd.Text = "Libellé :";
             // 
             // lblCatAddPro
             // 
             this.lblCatAddPro.AutoSize = true;
-            this.lblCatAddPro.Location = new System.Drawing.Point(326, 267);
+            this.lblCatAddPro.Location = new System.Drawing.Point(285, 200);
             this.lblCatAddPro.Name = "lblCatAddPro";
-            this.lblCatAddPro.Size = new System.Drawing.Size(81, 20);
+            this.lblCatAddPro.Size = new System.Drawing.Size(64, 15);
             this.lblCatAddPro.TabIndex = 12;
             this.lblCatAddPro.Text = "Catégorie :";
             // 
             // listCategorie
             // 
             this.listCategorie.FormattingEnabled = true;
-            this.listCategorie.ItemHeight = 20;
-            this.listCategorie.Location = new System.Drawing.Point(326, 303);
-            this.listCategorie.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.listCategorie.ItemHeight = 15;
+            this.listCategorie.Location = new System.Drawing.Point(285, 227);
+            this.listCategorie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listCategorie.Name = "listCategorie";
-            this.listCategorie.Size = new System.Drawing.Size(103, 44);
+            this.listCategorie.Size = new System.Drawing.Size(91, 34);
             this.listCategorie.TabIndex = 13;
             // 
             // LabelDetails
             // 
             this.LabelDetails.AutoSize = true;
             this.LabelDetails.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabelDetails.Location = new System.Drawing.Point(165, 21);
+            this.LabelDetails.Location = new System.Drawing.Point(144, 16);
             this.LabelDetails.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelDetails.Name = "LabelDetails";
-            this.LabelDetails.Size = new System.Drawing.Size(177, 67);
+            this.LabelDetails.Size = new System.Drawing.Size(143, 54);
             this.LabelDetails.TabIndex = 12;
             this.LabelDetails.Text = "Détails";
             // 
             // textPrix
             // 
-            this.textPrix.Location = new System.Drawing.Point(71, 303);
-            this.textPrix.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textPrix.Location = new System.Drawing.Point(62, 227);
+            this.textPrix.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textPrix.Name = "textPrix";
-            this.textPrix.Size = new System.Drawing.Size(101, 27);
+            this.textPrix.Size = new System.Drawing.Size(89, 23);
             this.textPrix.TabIndex = 10;
             // 
             // textLibelle
             // 
-            this.textLibelle.Location = new System.Drawing.Point(326, 172);
-            this.textLibelle.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textLibelle.Location = new System.Drawing.Point(285, 129);
+            this.textLibelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textLibelle.Name = "textLibelle";
-            this.textLibelle.Size = new System.Drawing.Size(103, 27);
+            this.textLibelle.Size = new System.Drawing.Size(91, 23);
             this.textLibelle.TabIndex = 9;
             // 
             // textCode
             // 
             this.textCode.Enabled = false;
-            this.textCode.Location = new System.Drawing.Point(71, 172);
-            this.textCode.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textCode.Location = new System.Drawing.Point(62, 129);
+            this.textCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textCode.Name = "textCode";
-            this.textCode.Size = new System.Drawing.Size(101, 27);
+            this.textCode.Size = new System.Drawing.Size(89, 23);
             this.textCode.TabIndex = 8;
             // 
             // Supprimer
             // 
-            this.Supprimer.Location = new System.Drawing.Point(326, 444);
-            this.Supprimer.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Supprimer.Location = new System.Drawing.Point(285, 333);
+            this.Supprimer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Supprimer.Name = "Supprimer";
-            this.Supprimer.Size = new System.Drawing.Size(103, 27);
+            this.Supprimer.Size = new System.Drawing.Size(90, 20);
             this.Supprimer.TabIndex = 7;
             this.Supprimer.Text = "Supprimer";
             this.Supprimer.UseVisualStyleBackColor = true;
@@ -288,10 +292,10 @@
             // 
             // Modifier
             // 
-            this.Modifier.Location = new System.Drawing.Point(194, 444);
-            this.Modifier.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Modifier.Location = new System.Drawing.Point(170, 333);
+            this.Modifier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Modifier.Name = "Modifier";
-            this.Modifier.Size = new System.Drawing.Size(101, 27);
+            this.Modifier.Size = new System.Drawing.Size(88, 20);
             this.Modifier.TabIndex = 6;
             this.Modifier.Text = "Modifier";
             this.Modifier.UseVisualStyleBackColor = true;
@@ -299,15 +303,16 @@
             // 
             // FrmListeProduits
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1232, 803);
+            this.ClientSize = new System.Drawing.Size(1078, 602);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.actualiserProduit);
             this.Controls.Add(this.dgvProduit);
             this.Controls.Add(this.retSynt);
             this.Controls.Add(this.lblProduit);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmListeProduits";
             this.Text = "ListeProduitsForms";
             this.Load += new System.EventHandler(this.FrmListeProduits_Load);

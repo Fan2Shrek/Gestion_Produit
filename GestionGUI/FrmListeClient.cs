@@ -15,7 +15,7 @@ namespace GestionGUI
 
             foreach (Client cli in ClientBLL.GetClient())
             {
-                dgvClient.Rows.Add(cli.Code, cli.Nom, cli.Prenom, cli.Telephone, cli.Email);
+                dgvClient.Rows.Add(cli.Code, cli.Nom, cli.Prenom, cli.Email, cli.Telephone);
             }
 
         }
@@ -55,63 +55,41 @@ namespace GestionGUI
 
         private void Modifier_Click(object sender, EventArgs e)
         {
-            string libelle = textNomCli.Text;
-            string prix = textPrenomCli.Text;
-            string categorie = listCategorie.Text;
+            string nom = textNomCli.Text;
+            string prenom = textPrenomCli.Text;
+            string email = textEmailCli.Text;
+            string telephone = textTelCli.Text;
+            string fax = textFaxCli.Text;
+            string rueFactu = textRueFactuCli.Text;
+            string cpFactu = textCPFactuCli.Text;
+            string villeFact = textVilleFactCli.Text;
+            string rueLivraison = textRueLivraisonCli.Text;
+            string cpLivraison = CodePostalLivraiCli.Text;
+            string villeLivraison = textVilleLivraiCli.Text;
             bool saisie = true;
 
-            if (libelle == "")
+            if (nom == "" || prenom == "" || email == "" || telephone == "" || fax == "" || rueFactu == "" ||
+                cpFactu == "" || villeFact == "" || rueLivraison == "" || cpLivraison == "" || villeLivraison == "")
             {
-                lblErrorLibellé.ForeColor = Color.Red;
+                lblErrorClient.ForeColor = Color.Red;
                 saisie = false;
             }
             else
             {
-                lblErrorLibellé.ForeColor = System.Drawing.SystemColors.ControlDark;
-            }
-
-            if (prix == "")
-            {
-                lblErrorPrix.ForeColor = Color.Red;
-                saisie = false;
-            }
-            else
-            {
-                lblErrorPrix.ForeColor = System.Drawing.SystemColors.ControlDark;
-            }
-
-            if (categorie == "")
-            {
-                lblErrorCategorie.ForeColor = Color.Red;
-                saisie = false;
-            }
-            else
-            {
-                lblErrorCategorie.ForeColor = System.Drawing.SystemColors.ControlDark;
+                lblErrorClient.ForeColor = System.Drawing.SystemColors.ControlDark;
             }
 
             if (saisie)
             {
-                float temp;
-                float.TryParse(textPrenomCli.Text, out temp);
                 int id;
-
                 int.TryParse(textCodeCli.Text, out id);
+                             
+                // Création de l'objet client avec le nom récupéré dans la GUI
+                Client cli = new Client(id, nom, prenom, email, telephone, fax, 
+                    rueFactu, cpFactu, villeFact, rueLivraison, cpLivraison, villeLivraison) ;
 
-                foreach (Categorie cate in CategorieBLL.GetCategorie())
-                {
-                    if (cate.Libelle == listCategorie.Text)
-                    {
-                        // Création de l'objet produit avec le nom récupéré dans la GUI
-                        Produit pro = new Produit(id, libelle, temp, cate);
-
-                        // Appel de la méthode CreerProduit de la couche BLL
-                        ProduitBLL.ModifierProduit(pro);
-
-                        break;
-                    }
-                };
-
+                // Appel de la méthode CreerProduit de la couche BLL
+                ClientBLL.ModifierClient(cli);
             }
         }
 

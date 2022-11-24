@@ -35,5 +35,11 @@ namespace GestionBLL
         {
             return ClientDAO.GetClient();
         }
+
+        // Méthode qui modifie un nouveau client avec la méthode UpdateClient de la DAL
+        public static int ModifierClient(Client cli)
+        {
+            return ClientDAO.UpdateClient(cli);
+        }
     }
 }
