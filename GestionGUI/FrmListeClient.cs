@@ -76,7 +76,7 @@ namespace GestionGUI
                              
                 // Création de l'objet client avec le nom récupéré dans la GUI
                 Client cli = new Client(id, nom, prenom, email, telephone, fax, 
-                    rueFactu, cpFactu, villeFact, rueLivraison, cpLivraison, villeLivraison) ;
+                    rueFactu, cpFactu, villeFact, rueLivraison, cpLivraison, villeLivraison);
 
                 // Appel de la méthode CreerProduit de la couche BLL
                 ClientBLL.ModifierClient(cli);
