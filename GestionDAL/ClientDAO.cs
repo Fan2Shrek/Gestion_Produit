@@ -96,7 +96,7 @@ namespace GestionDAL
                 "ville_livraison_client = @villeLivraison," +
                 "telephone_client = @telephone," +
                 "fax_client = @fax," +
-                "email_client = @email" +
+                "email_client = @email " +
                 "WHERE code_client = @codeClient";
 
             cmd.Parameters.Add(new SqlParameter("@nom", System.Data.SqlDbType.NVarChar, 255));

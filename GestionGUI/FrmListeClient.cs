@@ -43,6 +43,15 @@ namespace GestionGUI
             textCodeCli.Text = dgvClient.CurrentRow.Cells[0].Value.ToString();
             textNomCli.Text = dgvClient.CurrentRow.Cells[1].Value.ToString();
             textPrenomCli.Text = dgvClient.CurrentRow.Cells[2].Value.ToString();
+            textEmailCli.Text = dgvClient.CurrentRow.Cells[3].Value.ToString();
+            textFaxCli.Text = dgvClient.CurrentRow.Cells[4].Value.ToString();
+            textTelCli.Text = dgvClient.CurrentRow.Cells[5].Value.ToString();            
+            textRueFactuCli.Text = dgvClient.CurrentRow.Cells[6].Value.ToString();
+            textCPFactuCli.Text = dgvClient.CurrentRow.Cells[7].Value.ToString();
+            textVilleFactCli.Text = dgvClient.CurrentRow.Cells[8].Value.ToString();
+            textRueLivraisonCli.Text = dgvClient.CurrentRow.Cells[9].Value.ToString();
+            CodePostalLivraiCli.Text = dgvClient.CurrentRow.Cells[10].Value.ToString();
+            textVilleLivraiCli.Text = dgvClient.CurrentRow.Cells[11].Value.ToString();
         }
 
         private void Modifier_Click(object sender, EventArgs e)
@@ -82,6 +91,13 @@ namespace GestionGUI
 
                 // Appel de la méthode CreerProduit de la couche BLL
                 ClientBLL.ModifierClient(cli);
+
+                this.Hide();
+                FrmListeClients FrmListeClients;
+                FrmListeClients = new FrmListeClients();
+                FrmListeClients.Closed += (s, args) => this.Close();
+                FrmListeClients.ShowDialog(); // ouverture du formulaire list produit
+                this.Close();
             }
         }
 
@@ -151,6 +167,11 @@ namespace GestionGUI
                 // Appel de la méthode CreerProduit de la couche BLL
                 ClientBLL.AjouterClient(cli);
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
