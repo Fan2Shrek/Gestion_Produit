@@ -18,9 +18,9 @@ namespace Connexion
             string nom = txtBoxUsername.Text;
             string password = txtBoxPassword.Text;
 
-            Utilisateur? uti = UtilisateurBLL.nomUtilisateur(nom);
+            Utilisateur uti = new Utilisateur(0, nom, password);
 
-            if (uti != null && uti.Password == password)
+            if (UtilisateurBLL.verifierConnexion(uti))
             {
                 this.Hide()
 ;               FrmSyntheseClients FrmSyntheseClients;

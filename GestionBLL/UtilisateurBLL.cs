@@ -24,9 +24,9 @@ namespace GestionBLL
             ConnexionBD.GetConnexionBD().SetchaineConnexion(chaine);
         }
 
-        public static Utilisateur? nomUtilisateur(string name)
+        public static bool verifierConnexion(Utilisateur uti)
         {
-            return UtilisateurDAO.getUserByName(name);
+            return UtilisateurDAO.checkConnection(uti);
         }
     }
 }

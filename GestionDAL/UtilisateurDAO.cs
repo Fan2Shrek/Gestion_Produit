@@ -16,15 +16,17 @@ namespace GestionDAL
             return unUtilisateurDAO;
         }
 
-        public static Utilisateur? getUserByName(string name)
+        public static bool checkConnection(Utilisateur uti)
         {
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "SELECT * FROM utilisateur WHERE login_utilisateur = @nom";
+            cmd.CommandText = "SELECT * FROM utilisateur WHERE login_utilisateur = @nom and mot_de_passe_utilisateur = @mdp";
             cmd.Parameters.Add(new SqlParameter("@nom", System.Data.SqlDbType.NVarChar, 40));
-            cmd.Parameters["@nom"].Value = name;
+            cmd.Parameters["@nom"].Value = uti.Nom;
+            cmd.Parameters.Add(new SqlParameter("@mdp", System.Data.SqlDbType.NVarChar, 40));
+            cmd.Parameters["@mdp"].Value = uti.Password;
 
             SqlDataReader monReader = cmd.ExecuteReader();
             monReader.Read();
@@ -37,12 +39,12 @@ namespace GestionDAL
                 string password = monReader["mot_de_passe_utilisateur"].ToString();
                 monReader.Close();
 
-                return new Utilisateur(id, nom, password);
+                return true;
             }
             else
             {
                 monReader.Close();
-                return null;
+                return false;
             }
         }
     }
