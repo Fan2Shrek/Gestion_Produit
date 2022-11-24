@@ -52,26 +52,33 @@
             this.textCode = new System.Windows.Forms.TextBox();
             this.Supprimer = new System.Windows.Forms.Button();
             this.Modifier = new System.Windows.Forms.Button();
+            this.PanelDelete = new System.Windows.Forms.Panel();
+            this.MessageDelete2 = new System.Windows.Forms.Label();
+            this.MessageDelete1 = new System.Windows.Forms.Label();
+            this.AnnulerDelete = new System.Windows.Forms.Button();
+            this.ConfirmerDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduit)).BeginInit();
             this.panel1.SuspendLayout();
+            this.PanelDelete.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblProduit
             // 
             this.lblProduit.AutoSize = true;
             this.lblProduit.Font = new System.Drawing.Font("Segoe UI", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblProduit.Location = new System.Drawing.Point(306, 48);
+            this.lblProduit.Location = new System.Drawing.Point(437, 80);
+            this.lblProduit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProduit.Name = "lblProduit";
-            this.lblProduit.Size = new System.Drawing.Size(443, 59);
+            this.lblProduit.Size = new System.Drawing.Size(660, 86);
             this.lblProduit.TabIndex = 1;
             this.lblProduit.Text = "Gestion des produits";
             // 
             // retSynt
             // 
-            this.retSynt.Location = new System.Drawing.Point(10, 572);
-            this.retSynt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.retSynt.Location = new System.Drawing.Point(14, 953);
+            this.retSynt.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.retSynt.Name = "retSynt";
-            this.retSynt.Size = new System.Drawing.Size(82, 22);
+            this.retSynt.Size = new System.Drawing.Size(117, 37);
             this.retSynt.TabIndex = 2;
             this.retSynt.Text = "Retour";
             this.retSynt.UseVisualStyleBackColor = true;
@@ -85,12 +92,12 @@
             this.Libelle,
             this.Prix,
             this.Categorie});
-            this.dgvProduit.Location = new System.Drawing.Point(23, 172);
-            this.dgvProduit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvProduit.Location = new System.Drawing.Point(33, 287);
+            this.dgvProduit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvProduit.Name = "dgvProduit";
             this.dgvProduit.RowHeadersWidth = 51;
             this.dgvProduit.RowTemplate.Height = 29;
-            this.dgvProduit.Size = new System.Drawing.Size(557, 375);
+            this.dgvProduit.Size = new System.Drawing.Size(796, 625);
             this.dgvProduit.TabIndex = 3;
             this.dgvProduit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduit_CellClick);
             // 
@@ -124,14 +131,13 @@
             // 
             // actualiserProduit
             // 
-            this.actualiserProduit.Location = new System.Drawing.Point(23, 137);
-            this.actualiserProduit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.actualiserProduit.Location = new System.Drawing.Point(33, 228);
+            this.actualiserProduit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.actualiserProduit.Name = "actualiserProduit";
-            this.actualiserProduit.Size = new System.Drawing.Size(82, 22);
+            this.actualiserProduit.Size = new System.Drawing.Size(117, 37);
             this.actualiserProduit.TabIndex = 5;
             this.actualiserProduit.Text = "Actualiser";
             this.actualiserProduit.UseVisualStyleBackColor = true;
-            this.actualiserProduit.Click += new System.EventHandler(this.actualiserClient_Click);
             // 
             // panel1
             // 
@@ -150,18 +156,17 @@
             this.panel1.Controls.Add(this.textCode);
             this.panel1.Controls.Add(this.Supprimer);
             this.panel1.Controls.Add(this.Modifier);
-            this.panel1.Location = new System.Drawing.Point(615, 172);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(879, 287);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(436, 375);
+            this.panel1.Size = new System.Drawing.Size(623, 625);
             this.panel1.TabIndex = 8;
             // 
             // addPro
             // 
-            this.addPro.Location = new System.Drawing.Point(62, 332);
-            this.addPro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addPro.Location = new System.Drawing.Point(89, 553);
+            this.addPro.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.addPro.Name = "addPro";
-            this.addPro.Size = new System.Drawing.Size(82, 22);
+            this.addPro.Size = new System.Drawing.Size(117, 37);
             this.addPro.TabIndex = 19;
             this.addPro.Text = "Ajouter";
             this.addPro.UseVisualStyleBackColor = true;
@@ -171,9 +176,10 @@
             // 
             this.lblErrorCategorie.AutoSize = true;
             this.lblErrorCategorie.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblErrorCategorie.Location = new System.Drawing.Point(285, 272);
+            this.lblErrorCategorie.Location = new System.Drawing.Point(407, 453);
+            this.lblErrorCategorie.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblErrorCategorie.Name = "lblErrorCategorie";
-            this.lblErrorCategorie.Size = new System.Drawing.Size(97, 15);
+            this.lblErrorCategorie.Size = new System.Drawing.Size(144, 25);
             this.lblErrorCategorie.TabIndex = 15;
             this.lblErrorCategorie.Text = "Catég. incorrecte";
             // 
@@ -181,9 +187,10 @@
             // 
             this.lblErrorPrix.AutoSize = true;
             this.lblErrorPrix.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblErrorPrix.Location = new System.Drawing.Point(61, 272);
+            this.lblErrorPrix.Location = new System.Drawing.Point(87, 453);
+            this.lblErrorPrix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblErrorPrix.Name = "lblErrorPrix";
-            this.lblErrorPrix.Size = new System.Drawing.Size(77, 15);
+            this.lblErrorPrix.Size = new System.Drawing.Size(113, 25);
             this.lblErrorPrix.TabIndex = 18;
             this.lblErrorPrix.Text = "Prix incorrect";
             // 
@@ -191,100 +198,99 @@
             // 
             this.lblErrorLibellé.AutoSize = true;
             this.lblErrorLibellé.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblErrorLibellé.Location = new System.Drawing.Point(285, 163);
+            this.lblErrorLibellé.Location = new System.Drawing.Point(407, 272);
+            this.lblErrorLibellé.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblErrorLibellé.Name = "lblErrorLibellé";
-            this.lblErrorLibellé.Size = new System.Drawing.Size(91, 15);
+            this.lblErrorLibellé.Size = new System.Drawing.Size(134, 25);
             this.lblErrorLibellé.TabIndex = 17;
             this.lblErrorLibellé.Text = "Libellé incorrect";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(62, 200);
+            this.label2.Location = new System.Drawing.Point(89, 333);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 15);
+            this.label2.Size = new System.Drawing.Size(49, 25);
             this.label2.TabIndex = 16;
             this.label2.Text = "Prix :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 102);
+            this.label1.Location = new System.Drawing.Point(89, 170);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 15);
+            this.label1.Size = new System.Drawing.Size(63, 25);
             this.label1.TabIndex = 15;
             this.label1.Text = "Code :";
             // 
             // lblLibelleProAdd
             // 
             this.lblLibelleProAdd.AutoSize = true;
-            this.lblLibelleProAdd.Location = new System.Drawing.Point(285, 102);
+            this.lblLibelleProAdd.Location = new System.Drawing.Point(407, 170);
+            this.lblLibelleProAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLibelleProAdd.Name = "lblLibelleProAdd";
-            this.lblLibelleProAdd.Size = new System.Drawing.Size(47, 15);
+            this.lblLibelleProAdd.Size = new System.Drawing.Size(70, 25);
             this.lblLibelleProAdd.TabIndex = 14;
             this.lblLibelleProAdd.Text = "Libellé :";
             // 
             // lblCatAddPro
             // 
             this.lblCatAddPro.AutoSize = true;
-            this.lblCatAddPro.Location = new System.Drawing.Point(285, 200);
+            this.lblCatAddPro.Location = new System.Drawing.Point(407, 333);
+            this.lblCatAddPro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCatAddPro.Name = "lblCatAddPro";
-            this.lblCatAddPro.Size = new System.Drawing.Size(64, 15);
+            this.lblCatAddPro.Size = new System.Drawing.Size(97, 25);
             this.lblCatAddPro.TabIndex = 12;
             this.lblCatAddPro.Text = "Catégorie :";
             // 
             // listCategorie
             // 
             this.listCategorie.FormattingEnabled = true;
-            this.listCategorie.ItemHeight = 15;
-            this.listCategorie.Location = new System.Drawing.Point(285, 227);
-            this.listCategorie.Margin = new System.Windows.Forms.Padding(2);
+            this.listCategorie.ItemHeight = 25;
+            this.listCategorie.Location = new System.Drawing.Point(407, 378);
             this.listCategorie.Name = "listCategorie";
-            this.listCategorie.Size = new System.Drawing.Size(91, 34);
+            this.listCategorie.Size = new System.Drawing.Size(128, 54);
             this.listCategorie.TabIndex = 13;
             // 
             // LabelDetails
             // 
             this.LabelDetails.AutoSize = true;
             this.LabelDetails.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabelDetails.Location = new System.Drawing.Point(144, 16);
-            this.LabelDetails.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelDetails.Location = new System.Drawing.Point(206, 27);
             this.LabelDetails.Name = "LabelDetails";
-            this.LabelDetails.Size = new System.Drawing.Size(143, 54);
+            this.LabelDetails.Size = new System.Drawing.Size(214, 81);
             this.LabelDetails.TabIndex = 12;
             this.LabelDetails.Text = "Détails";
             // 
             // textPrix
             // 
-            this.textPrix.Location = new System.Drawing.Point(62, 227);
-            this.textPrix.Margin = new System.Windows.Forms.Padding(2);
+            this.textPrix.Location = new System.Drawing.Point(89, 378);
             this.textPrix.Name = "textPrix";
-            this.textPrix.Size = new System.Drawing.Size(89, 23);
+            this.textPrix.Size = new System.Drawing.Size(125, 31);
             this.textPrix.TabIndex = 10;
             // 
             // textLibelle
             // 
-            this.textLibelle.Location = new System.Drawing.Point(285, 129);
-            this.textLibelle.Margin = new System.Windows.Forms.Padding(2);
+            this.textLibelle.Location = new System.Drawing.Point(407, 215);
             this.textLibelle.Name = "textLibelle";
-            this.textLibelle.Size = new System.Drawing.Size(91, 23);
+            this.textLibelle.Size = new System.Drawing.Size(128, 31);
             this.textLibelle.TabIndex = 9;
             // 
             // textCode
             // 
             this.textCode.Enabled = false;
-            this.textCode.Location = new System.Drawing.Point(62, 129);
-            this.textCode.Margin = new System.Windows.Forms.Padding(2);
+            this.textCode.Location = new System.Drawing.Point(89, 215);
             this.textCode.Name = "textCode";
-            this.textCode.Size = new System.Drawing.Size(89, 23);
+            this.textCode.Size = new System.Drawing.Size(125, 31);
             this.textCode.TabIndex = 8;
             // 
             // Supprimer
             // 
-            this.Supprimer.Location = new System.Drawing.Point(285, 333);
-            this.Supprimer.Margin = new System.Windows.Forms.Padding(2);
+            this.Supprimer.Location = new System.Drawing.Point(407, 555);
             this.Supprimer.Name = "Supprimer";
-            this.Supprimer.Size = new System.Drawing.Size(90, 20);
+            this.Supprimer.Size = new System.Drawing.Size(129, 33);
             this.Supprimer.TabIndex = 7;
             this.Supprimer.Text = "Supprimer";
             this.Supprimer.UseVisualStyleBackColor = true;
@@ -292,33 +298,85 @@
             // 
             // Modifier
             // 
-            this.Modifier.Location = new System.Drawing.Point(170, 333);
-            this.Modifier.Margin = new System.Windows.Forms.Padding(2);
+            this.Modifier.Location = new System.Drawing.Point(243, 555);
             this.Modifier.Name = "Modifier";
-            this.Modifier.Size = new System.Drawing.Size(88, 20);
+            this.Modifier.Size = new System.Drawing.Size(126, 33);
             this.Modifier.TabIndex = 6;
             this.Modifier.Text = "Modifier";
             this.Modifier.UseVisualStyleBackColor = true;
             this.Modifier.Click += new System.EventHandler(this.Modifier_Click);
             // 
+            // PanelDelete
+            // 
+            this.PanelDelete.Controls.Add(this.MessageDelete2);
+            this.PanelDelete.Controls.Add(this.MessageDelete1);
+            this.PanelDelete.Controls.Add(this.AnnulerDelete);
+            this.PanelDelete.Controls.Add(this.ConfirmerDelete);
+            this.PanelDelete.Location = new System.Drawing.Point(564, 440);
+            this.PanelDelete.Name = "PanelDelete";
+            this.PanelDelete.Size = new System.Drawing.Size(386, 205);
+            this.PanelDelete.TabIndex = 22;
+            // 
+            // MessageDelete2
+            // 
+            this.MessageDelete2.AutoSize = true;
+            this.MessageDelete2.Location = new System.Drawing.Point(98, 53);
+            this.MessageDelete2.Name = "MessageDelete2";
+            this.MessageDelete2.Size = new System.Drawing.Size(192, 25);
+            this.MessageDelete2.TabIndex = 3;
+            this.MessageDelete2.Text = "supprimer ce produit ?";
+            this.MessageDelete2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // MessageDelete1
+            // 
+            this.MessageDelete1.AutoSize = true;
+            this.MessageDelete1.Location = new System.Drawing.Point(80, 28);
+            this.MessageDelete1.Name = "MessageDelete1";
+            this.MessageDelete1.Size = new System.Drawing.Size(222, 25);
+            this.MessageDelete1.TabIndex = 2;
+            this.MessageDelete1.Text = "Êtes-vous sûr(e) de vouloir";
+            // 
+            // AnnulerDelete
+            // 
+            this.AnnulerDelete.Location = new System.Drawing.Point(223, 140);
+            this.AnnulerDelete.Name = "AnnulerDelete";
+            this.AnnulerDelete.Size = new System.Drawing.Size(112, 34);
+            this.AnnulerDelete.TabIndex = 1;
+            this.AnnulerDelete.Text = "Non";
+            this.AnnulerDelete.UseVisualStyleBackColor = true;
+            this.AnnulerDelete.Click += new System.EventHandler(this.AnnulerDelete_Click);
+            // 
+            // ConfirmerDelete
+            // 
+            this.ConfirmerDelete.Location = new System.Drawing.Point(49, 140);
+            this.ConfirmerDelete.Name = "ConfirmerDelete";
+            this.ConfirmerDelete.Size = new System.Drawing.Size(112, 34);
+            this.ConfirmerDelete.TabIndex = 0;
+            this.ConfirmerDelete.Text = "Oui";
+            this.ConfirmerDelete.UseVisualStyleBackColor = true;
+            this.ConfirmerDelete.Click += new System.EventHandler(this.ConfirmerDelete_Click);
+            // 
             // FrmListeProduits
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1078, 602);
+            this.ClientSize = new System.Drawing.Size(1540, 1003);
+            this.Controls.Add(this.PanelDelete);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.actualiserProduit);
             this.Controls.Add(this.dgvProduit);
             this.Controls.Add(this.retSynt);
             this.Controls.Add(this.lblProduit);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmListeProduits";
             this.Text = "ListeProduitsForms";
             this.Load += new System.EventHandler(this.FrmListeProduits_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduit)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.PanelDelete.ResumeLayout(false);
+            this.PanelDelete.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,5 +408,10 @@
         private TextBox textCode;
         private Button Supprimer;
         private Button Modifier;
+        private Panel PanelDelete;
+        private Label MessageDelete2;
+        private Label MessageDelete1;
+        private Button AnnulerDelete;
+        private Button ConfirmerDelete;
     }
 }

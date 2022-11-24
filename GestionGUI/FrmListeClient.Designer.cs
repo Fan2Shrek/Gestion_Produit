@@ -286,7 +286,6 @@
             this.textCodeCli.Name = "textCodeCli";
             this.textCodeCli.Size = new System.Drawing.Size(170, 27);
             this.textCodeCli.TabIndex = 8;
-            this.textCodeCli.TextChanged += new System.EventHandler(this.textCodeCli_TextChanged);
             // 
             // textNomCli
             // 
@@ -393,7 +392,6 @@
             this.textTelCli.Name = "textTelCli";
             this.textTelCli.Size = new System.Drawing.Size(172, 27);
             this.textTelCli.TabIndex = 24;
-            this.textTelCli.TextChanged += new System.EventHandler(this.textTelCli_TextChanged);
             // 
             // textFaxCli
             // 
@@ -565,7 +563,6 @@
             this.Controls.Add(this.lblProduit);
             this.Name = "FrmListeClients";
             this.Text = "ListeProduitsForms";
-            this.Load += new System.EventHandler(this.FrmListeProduits_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClient)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

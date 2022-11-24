@@ -24,6 +24,8 @@ namespace GestionGUI
             {
                 this.listCategorie.Items.Add(cate.Libelle);
             }
+
+            PanelDelete.Hide();
         }
 
         private void retSynt_Click(object sender, EventArgs e)
@@ -186,10 +188,23 @@ namespace GestionGUI
 
         private void Supprimer_Click(object sender, EventArgs e)
         {
+            PanelDelete.Show();
+        }
+
+        private void ConfirmerDelete_Click(object sender, EventArgs e)
+        {
+            PanelDelete.Hide();
+
             int id;
 
             int.TryParse(textCode.Text, out id);
-            ProduitBLL.SupprimerProduit(id);
+            // ProduitBLL.SupprimerProduit(id);
+
+            int delete = ProduitBLL.SupprimerProduit(id);
+            if (delete == 0)
+            {
+                MessageBox.Show("Le produit est relié à au moins un devis, il ne peut donc pas être supprimé.");
+            }
 
             this.Hide();
             FrmListeProduits FrmListeProduits;
@@ -199,9 +214,9 @@ namespace GestionGUI
             this.Close();
         }
 
-        private void actualiserClient_Click(object sender, EventArgs e)
+        private void AnnulerDelete_Click(object sender, EventArgs e)
         {
-
+            PanelDelete.Hide();
         }
     }
 }

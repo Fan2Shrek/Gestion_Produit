@@ -128,13 +128,26 @@ namespace GestionDAL
 
         public static int DeleteProduit(int id)
         {
-            int nbEnr;
+            int exec, nombre, nbEnr;
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "DELETE FROM produit WHERE code_produit = " + id;
-            nbEnr = cmd.ExecuteNonQuery();
+            cmd.CommandText = "SELECT count(*) as nbDevis FROM contenir WHERE code_produit = " + id;
+            exec = cmd.ExecuteNonQuery();
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Read();
+            nombre = (int)reader["nbDevis"];
+            reader.Close();
+            if (nombre > 0)
+            {
+                nbEnr = 0;
+            }
+            else
+            {
+                cmd.CommandText = "DELETE FROM produit WHERE code_produit = " + id;
+                nbEnr = cmd.ExecuteNonQuery();
+            }
             // Fermeture de la connexion
             maConnexion.Close();
             return nbEnr;

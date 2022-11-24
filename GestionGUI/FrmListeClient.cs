@@ -32,11 +32,6 @@ namespace GestionGUI
             this.Close();
         }
 
-        private void FrmListeProduits_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void dgvProduit_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             panel1.Show();
@@ -108,16 +103,6 @@ namespace GestionGUI
 
             int.TryParse(textCodeCli.Text, out id);
             ProduitBLL.SupprimerProduit(id);
-        }
-
-        private void textTelCli_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textCodeCli_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void actualiserClient_Click(object sender, EventArgs e)
