@@ -131,7 +131,7 @@
             this.actualiserProduit.TabIndex = 5;
             this.actualiserProduit.Text = "Actualiser";
             this.actualiserProduit.UseVisualStyleBackColor = true;
-            this.actualiserProduit.Click += new System.EventHandler(this.actualiserProduit_Click);
+            this.actualiserProduit.Click += new System.EventHandler(this.actualiserClient_Click);
             // 
             // panel1
             // 
@@ -151,7 +151,7 @@
             this.panel1.Controls.Add(this.Supprimer);
             this.panel1.Controls.Add(this.Modifier);
             this.panel1.Location = new System.Drawing.Point(615, 172);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(436, 375);
             this.panel1.TabIndex = 8;
@@ -238,7 +238,7 @@
             this.listCategorie.FormattingEnabled = true;
             this.listCategorie.ItemHeight = 15;
             this.listCategorie.Location = new System.Drawing.Point(285, 227);
-            this.listCategorie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listCategorie.Margin = new System.Windows.Forms.Padding(2);
             this.listCategorie.Name = "listCategorie";
             this.listCategorie.Size = new System.Drawing.Size(91, 34);
             this.listCategorie.TabIndex = 13;
@@ -257,7 +257,7 @@
             // textPrix
             // 
             this.textPrix.Location = new System.Drawing.Point(62, 227);
-            this.textPrix.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textPrix.Margin = new System.Windows.Forms.Padding(2);
             this.textPrix.Name = "textPrix";
             this.textPrix.Size = new System.Drawing.Size(89, 23);
             this.textPrix.TabIndex = 10;
@@ -265,7 +265,7 @@
             // textLibelle
             // 
             this.textLibelle.Location = new System.Drawing.Point(285, 129);
-            this.textLibelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textLibelle.Margin = new System.Windows.Forms.Padding(2);
             this.textLibelle.Name = "textLibelle";
             this.textLibelle.Size = new System.Drawing.Size(91, 23);
             this.textLibelle.TabIndex = 9;
@@ -274,7 +274,7 @@
             // 
             this.textCode.Enabled = false;
             this.textCode.Location = new System.Drawing.Point(62, 129);
-            this.textCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textCode.Margin = new System.Windows.Forms.Padding(2);
             this.textCode.Name = "textCode";
             this.textCode.Size = new System.Drawing.Size(89, 23);
             this.textCode.TabIndex = 8;
@@ -282,7 +282,7 @@
             // Supprimer
             // 
             this.Supprimer.Location = new System.Drawing.Point(285, 333);
-            this.Supprimer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Supprimer.Margin = new System.Windows.Forms.Padding(2);
             this.Supprimer.Name = "Supprimer";
             this.Supprimer.Size = new System.Drawing.Size(90, 20);
             this.Supprimer.TabIndex = 7;
@@ -293,7 +293,7 @@
             // Modifier
             // 
             this.Modifier.Location = new System.Drawing.Point(170, 333);
-            this.Modifier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Modifier.Margin = new System.Windows.Forms.Padding(2);
             this.Modifier.Name = "Modifier";
             this.Modifier.Size = new System.Drawing.Size(88, 20);
             this.Modifier.TabIndex = 6;

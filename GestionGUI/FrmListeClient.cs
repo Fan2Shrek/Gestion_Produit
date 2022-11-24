@@ -43,16 +43,6 @@ namespace GestionGUI
             textPrenomCli.Text = dgvClient.CurrentRow.Cells[2].Value.ToString();
         }
 
-        private void actualiserProduit_Click(object sender, EventArgs e)
-        {
-            dgvClient.Rows.Clear();
-
-            foreach (Produit pro in ProduitBLL.GetProduit())
-            {
-                dgvClient.Rows.Add(pro.Code, pro.Libelle, pro.Prix, pro.Categorie.Libelle);
-            }
-        }
-
         private void Modifier_Click(object sender, EventArgs e)
         {
             string nom = textNomCli.Text;
@@ -101,11 +91,6 @@ namespace GestionGUI
             ProduitBLL.SupprimerProduit(id);
         }
 
-        private void listCategorie_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textTelCli_TextChanged(object sender, EventArgs e)
         {
 
@@ -114,6 +99,16 @@ namespace GestionGUI
         private void textCodeCli_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void actualiserClient_Click(object sender, EventArgs e)
+        {
+            dgvClient.Rows.Clear();
+
+            foreach (Client cli in ClientBLL.GetClient())
+            {
+                dgvClient.Rows.Add(cli.Code, cli.Nom, cli.Prenom, cli.Email, cli.Telephone);
+            }
         }
     }
 }

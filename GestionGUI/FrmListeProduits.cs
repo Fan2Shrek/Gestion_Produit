@@ -49,16 +49,6 @@ namespace GestionGUI
             textPrix.Text = dgvProduit.CurrentRow.Cells[2].Value.ToString();
         }
 
-        private void actualiserProduit_Click(object sender, EventArgs e)
-        {
-            dgvProduit.Rows.Clear();
-
-            foreach (Produit pro in ProduitBLL.GetProduit())
-            {
-                dgvProduit.Rows.Add(pro.Code, pro.Libelle, pro.Prix, pro.Categorie.Libelle);
-            }
-        }
-
         private void Modifier_Click(object sender, EventArgs e)
         {
             string libelle = textLibelle.Text;
@@ -207,6 +197,11 @@ namespace GestionGUI
             FrmListeProduits.Closed += (s, args) => this.Close();
             FrmListeProduits.ShowDialog(); // ouverture du formulaire list produit
             this.Close();
+        }
+
+        private void actualiserClient_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

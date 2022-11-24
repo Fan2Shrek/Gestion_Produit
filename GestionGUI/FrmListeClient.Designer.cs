@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             this.retSynt = new System.Windows.Forms.Button();
-            this.actualiserProduit = new System.Windows.Forms.Button();
             this.dgvClient = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,11 +71,7 @@
             this.textVilleLivraiCli = new System.Windows.Forms.TextBox();
             this.lblErrorClient = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actualiserClient = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClient)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -86,17 +86,6 @@
             this.retSynt.Text = "Retour";
             this.retSynt.UseVisualStyleBackColor = true;
             this.retSynt.Click += new System.EventHandler(this.retSynt_Click);
-            // 
-            // actualiserProduit
-            // 
-            this.actualiserProduit.Location = new System.Drawing.Point(18, 130);
-            this.actualiserProduit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.actualiserProduit.Name = "actualiserProduit";
-            this.actualiserProduit.Size = new System.Drawing.Size(82, 22);
-            this.actualiserProduit.TabIndex = 5;
-            this.actualiserProduit.Text = "Actualiser";
-            this.actualiserProduit.UseVisualStyleBackColor = true;
-            this.actualiserProduit.Click += new System.EventHandler(this.actualiserProduit_Click);
             // 
             // dgvClient
             // 
@@ -115,6 +104,31 @@
             this.dgvClient.Size = new System.Drawing.Size(485, 375);
             this.dgvClient.TabIndex = 3;
             this.dgvClient.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduit_CellClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Code";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nom";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Prenom";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Téléphone";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // Telephone
             // 
@@ -458,30 +472,15 @@
             this.panel1.Size = new System.Drawing.Size(536, 456);
             this.panel1.TabIndex = 7;
             // 
-            // dataGridViewTextBoxColumn1
+            // actualiserClient
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Code";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nom";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Prenom";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Téléphone";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.actualiserClient.Location = new System.Drawing.Point(18, 130);
+            this.actualiserClient.Name = "actualiserClient";
+            this.actualiserClient.Size = new System.Drawing.Size(75, 23);
+            this.actualiserClient.TabIndex = 8;
+            this.actualiserClient.Text = "Actualiser";
+            this.actualiserClient.UseVisualStyleBackColor = true;
+            this.actualiserClient.Click += new System.EventHandler(this.actualiserClient_Click);
             // 
             // FrmListeClients
             // 
@@ -489,8 +488,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1078, 602);
+            this.Controls.Add(this.actualiserClient);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.actualiserProduit);
             this.Controls.Add(this.dgvClient);
             this.Controls.Add(this.retSynt);
             this.Controls.Add(this.lblProduit);
@@ -509,7 +508,6 @@
         #endregion
 
         private Button retSynt;
-        private Button actualiserProduit;
         private DataGridView dgvClient;
         private DataGridViewTextBoxColumn Telephone;
         private DataGridViewTextBoxColumn Code;
@@ -552,5 +550,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private Button actualiserClient;
     }
 }
