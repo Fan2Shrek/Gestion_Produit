@@ -142,6 +142,66 @@ namespace GestionDAL
             maConnexion.Close();
             return nbEnr;
         }
+
+        public static int AddClient(Client unClient)
+        {
+            int nbEnr;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "INSERT INTO client VALUES (@nom," +
+                "@prenom," +
+                "@rueFactu," +
+                "@cpFacturation," +
+                "@villeFacturation," +
+                "@rueLivraison," +
+                "@cpLivraison," +
+                "@villeLivraison," +
+                "@telephone," +
+                "@fax," +
+                "@email)";
+
+            cmd.Parameters.Add(new SqlParameter("@nom", System.Data.SqlDbType.NVarChar, 255));
+            cmd.Parameters["@nom"].Value = unClient.Nom;
+
+            cmd.Parameters.Add(new SqlParameter("@prenom", System.Data.SqlDbType.NVarChar, 255));
+            cmd.Parameters["@prenom"].Value = unClient.Prenom;
+
+            cmd.Parameters.Add(new SqlParameter("@rueFactu", System.Data.SqlDbType.NVarChar, 255));
+            cmd.Parameters["@rueFactu"].Value = unClient.Rue_facturation;
+
+            cmd.Parameters.Add(new SqlParameter("@cpFacturation", System.Data.SqlDbType.NVarChar, 5));
+            cmd.Parameters["@cpFacturation"].Value = unClient.Cp_facturation;
+
+            cmd.Parameters.Add(new SqlParameter("@villeFacturation", System.Data.SqlDbType.NVarChar, 255));
+            cmd.Parameters["@villeFacturation"].Value = unClient.Ville_facturation;
+
+            cmd.Parameters.Add(new SqlParameter("@rueLivraison", System.Data.SqlDbType.NVarChar, 255));
+            cmd.Parameters["@rueLivraison"].Value = unClient.Rue_livraison;
+
+            cmd.Parameters.Add(new SqlParameter("@cpLivraison", System.Data.SqlDbType.NVarChar, 5));
+            cmd.Parameters["@cpLivraison"].Value = unClient.Cp_livraison;
+
+            cmd.Parameters.Add(new SqlParameter("@villeLivraison", System.Data.SqlDbType.NVarChar, 255));
+            cmd.Parameters["@villeLivraison"].Value = unClient.Ville_livraison;
+
+            cmd.Parameters.Add(new SqlParameter("@telephone", System.Data.SqlDbType.NVarChar, 15));
+            cmd.Parameters["@telephone"].Value = unClient.Telephone;
+
+            cmd.Parameters.Add(new SqlParameter("@fax", System.Data.SqlDbType.NVarChar, 15));
+            cmd.Parameters["@fax"].Value = unClient.Fax;
+
+            cmd.Parameters.Add(new SqlParameter("@email", System.Data.SqlDbType.NVarChar, 255));
+            cmd.Parameters["@email"].Value = unClient.Email;
+
+            cmd.Connection = maConnexion;
+
+            nbEnr = cmd.ExecuteNonQuery();
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }
     }
 
 }

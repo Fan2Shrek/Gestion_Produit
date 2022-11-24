@@ -15,7 +15,9 @@ namespace GestionGUI
 
             foreach (Client cli in ClientBLL.GetClient())
             {
-                dgvClient.Rows.Add(cli.Code, cli.Nom, cli.Prenom, cli.Email, cli.Telephone);
+                dgvClient.Rows.Add(cli.Code, cli.Nom, cli.Prenom, cli.Email, cli.Fax, cli.Telephone,
+                    cli.Rue_facturation, cli.Cp_facturation, cli.Ville_facturation,
+                    cli.Rue_livraison, cli.Cp_livraison, cli.Ville_livraison);
             }
 
         }
@@ -108,6 +110,46 @@ namespace GestionGUI
             foreach (Client cli in ClientBLL.GetClient())
             {
                 dgvClient.Rows.Add(cli.Code, cli.Nom, cli.Prenom, cli.Email, cli.Telephone);
+            }
+        }
+
+        private void AjouterCli_Click(object sender, EventArgs e)
+        {
+            string nom = textNomCli.Text;
+            string prenom = textPrenomCli.Text;
+            string email = textEmailCli.Text;
+            string telephone = textTelCli.Text;
+            string fax = textFaxCli.Text;
+            string rueFactu = textRueFactuCli.Text;
+            string cpFactu = textCPFactuCli.Text;
+            string villeFact = textVilleFactCli.Text;
+            string rueLivraison = textRueLivraisonCli.Text;
+            string cpLivraison = CodePostalLivraiCli.Text;
+            string villeLivraison = textVilleLivraiCli.Text;
+            bool saisie = true;
+
+            if (nom == "" || prenom == "" || email == "" || telephone == "" || fax == "" || rueFactu == "" ||
+                cpFactu == "" || villeFact == "" || rueLivraison == "" || cpLivraison == "" || villeLivraison == "")
+            {
+                lblErrorClient.ForeColor = Color.Red;
+                saisie = false;
+            }
+            else
+            {
+                lblErrorClient.ForeColor = System.Drawing.SystemColors.ControlDark;
+            }
+
+            if (saisie)
+            {
+                int id;
+                int.TryParse(textCodeCli.Text, out id);
+
+                // Création de l'objet client avec le nom récupéré dans la GUI
+                Client cli = new Client(id, nom, prenom, email, telephone, fax,
+                    rueFactu, cpFactu, villeFact, rueLivraison, cpLivraison, villeLivraison);
+
+                // Appel de la méthode CreerProduit de la couche BLL
+                ClientBLL.AjouterClient(cli);
             }
         }
     }
