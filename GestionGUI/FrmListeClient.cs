@@ -86,8 +86,9 @@ namespace GestionGUI
                 int.TryParse(textCodeCli.Text, out id);
                              
                 // Création de l'objet client avec le nom récupéré dans la GUI
-                Client cli = new Client(id, nom, prenom, email, telephone, fax, 
-                    rueFactu, cpFactu, villeFact, rueLivraison, cpLivraison, villeLivraison);
+                Client cli = new Client(id, nom, prenom, rueFactu, 
+                    cpFactu, villeFact, rueLivraison, cpLivraison, 
+                    villeLivraison, telephone, fax, email);
 
                 // Appel de la méthode CreerProduit de la couche BLL
                 ClientBLL.ModifierClient(cli);
@@ -125,7 +126,9 @@ namespace GestionGUI
 
             foreach (Client cli in ClientBLL.GetClient())
             {
-                dgvClient.Rows.Add(cli.Code, cli.Nom, cli.Prenom, cli.Email, cli.Telephone);
+                dgvClient.Rows.Add(cli.Code, cli.Nom, cli.Prenom, cli.Email, 
+                    cli.Fax, cli.Telephone, cli.Rue_facturation, cli.Cp_facturation, 
+                    cli.Ville_facturation, cli.Rue_livraison, cli.Cp_livraison, cli.Ville_livraison);
             }
         }
 
@@ -161,11 +164,19 @@ namespace GestionGUI
                 int.TryParse(textCodeCli.Text, out id);
 
                 // Création de l'objet client avec le nom récupéré dans la GUI
-                Client cli = new Client(id, nom, prenom, email, telephone, fax,
-                    rueFactu, cpFactu, villeFact, rueLivraison, cpLivraison, villeLivraison);
+                Client cli = new Client(id, nom, prenom, rueFactu,
+                    cpFactu, villeFact, rueLivraison, cpLivraison,
+                    villeLivraison, telephone, fax, email);
 
                 // Appel de la méthode CreerProduit de la couche BLL
                 ClientBLL.AjouterClient(cli);
+
+                this.Hide();
+                FrmListeClients FrmListeClients;
+                FrmListeClients = new FrmListeClients();
+                FrmListeClients.Closed += (s, args) => this.Close();
+                FrmListeClients.ShowDialog(); // ouverture du formulaire list produit
+                this.Close();
             }
         }
 
