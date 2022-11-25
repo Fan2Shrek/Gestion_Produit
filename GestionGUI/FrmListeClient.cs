@@ -20,6 +20,8 @@ namespace GestionGUI
                     cli.Rue_livraison, cli.Cp_livraison, cli.Ville_livraison);
             }
 
+            PanelDelete.Hide();
+
         }
 
         private void retSynt_Click(object sender, EventArgs e)
@@ -99,10 +101,7 @@ namespace GestionGUI
 
         private void Supprimer_Click(object sender, EventArgs e)
         {
-            int id;
-
-            int.TryParse(textCodeCli.Text, out id);
-            ProduitBLL.SupprimerProduit(id);
+            PanelDelete.Show();
         }
 
         private void actualiserClient_Click(object sender, EventArgs e)
@@ -160,14 +159,37 @@ namespace GestionGUI
                 FrmListeClients FrmListeClients;
                 FrmListeClients = new FrmListeClients();
                 FrmListeClients.Closed += (s, args) => this.Close();
-                FrmListeClients.ShowDialog(); // ouverture du formulaire list produit
+                FrmListeClients.ShowDialog(); // ouverture du formulaire list clients
                 this.Close();
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void ConfirmerDelete_Click(object sender, EventArgs e)
         {
+            PanelDelete.Hide();
 
+            int id;
+
+            int.TryParse(textCodeCli.Text, out id);
+            // ProduitBLL.SupprimerProduit(id);
+
+            int deleteCli = ClientBLL.SupprimerClient(id);
+            if (deleteCli == 0)
+            {
+                MessageBox.Show("Le client est relié à au moins un devis, il ne peut donc pas être supprimé.");
+            }
+
+            this.Hide();
+            FrmListeClients FrmListeClients;
+            FrmListeClients = new FrmListeClients();
+            FrmListeClients.Closed += (s, args) => this.Close();
+            FrmListeClients.ShowDialog(); // ouverture du formulaire list clients
+            this.Close();
+        }
+
+        private void AnnulerDelete_Click(object sender, EventArgs e)
+        {
+            PanelDelete.Hide();
         }
     }
 }

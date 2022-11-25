@@ -46,5 +46,10 @@ namespace GestionBLL
         {
             return ClientDAO.AddClient(cli);
         }
+
+        public static int SupprimerClient(int id)
+        {
+            return ClientDAO.DeleteClient(id);
+        }
     }
 }

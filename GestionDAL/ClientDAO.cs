@@ -202,6 +202,34 @@ namespace GestionDAL
             maConnexion.Close();
             return nbEnr;
         }
+
+        public static int DeleteClient(int id)
+        {
+            int exec, nombre, nbEnr;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT count(*) as nbDevis FROM devis WHERE code_client = " + id;
+            exec = cmd.ExecuteNonQuery();
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Read();
+            nombre = (int)reader["nbDevis"];
+            reader.Close();
+            if (nombre > 0)
+            {
+                nbEnr = 0;
+
+            }
+            else
+            {
+                cmd.CommandText = "DELETE FROM client WHERE code_client = " + id;
+                nbEnr = cmd.ExecuteNonQuery();
+            }
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }
     }
 
 }
