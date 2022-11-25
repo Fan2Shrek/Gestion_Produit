@@ -32,6 +32,12 @@ namespace GestionBLL
             return ProduitDAO.GetProduit();
         }
 
+        // Méthode qui renvoit une List d'objets Utilisateur en faisant appel à la méthode GetProduit() de la DAL : VIEW
+        public static int CategorieProduit(int code)
+        {
+            return ProduitDAO.SelectCategorieProduit(code);
+        }
+
         // Méthode qui renvoi l’objet Produit en l'ajoutant à la
         // BD avec la méthode AjoutProduit de la DAL
         public static int CreerProduit(Produit ut)

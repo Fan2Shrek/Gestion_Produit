@@ -45,10 +45,17 @@ namespace GestionGUI
 
         private void dgvProduit_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            int code_categorie;
+            string libelle_categorie;
+
+            libelle_categorie = dgvProduit.CurrentRow.Cells[3].Value.ToString();
+            code_categorie = CategorieBLL.GetCodeCategorie(libelle_categorie);
+            
             panel1.Show();
             textCode.Text = dgvProduit.CurrentRow.Cells[0].Value.ToString();
             textLibelle.Text = dgvProduit.CurrentRow.Cells[1].Value.ToString();
             textPrix.Text = dgvProduit.CurrentRow.Cells[2].Value.ToString();
+            listCategorie.SelectedIndex = code_categorie;
         }
 
         private void Modifier_Click(object sender, EventArgs e)

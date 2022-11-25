@@ -68,6 +68,24 @@ namespace GestionDAL
             return lesProduits;
         }
 
+        public static int SelectCategorieProduit(int code)
+        {
+            int nbEnr;
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+
+            cmd.CommandText = "SELECT code_categorie as cat FROM produit WHERE code_produit = " + code;
+
+            nbEnr = cmd.ExecuteNonQuery();
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }
+
         // Cette méthode insert un nouveau produit passé en paramètre dans la BD
         public static int AjoutProduit(Produit unProduit)
         {
