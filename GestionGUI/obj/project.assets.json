@@ -839,23 +839,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Etudiant-Sup\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionGUI\\GestionGUI.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionGUI\\GestionGUI.csproj",
       "projectName": "GestionGUI",
-      "projectPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionGUI\\GestionGUI.csproj",
-      "packagesPath": "C:\\Users\\Etudiant-Sup\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionGUI\\obj\\",
+      "projectPath": "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionGUI\\GestionGUI.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionGUI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Etudiant-Sup\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -869,14 +865,14 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj": {
-              "projectPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj"
+            "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj"
             },
-            "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {
-              "projectPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj"
+            "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj"
             },
-            "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj": {
-              "projectPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj"
+            "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj"
             }
           }
         }
