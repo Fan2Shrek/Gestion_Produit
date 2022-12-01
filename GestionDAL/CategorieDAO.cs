@@ -59,5 +59,37 @@ namespace GestionDAL
             maConnexion.Close();
             return lesCategories;
         }
+
+        public static int GetCodeCategorie(string libelle)
+        {
+            int code;
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+
+            cmd.CommandText = "SELECT code_categorie AS categorie FROM categorie WHERE libelle_categorie = @libelle";
+
+            cmd.Parameters.Add(new SqlParameter("@libelle", System.Data.SqlDbType.NVarChar, 255));
+            cmd.Parameters["@libelle"].Value = libelle;
+
+            //reader
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Read();
+            code = (int)reader["categorie"];
+            reader.Close();
+            /*if (code > 0)
+            {
+                code = nbEnr;
+            }*/
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            code = code - 1;
+
+            return code;
+        }
     }
 }
