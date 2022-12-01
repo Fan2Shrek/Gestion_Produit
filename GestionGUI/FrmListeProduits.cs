@@ -20,7 +20,7 @@ namespace GestionGUI
 
 
 
-            foreach (Categorie cate in CategorieDAO.GetCategorie())
+            foreach (Categorie cate in CategorieBLL.GetCategorie())
             {
                 this.listCategorie.Items.Add(cate.Libelle);
             }
