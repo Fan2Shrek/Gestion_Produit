@@ -15,6 +15,8 @@ namespace GestionGUI
         public FrmListeDevis()
         {
             InitializeComponent();
+
+            PanelDeleteDevis.Hide();
         }
 
         private void dgvDevis_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -25,6 +27,16 @@ namespace GestionGUI
         private void lblTauxTVADevis_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void retSynt_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmSyntheseClients FrmSyntheseClients;
+            FrmSyntheseClients = new FrmSyntheseClients();
+            FrmSyntheseClients.Closed += (s, args) => this.Close();
+            FrmSyntheseClients.ShowDialog(); // retour synthese
+            this.Close();
         }
     }
 }

@@ -71,17 +71,17 @@
             this.textMontantTTC = new System.Windows.Forms.TextBox();
             this.lblErrorDevis = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblListClient = new System.Windows.Forms.Label();
-            this.lblStatut = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboStatut = new System.Windows.Forms.ComboBox();
-            this.comboClient = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Produit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Libelle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prix_Unitaire = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantité = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prix_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboClient = new System.Windows.Forms.ComboBox();
+            this.comboStatut = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lblStatut = new System.Windows.Forms.Label();
+            this.lblListClient = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevis)).BeginInit();
             this.PanelDeleteDevis.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -157,6 +157,7 @@
             this.retSynt.TabIndex = 25;
             this.retSynt.Text = "Retour";
             this.retSynt.UseVisualStyleBackColor = true;
+            this.retSynt.Click += new System.EventHandler(this.retSynt_Click);
             // 
             // Telephone
             // 
@@ -267,9 +268,9 @@
             this.MessageDelete2Devis.Location = new System.Drawing.Point(85, 42);
             this.MessageDelete2Devis.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.MessageDelete2Devis.Name = "MessageDelete2Devis";
-            this.MessageDelete2Devis.Size = new System.Drawing.Size(146, 20);
+            this.MessageDelete2Devis.Size = new System.Drawing.Size(144, 20);
             this.MessageDelete2Devis.TabIndex = 3;
-            this.MessageDelete2Devis.Text = "supprimer ce client ?";
+            this.MessageDelete2Devis.Text = "supprimer ce devis ?";
             this.MessageDelete2Devis.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // PanelDeleteDevis
@@ -487,48 +488,6 @@
             this.panel1.Size = new System.Drawing.Size(613, 608);
             this.panel1.TabIndex = 28;
             // 
-            // lblListClient
-            // 
-            this.lblListClient.AutoSize = true;
-            this.lblListClient.Location = new System.Drawing.Point(435, 149);
-            this.lblListClient.Name = "lblListClient";
-            this.lblListClient.Size = new System.Drawing.Size(54, 20);
-            this.lblListClient.TabIndex = 40;
-            this.lblListClient.Text = "Client :";
-            // 
-            // lblStatut
-            // 
-            this.lblStatut.AutoSize = true;
-            this.lblStatut.Location = new System.Drawing.Point(435, 219);
-            this.lblStatut.Name = "lblStatut";
-            this.lblStatut.Size = new System.Drawing.Size(55, 20);
-            this.lblStatut.TabIndex = 41;
-            this.lblStatut.Text = "Statut :";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(485, 99);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(121, 27);
-            this.dateTimePicker1.TabIndex = 42;
-            // 
-            // comboStatut
-            // 
-            this.comboStatut.FormattingEnabled = true;
-            this.comboStatut.Location = new System.Drawing.Point(434, 242);
-            this.comboStatut.Name = "comboStatut";
-            this.comboStatut.Size = new System.Drawing.Size(172, 28);
-            this.comboStatut.TabIndex = 43;
-            // 
-            // comboClient
-            // 
-            this.comboClient.FormattingEnabled = true;
-            this.comboClient.Location = new System.Drawing.Point(435, 172);
-            this.comboClient.Name = "comboClient";
-            this.comboClient.Size = new System.Drawing.Size(172, 28);
-            this.comboClient.TabIndex = 44;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -579,6 +538,48 @@
             this.Prix_Total.MinimumWidth = 6;
             this.Prix_Total.Name = "Prix_Total";
             this.Prix_Total.Width = 125;
+            // 
+            // comboClient
+            // 
+            this.comboClient.FormattingEnabled = true;
+            this.comboClient.Location = new System.Drawing.Point(435, 172);
+            this.comboClient.Name = "comboClient";
+            this.comboClient.Size = new System.Drawing.Size(172, 28);
+            this.comboClient.TabIndex = 44;
+            // 
+            // comboStatut
+            // 
+            this.comboStatut.FormattingEnabled = true;
+            this.comboStatut.Location = new System.Drawing.Point(434, 242);
+            this.comboStatut.Name = "comboStatut";
+            this.comboStatut.Size = new System.Drawing.Size(172, 28);
+            this.comboStatut.TabIndex = 43;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(485, 99);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(121, 27);
+            this.dateTimePicker1.TabIndex = 42;
+            // 
+            // lblStatut
+            // 
+            this.lblStatut.AutoSize = true;
+            this.lblStatut.Location = new System.Drawing.Point(435, 219);
+            this.lblStatut.Name = "lblStatut";
+            this.lblStatut.Size = new System.Drawing.Size(55, 20);
+            this.lblStatut.TabIndex = 41;
+            this.lblStatut.Text = "Statut :";
+            // 
+            // lblListClient
+            // 
+            this.lblListClient.AutoSize = true;
+            this.lblListClient.Location = new System.Drawing.Point(435, 149);
+            this.lblListClient.Name = "lblListClient";
+            this.lblListClient.Size = new System.Drawing.Size(54, 20);
+            this.lblListClient.TabIndex = 40;
+            this.lblListClient.Text = "Client :";
             // 
             // FrmListeDevis
             // 

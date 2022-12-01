@@ -46,5 +46,15 @@ namespace GestionGUI
             FrmListeClients.ShowDialog(); // ouverture du formulaire list client
             this.Close();
         }
+
+        private void btnDevis_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmListeDevis FrmListeDevis;
+            FrmListeDevis = new FrmListeDevis();
+            FrmListeDevis.Closed += (s, args) => this.Close();
+            FrmListeDevis.ShowDialog(); // ouverture du formulaire list devis
+            this.Close();
+        }
     }
 }
