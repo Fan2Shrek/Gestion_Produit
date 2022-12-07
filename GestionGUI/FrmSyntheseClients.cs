@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Connexion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,14 +28,14 @@ namespace GestionGUI
             this.Close();
         }
 
-        private void FrmSyntheseClients_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void deconnexion_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ConnexionForm ConnexionForm;
+            ConnexionForm = new ConnexionForm();
+            ConnexionForm.Closed += (s, args) => this.Close();
+            ConnexionForm.ShowDialog(); // déconnexion
+            this.Close();
         }
 
         private void btnClient_Click(object sender, EventArgs e)

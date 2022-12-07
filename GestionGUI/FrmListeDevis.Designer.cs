@@ -112,7 +112,6 @@
             this.dgvDevis.RowTemplate.Height = 29;
             this.dgvDevis.Size = new System.Drawing.Size(554, 500);
             this.dgvDevis.TabIndex = 26;
-            this.dgvDevis.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDevis_CellContentClick);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -349,7 +348,6 @@
             this.lblTauxTVADevis.Size = new System.Drawing.Size(75, 20);
             this.lblTauxTVADevis.TabIndex = 14;
             this.lblTauxTVADevis.Text = "Taux TVA :";
-            this.lblTauxTVADevis.Click += new System.EventHandler(this.lblTauxTVADevis_Click);
             // 
             // lblCodeDevis
             // 

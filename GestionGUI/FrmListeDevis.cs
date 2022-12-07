@@ -19,16 +19,6 @@ namespace GestionGUI
             PanelDeleteDevis.Hide();
         }
 
-        private void dgvDevis_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void lblTauxTVADevis_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void retSynt_Click(object sender, EventArgs e)
         {
             this.Hide();

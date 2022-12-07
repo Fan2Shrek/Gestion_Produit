@@ -38,11 +38,6 @@ namespace GestionGUI
             this.Close();
         }
 
-        private void FrmListeProduits_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void dgvProduit_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int code_categorie;

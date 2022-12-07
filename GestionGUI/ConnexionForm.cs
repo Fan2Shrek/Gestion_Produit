@@ -35,18 +35,13 @@ namespace Connexion
             }
         }
 
-        private void txtBoxUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void temp_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmListeProduits FrmListeProduits;
-            FrmListeProduits = new FrmListeProduits();
-            FrmListeProduits.Closed += (s, args) => this.Close();
-            FrmListeProduits.ShowDialog(); // ouverture du formulaire list produit
+            FrmSyntheseClients FrmSyntheseClients;
+            FrmSyntheseClients = new FrmSyntheseClients();
+            FrmSyntheseClients.Closed += (s, args) => this.Close();
+            FrmSyntheseClients.ShowDialog(); // ouverture du formulaire synthese
             this.Close();
         }
     }

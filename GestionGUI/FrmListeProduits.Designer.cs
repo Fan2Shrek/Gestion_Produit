@@ -376,7 +376,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmListeProduits";
             this.Text = "ListeProduitsForms";
-            this.Load += new System.EventHandler(this.FrmListeProduits_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduit)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
