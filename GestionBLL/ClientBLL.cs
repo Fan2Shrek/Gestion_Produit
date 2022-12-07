@@ -36,6 +36,11 @@ namespace GestionBLL
             return ClientDAO.GetClient();
         }
 
+        public static int GetCodeClient(string nom)
+        {
+            return ClientDAO.GetCodeClient(nom);
+        }
+
         // Méthode qui modifie un nouveau client avec la méthode UpdateClient de la DAL
         public static int ModifierClient(Client cli)
         {
