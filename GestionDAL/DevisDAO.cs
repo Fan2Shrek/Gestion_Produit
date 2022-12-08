@@ -176,8 +176,8 @@ namespace GestionDAL
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
 
-            cmd.CommandText = "UPDATE devis date = @date, taux_tav = @taux_tva," +
-                "codeClient = @codeClient, codeStatut = @codeStatut";
+            cmd.CommandText = "UPDATE devis date_devis = @date, taux_tav_devis = @taux_tva," +
+                "code_client = @codeClient, codeStatut = @code_statut";
             cmd.Parameters.Add(new SqlParameter("@date", System.Data.SqlDbType.DateTime, 255));
             cmd.Parameters["@date"].Value = unDevis.Date;
 
@@ -192,6 +192,22 @@ namespace GestionDAL
 
             nbEnr = cmd.ExecuteNonQuery();
 
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }
+
+        public static int DeleteDevis(int id)
+        {
+            int nbEnr;
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "DELETE FROM devis WHERE code_devis = " + id;
+            nbEnr = cmd.ExecuteNonQuery();
+            
             // Fermeture de la connexion
             maConnexion.Close();
             return nbEnr;

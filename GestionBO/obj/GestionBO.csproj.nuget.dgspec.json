@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {}
+    "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {
+    "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj",
+        "projectUniqueName": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\GestionBO.csproj",
         "projectName": "GestionBO",
-        "projectPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj",
-        "packagesPath": "C:\\Users\\Etudiant-Sup\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\obj\\",
+        "projectPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\GestionBO.csproj",
+        "packagesPath": "C:\\Users\\Pierre\\.nuget\\packages\\",
+        "outputPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Etudiant-Sup\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pierre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

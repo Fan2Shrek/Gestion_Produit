@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionGUI\\GestionGUI.csproj": {}
+    "C:\\Code\\Project csharp\\Gestion_Produit\\GestionGUI\\GestionGUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj": {
+    "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj",
+        "projectUniqueName": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj",
         "projectName": "GestionBLL",
-        "projectPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj",
-        "packagesPath": "C:\\Users\\Etudiant-Sup\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBLL\\obj\\",
+        "projectPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj",
+        "packagesPath": "C:\\Users\\Pierre\\.nuget\\packages\\",
+        "outputPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBLL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Etudiant-Sup\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pierre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {
-                "projectPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj"
+              "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {
+                "projectPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\GestionBO.csproj"
               },
-              "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj": {
-                "projectPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj"
+              "C:\\Code\\Project csharp\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj": {
+                "projectPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj"
               }
             }
           }
@@ -75,20 +72,17 @@
         }
       }
     },
-    "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {
+    "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj",
+        "projectUniqueName": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\GestionBO.csproj",
         "projectName": "GestionBO",
-        "projectPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj",
-        "packagesPath": "C:\\Users\\Etudiant-Sup\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\obj\\",
+        "projectPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\GestionBO.csproj",
+        "packagesPath": "C:\\Users\\Pierre\\.nuget\\packages\\",
+        "outputPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Etudiant-Sup\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pierre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -133,20 +127,17 @@
         }
       }
     },
-    "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj": {
+    "C:\\Code\\Project csharp\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj",
+        "projectUniqueName": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj",
         "projectName": "GestionDAL",
-        "projectPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj",
-        "packagesPath": "C:\\Users\\Etudiant-Sup\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionDAL\\obj\\",
+        "projectPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj",
+        "packagesPath": "C:\\Users\\Pierre\\.nuget\\packages\\",
+        "outputPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionDAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Etudiant-Sup\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pierre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -160,8 +151,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {
-                "projectPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj"
+              "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {
+                "projectPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\GestionBO.csproj"
               }
             }
           }
@@ -201,20 +192,17 @@
         }
       }
     },
-    "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionGUI\\GestionGUI.csproj": {
+    "C:\\Code\\Project csharp\\Gestion_Produit\\GestionGUI\\GestionGUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionGUI\\GestionGUI.csproj",
+        "projectUniqueName": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionGUI\\GestionGUI.csproj",
         "projectName": "GestionGUI",
-        "projectPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionGUI\\GestionGUI.csproj",
-        "packagesPath": "C:\\Users\\Etudiant-Sup\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionGUI\\obj\\",
+        "projectPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionGUI\\GestionGUI.csproj",
+        "packagesPath": "C:\\Users\\Pierre\\.nuget\\packages\\",
+        "outputPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionGUI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Etudiant-Sup\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pierre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -228,14 +216,14 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj": {
-                "projectPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj"
+              "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj": {
+                "projectPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj"
               },
-              "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {
-                "projectPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj"
+              "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {
+                "projectPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\GestionBO.csproj"
               },
-              "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj": {
-                "projectPath": "C:\\Users\\Etudiant-Sup\\Desktop\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj"
+              "C:\\Code\\Project csharp\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj": {
+                "projectPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj"
               }
             }
           }
