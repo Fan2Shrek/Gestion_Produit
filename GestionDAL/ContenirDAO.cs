@@ -24,13 +24,44 @@ namespace GestionDAL
 
         // Cette méthode retourne une List contenant les objets Utilisateurs contenus dans la table produit : VIEW
 
-        public static List<Contenir> GetContenir()
+        public static List<Contenir> GetContenir(int code_devis)
         {
-            int code_devis;
-            int code_produit;
             int quantite;
             float remise;
+
+            DateTime date_devis;
+            float taux_tva_devis;
+
+            int code_produit;
+            string libelle_produit;
+            float prix_produit;
+
+            int code_categorie;
+            string libelle_categorie;
+
+            int code_statut;
+            string libelle_statut;
+
+            int code_client;
+            string nom_client;
+            string prenom_client;
+            string rue_facturation_client;
+            string cp_facturation_client;
+            string ville_facturation_client;
+            string rue_livraison_client;
+            string cp_livraison_client;
+            string ville_livraison_client;
+            string telephone_client;
+            string fax_client;
+            string email_client;
+
+
+            Client unClient;
+            Statut unStatut;
             Contenir unConteneur;
+            Devis unDevis;
+            Produit unProduit;
+            Categorie uneCategorie;
 
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
@@ -40,48 +71,63 @@ namespace GestionDAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = " SELECT * FROM contenir";
+            cmd.CommandText = "SELECT * FROM informations WHERE code_devis = " + code_devis;
             SqlDataReader monReader = cmd.ExecuteReader();
 
             // Remplissage de la liste
             while (monReader.Read())
             {
-                code_devis = Int32.Parse(monReader["code_devis"].ToString());
                 code_produit = Int32.Parse(monReader["code_produit"].ToString());
                 quantite = Int32.Parse(monReader["quantite"].ToString());
                 remise = float.Parse(monReader["remise"].ToString());
 
-                unConteneur = new Contenir(code_devis, code_produit, quantite, remise);
+                date_devis = DateTime.Parse(monReader["date_devis"].ToString());
+                taux_tva_devis = float.Parse(monReader["remise"].ToString());
+
+                libelle_produit = monReader["libelle_produit"].ToString();
+                prix_produit = float.Parse(monReader["prix_vente_ht_produit"].ToString());
+
+                code_categorie = Int32.Parse(monReader["code_categorie"].ToString());
+                libelle_categorie = monReader["libelle_categorie"].ToString();
+
+                code_statut = Int32.Parse(monReader["code_statut"].ToString());
+                libelle_statut = monReader["libelle_statut"].ToString();
+
+                code_client = Int32.Parse(monReader["code_client"].ToString());
+                nom_client = monReader["nom_client"].ToString();
+                prenom_client = monReader["prenom_client"].ToString();
+                rue_facturation_client = monReader["rue_facturation_client"].ToString();
+                cp_facturation_client = monReader["cp_facturation_client"].ToString();
+                ville_facturation_client = monReader["ville_facturation_client"].ToString();
+                rue_livraison_client = monReader["rue_livraison_client"].ToString();
+                cp_livraison_client = monReader["cp_livraison_client"].ToString();
+                ville_livraison_client = monReader["ville_livraison_client"].ToString();
+                telephone_client = monReader["telephone_client"].ToString();
+                fax_client = monReader["fax_client"].ToString();
+                email_client = monReader["email_client"].ToString();
+
+
+                unClient = new Client(code_client, nom_client, prenom_client,
+                    rue_facturation_client, cp_facturation_client, ville_facturation_client,
+                    rue_livraison_client, cp_livraison_client, ville_livraison_client,
+                    telephone_client, fax_client, email_client);
+
+                uneCategorie = new Categorie(code_categorie, libelle_categorie);
+
+                unStatut = new Statut(code_statut, libelle_statut);
+
+                unProduit = new Produit(code_produit, libelle_produit, prix_produit, uneCategorie);
+
+                unDevis = new Devis(code_devis, date_devis, taux_tva_devis, unClient, unStatut);
+
+                unConteneur = new Contenir(unDevis, unProduit, quantite, remise);
+
                 lesConteneurs.Add(unConteneur);
             }
 
             // Fermeture de la connexion
             maConnexion.Close();
             return lesConteneurs;
-        }
-
-        public static int GetQuantiteDevis(int code)
-        {
-            int nbEnr;
-            int quantite;
-
-            // Connexion à la BD
-            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = maConnexion;
-
-            cmd.CommandText = "SELECT quantite FROM contenir WHERE code_devis = " + code;
-
-            nbEnr = cmd.ExecuteNonQuery();
-
-            SqlDataReader reader = cmd.ExecuteReader();
-            reader.Read();
-            quantite = (int)reader["quantite"];
-            reader.Close();
-
-            // Fermeture de la connexion
-            maConnexion.Close();
-            return quantite;
         }
     }
 }

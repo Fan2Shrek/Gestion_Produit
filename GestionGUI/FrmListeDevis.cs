@@ -23,7 +23,7 @@ namespace GestionGUI
             {
                 dgvDevis.Rows.Add(dev.Code, dev.Date, dev.Taux_tva, dev.Client.Nom, dev.Statut.Libelle);
             }
-            
+
             this.comboClient.DataSource = (ClientBLL.GetClient());
             this.comboClient.DisplayMember = "Nom";
 
@@ -45,10 +45,17 @@ namespace GestionGUI
 
         private void dgvDevis_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            dgvProduitsDevis.Rows.Clear();
             int code_devis;
             string nom_client;
             string libelle_statut;
+            float tauxTVADevis;
             DateTime date;
+            float prixTotalDevis = 0;
+            float prixTotalDevisAvecRemise = 0;
+            float montantTVA;
+            float montantTTC = 0;
+
 
             int.TryParse(dgvDevis.CurrentRow.Cells[0].Value.ToString(), out code_devis);
             nom_client = dgvDevis.CurrentRow.Cells[3].Value.ToString();
@@ -62,6 +69,22 @@ namespace GestionGUI
             textTauxTVA.Text = dgvDevis.CurrentRow.Cells[2].Value.ToString();
             comboClient.SelectedIndex = comboClient.FindStringExact(nom_client);
             comboStatut.SelectedIndex = comboStatut.FindStringExact(libelle_statut);
+
+            foreach (Contenir con in ContenirBLL.GetConteneurs(code_devis))
+            {
+                float prixTotal = con.Produit.Prix * con.Quantite;
+                dgvProduitsDevis.Rows.Add(con.Produit.Code, con.Produit.Libelle, con.Produit.Prix, con.Quantite, con.Remise, prixTotal);
+                prixTotalDevis = prixTotalDevis + prixTotal;
+                prixTotalDevisAvecRemise = prixTotalDevisAvecRemise + (prixTotal - (prixTotal * (con.Remise / 100)));
+            }
+            textMontantHTsansTauxRemise.Text = prixTotalDevis.ToString();
+            textMontantHTAvecRemise.Text = prixTotalDevisAvecRemise.ToString();
+            tauxTVADevis = float.Parse(dgvDevis.CurrentRow.Cells[2].Value.ToString());
+            tauxTVADevis = tauxTVADevis / 100;
+            montantTVA = prixTotalDevisAvecRemise * tauxTVADevis;
+            textMontantTVA.Text = montantTVA.ToString();
+            montantTTC = prixTotalDevisAvecRemise + montantTVA;
+            textMontantTTC.Text = montantTTC.ToString();
         }
 
         private void SupprimerDevis_Click(object sender, EventArgs e)
@@ -124,6 +147,12 @@ namespace GestionGUI
             {
                 dgvDevis.Rows.Add(dev.Code, dev.Date, dev.Taux_tva, dev.Client.Nom, dev.Statut.Libelle);
             }
+        }
+
+        private void dgvProduitsDevis_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textQuantite.Text = dgvProduitsDevis.CurrentRow.Cells[3].Value.ToString();
+            textTauxRemiseDevis.Text = dgvProduitsDevis.CurrentRow.Cells[4].Value.ToString();
         }
     }
 }
