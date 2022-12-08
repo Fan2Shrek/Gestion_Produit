@@ -124,25 +124,31 @@ namespace GestionGUI
             int.TryParse(textCodeDevis.Text, out id);
             Client cli = (Client)comboClient.SelectedItem;
             Statut stat = (Statut)comboStatut.SelectedItem;
-            float tva;
-            float.TryParse(textTauxTVA.Text, out tva);
 
+            if (txtQte.Text == "" || txtRemise.Text.ToString() == "")
+            {
+                lblErreur.ForeColor = Color.Red;
+            }
+            else {
+                float tva;
+                float.TryParse(textTauxTVA.Text, out tva);
 
-            Devis dev = new Devis(id, date, tva, cli, stat);
+                Devis dev = new Devis(id, date, tva, cli, stat);
 
-            int qte;
-            int.TryParse(txtQte.Text.ToString(), out qte);
-            int remise;
-            int.TryParse(txtRemise.Text.ToString(), out remise);
+                int qte;
+                int.TryParse(txtQte.Text.ToString(), out qte);
+                int remise;
+                int.TryParse(txtRemise.Text.ToString(), out remise);
 
-            DevisBLL.ModifierDevis(dev);
+                DevisBLL.ModifierDevis(dev);
 
-            this.Hide();
-            FrmListeDevis FrmListeDevis;
-            FrmListeDevis = new FrmListeDevis();
-            FrmListeDevis.Closed += (s, args) => this.Close();
-            FrmListeDevis.ShowDialog(); // ouverture du formulaire list devis
-            this.Close();
+                this.Hide();
+                FrmListeDevis FrmListeDevis;
+                FrmListeDevis = new FrmListeDevis();
+                FrmListeDevis.Closed += (s, args) => this.Close();
+                FrmListeDevis.ShowDialog(); // ouverture du formulaire list devis
+                this.Close();
+            }
         }
 
         private void actualiserDevis_Click(object sender, EventArgs e)
