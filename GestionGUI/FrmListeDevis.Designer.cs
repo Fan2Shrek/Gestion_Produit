@@ -90,10 +90,9 @@
             // 
             // actualiserDevis
             // 
-            this.actualiserDevis.Location = new System.Drawing.Point(26, 190);
-            this.actualiserDevis.Margin = new System.Windows.Forms.Padding(4);
+            this.actualiserDevis.Location = new System.Drawing.Point(21, 152);
             this.actualiserDevis.Name = "actualiserDevis";
-            this.actualiserDevis.Size = new System.Drawing.Size(118, 36);
+            this.actualiserDevis.Size = new System.Drawing.Size(94, 29);
             this.actualiserDevis.TabIndex = 27;
             this.actualiserDevis.Text = "Actualiser";
             this.actualiserDevis.UseVisualStyleBackColor = true;
@@ -107,12 +106,11 @@
             this.Taux_TVA,
             this.Client,
             this.Statut});
-            this.dgvDevis.Location = new System.Drawing.Point(26, 255);
-            this.dgvDevis.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDevis.Location = new System.Drawing.Point(21, 204);
             this.dgvDevis.Name = "dgvDevis";
             this.dgvDevis.RowHeadersWidth = 51;
             this.dgvDevis.RowTemplate.Height = 29;
-            this.dgvDevis.Size = new System.Drawing.Size(692, 625);
+            this.dgvDevis.Size = new System.Drawing.Size(554, 500);
             this.dgvDevis.TabIndex = 26;
             this.dgvDevis.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDevis_CellClick);
             // 
@@ -153,10 +151,9 @@
             // 
             // retSynt
             // 
-            this.retSynt.Location = new System.Drawing.Point(26, 914);
-            this.retSynt.Margin = new System.Windows.Forms.Padding(4);
+            this.retSynt.Location = new System.Drawing.Point(21, 731);
             this.retSynt.Name = "retSynt";
-            this.retSynt.Size = new System.Drawing.Size(118, 36);
+            this.retSynt.Size = new System.Drawing.Size(94, 29);
             this.retSynt.TabIndex = 25;
             this.retSynt.Text = "Retour";
             this.retSynt.UseVisualStyleBackColor = true;
@@ -194,10 +191,9 @@
             // 
             this.lblDevis.AutoSize = true;
             this.lblDevis.Font = new System.Drawing.Font("Segoe UI", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDevis.Location = new System.Drawing.Point(466, 51);
-            this.lblDevis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDevis.Location = new System.Drawing.Point(373, 41);
             this.lblDevis.Name = "lblDevis";
-            this.lblDevis.Size = new System.Drawing.Size(562, 86);
+            this.lblDevis.Size = new System.Drawing.Size(469, 72);
             this.lblDevis.TabIndex = 24;
             this.lblDevis.Text = "Gestion des devis";
             // 
@@ -238,41 +234,43 @@
             // 
             // ConfirmerDeleteDevis
             // 
-            this.ConfirmerDeleteDevis.Location = new System.Drawing.Point(49, 140);
+            this.ConfirmerDeleteDevis.Location = new System.Drawing.Point(39, 112);
             this.ConfirmerDeleteDevis.Margin = new System.Windows.Forms.Padding(2);
             this.ConfirmerDeleteDevis.Name = "ConfirmerDeleteDevis";
-            this.ConfirmerDeleteDevis.Size = new System.Drawing.Size(112, 34);
+            this.ConfirmerDeleteDevis.Size = new System.Drawing.Size(90, 27);
             this.ConfirmerDeleteDevis.TabIndex = 0;
             this.ConfirmerDeleteDevis.Text = "Oui";
             this.ConfirmerDeleteDevis.UseVisualStyleBackColor = true;
+            this.ConfirmerDeleteDevis.Click += new System.EventHandler(this.ConfirmerDeleteDevis_Click);
             // 
             // AnnulerDeleteDevis
             // 
-            this.AnnulerDeleteDevis.Location = new System.Drawing.Point(222, 140);
+            this.AnnulerDeleteDevis.Location = new System.Drawing.Point(178, 112);
             this.AnnulerDeleteDevis.Margin = new System.Windows.Forms.Padding(2);
             this.AnnulerDeleteDevis.Name = "AnnulerDeleteDevis";
-            this.AnnulerDeleteDevis.Size = new System.Drawing.Size(112, 34);
+            this.AnnulerDeleteDevis.Size = new System.Drawing.Size(90, 27);
             this.AnnulerDeleteDevis.TabIndex = 1;
             this.AnnulerDeleteDevis.Text = "Non";
             this.AnnulerDeleteDevis.UseVisualStyleBackColor = true;
+            this.AnnulerDeleteDevis.Click += new System.EventHandler(this.AnnulerDeleteDevis_Click);
             // 
             // MessageDelete1Devis
             // 
             this.MessageDelete1Devis.AutoSize = true;
-            this.MessageDelete1Devis.Location = new System.Drawing.Point(80, 28);
+            this.MessageDelete1Devis.Location = new System.Drawing.Point(64, 22);
             this.MessageDelete1Devis.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.MessageDelete1Devis.Name = "MessageDelete1Devis";
-            this.MessageDelete1Devis.Size = new System.Drawing.Size(222, 25);
+            this.MessageDelete1Devis.Size = new System.Drawing.Size(184, 20);
             this.MessageDelete1Devis.TabIndex = 2;
             this.MessageDelete1Devis.Text = "Êtes-vous sûr(e) de vouloir";
             // 
             // MessageDelete2Devis
             // 
             this.MessageDelete2Devis.AutoSize = true;
-            this.MessageDelete2Devis.Location = new System.Drawing.Point(106, 52);
+            this.MessageDelete2Devis.Location = new System.Drawing.Point(85, 42);
             this.MessageDelete2Devis.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.MessageDelete2Devis.Name = "MessageDelete2Devis";
-            this.MessageDelete2Devis.Size = new System.Drawing.Size(174, 25);
+            this.MessageDelete2Devis.Size = new System.Drawing.Size(144, 20);
             this.MessageDelete2Devis.TabIndex = 3;
             this.MessageDelete2Devis.Text = "supprimer ce devis ?";
             this.MessageDelete2Devis.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -283,188 +281,179 @@
             this.PanelDeleteDevis.Controls.Add(this.MessageDelete1Devis);
             this.PanelDeleteDevis.Controls.Add(this.AnnulerDeleteDevis);
             this.PanelDeleteDevis.Controls.Add(this.ConfirmerDeleteDevis);
-            this.PanelDeleteDevis.Location = new System.Drawing.Point(568, 469);
+            this.PanelDeleteDevis.Location = new System.Drawing.Point(454, 375);
             this.PanelDeleteDevis.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDeleteDevis.Name = "PanelDeleteDevis";
-            this.PanelDeleteDevis.Size = new System.Drawing.Size(386, 205);
+            this.PanelDeleteDevis.Size = new System.Drawing.Size(309, 164);
             this.PanelDeleteDevis.TabIndex = 29;
             // 
             // ModifierDevis
             // 
-            this.ModifierDevis.Location = new System.Drawing.Point(328, 701);
-            this.ModifierDevis.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.ModifierDevis.Location = new System.Drawing.Point(262, 561);
+            this.ModifierDevis.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ModifierDevis.Name = "ModifierDevis";
-            this.ModifierDevis.Size = new System.Drawing.Size(126, 34);
+            this.ModifierDevis.Size = new System.Drawing.Size(101, 27);
             this.ModifierDevis.TabIndex = 6;
             this.ModifierDevis.Text = "Modifier";
             this.ModifierDevis.UseVisualStyleBackColor = true;
             // 
             // SupprimerDevis
             // 
-            this.SupprimerDevis.Location = new System.Drawing.Point(570, 704);
-            this.SupprimerDevis.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.SupprimerDevis.Location = new System.Drawing.Point(456, 563);
+            this.SupprimerDevis.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.SupprimerDevis.Name = "SupprimerDevis";
-            this.SupprimerDevis.Size = new System.Drawing.Size(129, 34);
+            this.SupprimerDevis.Size = new System.Drawing.Size(103, 27);
             this.SupprimerDevis.TabIndex = 7;
             this.SupprimerDevis.Text = "Supprimer";
             this.SupprimerDevis.UseVisualStyleBackColor = true;
+            this.SupprimerDevis.Click += new System.EventHandler(this.SupprimerDevis_Click);
             // 
             // textCodeDevis
             // 
             this.textCodeDevis.Enabled = false;
-            this.textCodeDevis.Location = new System.Drawing.Point(34, 215);
-            this.textCodeDevis.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.textCodeDevis.Location = new System.Drawing.Point(27, 172);
+            this.textCodeDevis.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textCodeDevis.Name = "textCodeDevis";
-            this.textCodeDevis.Size = new System.Drawing.Size(212, 31);
+            this.textCodeDevis.Size = new System.Drawing.Size(170, 27);
             this.textCodeDevis.TabIndex = 8;
             // 
             // textTauxTVA
             // 
-            this.textTauxTVA.Location = new System.Drawing.Point(292, 302);
-            this.textTauxTVA.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.textTauxTVA.Location = new System.Drawing.Point(234, 242);
+            this.textTauxTVA.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textTauxTVA.Name = "textTauxTVA";
-            this.textTauxTVA.Size = new System.Drawing.Size(212, 31);
+            this.textTauxTVA.Size = new System.Drawing.Size(170, 27);
             this.textTauxTVA.TabIndex = 9;
             // 
             // textTauxRemiseDevis
             // 
-            this.textTauxRemiseDevis.Location = new System.Drawing.Point(34, 302);
-            this.textTauxRemiseDevis.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.textTauxRemiseDevis.Location = new System.Drawing.Point(27, 242);
+            this.textTauxRemiseDevis.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textTauxRemiseDevis.Name = "textTauxRemiseDevis";
-            this.textTauxRemiseDevis.Size = new System.Drawing.Size(212, 31);
+            this.textTauxRemiseDevis.Size = new System.Drawing.Size(170, 27);
             this.textTauxRemiseDevis.TabIndex = 10;
             // 
             // LabelDetails
             // 
             this.LabelDetails.AutoSize = true;
             this.LabelDetails.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabelDetails.Location = new System.Drawing.Point(286, 24);
+            this.LabelDetails.Location = new System.Drawing.Point(229, 19);
             this.LabelDetails.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelDetails.Name = "LabelDetails";
-            this.LabelDetails.Size = new System.Drawing.Size(214, 81);
+            this.LabelDetails.Size = new System.Drawing.Size(177, 67);
             this.LabelDetails.TabIndex = 12;
             this.LabelDetails.Text = "Détails";
             // 
             // lblTauxTVADevis
             // 
             this.lblTauxTVADevis.AutoSize = true;
-            this.lblTauxTVADevis.Location = new System.Drawing.Point(292, 274);
-            this.lblTauxTVADevis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTauxTVADevis.Location = new System.Drawing.Point(234, 219);
             this.lblTauxTVADevis.Name = "lblTauxTVADevis";
-            this.lblTauxTVADevis.Size = new System.Drawing.Size(91, 25);
+            this.lblTauxTVADevis.Size = new System.Drawing.Size(75, 20);
             this.lblTauxTVADevis.TabIndex = 14;
             this.lblTauxTVADevis.Text = "Taux TVA :";
             // 
             // lblCodeDevis
             // 
             this.lblCodeDevis.AutoSize = true;
-            this.lblCodeDevis.Location = new System.Drawing.Point(36, 186);
-            this.lblCodeDevis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodeDevis.Location = new System.Drawing.Point(29, 149);
             this.lblCodeDevis.Name = "lblCodeDevis";
-            this.lblCodeDevis.Size = new System.Drawing.Size(63, 25);
+            this.lblCodeDevis.Size = new System.Drawing.Size(51, 20);
             this.lblCodeDevis.TabIndex = 15;
             this.lblCodeDevis.Text = "Code :";
             // 
             // lblTauxRemiseDevis
             // 
             this.lblTauxRemiseDevis.AutoSize = true;
-            this.lblTauxRemiseDevis.Location = new System.Drawing.Point(34, 274);
-            this.lblTauxRemiseDevis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTauxRemiseDevis.Location = new System.Drawing.Point(27, 219);
             this.lblTauxRemiseDevis.Name = "lblTauxRemiseDevis";
-            this.lblTauxRemiseDevis.Size = new System.Drawing.Size(112, 25);
+            this.lblTauxRemiseDevis.Size = new System.Drawing.Size(93, 20);
             this.lblTauxRemiseDevis.TabIndex = 16;
             this.lblTauxRemiseDevis.Text = "Taux remise :";
             // 
             // AjouterDevis
             // 
-            this.AjouterDevis.Location = new System.Drawing.Point(79, 700);
-            this.AjouterDevis.Margin = new System.Windows.Forms.Padding(4);
+            this.AjouterDevis.Location = new System.Drawing.Point(63, 560);
             this.AjouterDevis.Name = "AjouterDevis";
-            this.AjouterDevis.Size = new System.Drawing.Size(126, 36);
+            this.AjouterDevis.Size = new System.Drawing.Size(101, 29);
             this.AjouterDevis.TabIndex = 19;
             this.AjouterDevis.Text = "Ajouter";
             this.AjouterDevis.UseVisualStyleBackColor = true;
             // 
             // textMontantHTsansTauxRemise
             // 
-            this.textMontantHTsansTauxRemise.Location = new System.Drawing.Point(34, 488);
-            this.textMontantHTsansTauxRemise.Margin = new System.Windows.Forms.Padding(4);
+            this.textMontantHTsansTauxRemise.Location = new System.Drawing.Point(27, 390);
             this.textMontantHTsansTauxRemise.Name = "textMontantHTsansTauxRemise";
-            this.textMontantHTsansTauxRemise.Size = new System.Drawing.Size(216, 31);
+            this.textMontantHTsansTauxRemise.Size = new System.Drawing.Size(174, 27);
             this.textMontantHTsansTauxRemise.TabIndex = 20;
             // 
             // lblMontantHTaHorsRemise
             // 
             this.lblMontantHTaHorsRemise.AutoSize = true;
-            this.lblMontantHTaHorsRemise.Location = new System.Drawing.Point(34, 459);
-            this.lblMontantHTaHorsRemise.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMontantHTaHorsRemise.Location = new System.Drawing.Point(27, 367);
             this.lblMontantHTaHorsRemise.Name = "lblMontantHTaHorsRemise";
-            this.lblMontantHTaHorsRemise.Size = new System.Drawing.Size(213, 25);
+            this.lblMontantHTaHorsRemise.Size = new System.Drawing.Size(175, 20);
             this.lblMontantHTaHorsRemise.TabIndex = 21;
             this.lblMontantHTaHorsRemise.Text = "Montant HT sans remise :";
             // 
             // lblMontantTVADevis
             // 
             this.lblMontantTVADevis.AutoSize = true;
-            this.lblMontantTVADevis.Location = new System.Drawing.Point(292, 186);
-            this.lblMontantTVADevis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMontantTVADevis.Location = new System.Drawing.Point(234, 149);
             this.lblMontantTVADevis.Name = "lblMontantTVADevis";
-            this.lblMontantTVADevis.Size = new System.Drawing.Size(125, 25);
+            this.lblMontantTVADevis.Size = new System.Drawing.Size(102, 20);
             this.lblMontantTVADevis.TabIndex = 22;
             this.lblMontantTVADevis.Text = "Montant TVA :";
             // 
             // lblMontantHTaAvecRemise
             // 
             this.lblMontantHTaAvecRemise.AutoSize = true;
-            this.lblMontantHTaAvecRemise.Location = new System.Drawing.Point(34, 548);
-            this.lblMontantHTaAvecRemise.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMontantHTaAvecRemise.Location = new System.Drawing.Point(27, 438);
             this.lblMontantHTaAvecRemise.Name = "lblMontantHTaAvecRemise";
-            this.lblMontantHTaAvecRemise.Size = new System.Drawing.Size(213, 25);
+            this.lblMontantHTaAvecRemise.Size = new System.Drawing.Size(177, 20);
             this.lblMontantHTaAvecRemise.TabIndex = 23;
             this.lblMontantHTaAvecRemise.Text = "Montant HT avec remise :";
             // 
             // textTelCli
             // 
-            this.textTelCli.Location = new System.Drawing.Point(292, 216);
-            this.textTelCli.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.textTelCli.Location = new System.Drawing.Point(234, 173);
+            this.textTelCli.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textTelCli.Name = "textTelCli";
-            this.textTelCli.Size = new System.Drawing.Size(214, 31);
+            this.textTelCli.Size = new System.Drawing.Size(172, 27);
             this.textTelCli.TabIndex = 24;
             // 
             // lblMontantHTAvecRemise
             // 
-            this.lblMontantHTAvecRemise.Location = new System.Drawing.Point(36, 576);
-            this.lblMontantHTAvecRemise.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.lblMontantHTAvecRemise.Location = new System.Drawing.Point(29, 461);
+            this.lblMontantHTAvecRemise.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.lblMontantHTAvecRemise.Name = "lblMontantHTAvecRemise";
-            this.lblMontantHTAvecRemise.Size = new System.Drawing.Size(214, 31);
+            this.lblMontantHTAvecRemise.Size = new System.Drawing.Size(172, 27);
             this.lblMontantHTAvecRemise.TabIndex = 25;
             // 
             // lblMontantTTCDevis
             // 
             this.lblMontantTTCDevis.AutoSize = true;
-            this.lblMontantTTCDevis.Location = new System.Drawing.Point(34, 364);
-            this.lblMontantTTCDevis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMontantTTCDevis.Location = new System.Drawing.Point(27, 291);
             this.lblMontantTTCDevis.Name = "lblMontantTTCDevis";
-            this.lblMontantTTCDevis.Size = new System.Drawing.Size(122, 25);
+            this.lblMontantTTCDevis.Size = new System.Drawing.Size(100, 20);
             this.lblMontantTTCDevis.TabIndex = 26;
             this.lblMontantTTCDevis.Text = "Montant TTC :";
             // 
             // textMontantTTC
             // 
-            this.textMontantTTC.Location = new System.Drawing.Point(34, 399);
-            this.textMontantTTC.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.textMontantTTC.Location = new System.Drawing.Point(27, 319);
+            this.textMontantTTC.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textMontantTTC.Name = "textMontantTTC";
-            this.textMontantTTC.Size = new System.Drawing.Size(214, 31);
+            this.textMontantTTC.Size = new System.Drawing.Size(172, 27);
             this.textMontantTTC.TabIndex = 27;
             // 
             // lblErrorDevis
             // 
             this.lblErrorDevis.AutoSize = true;
             this.lblErrorDevis.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblErrorDevis.Location = new System.Drawing.Point(251, 636);
-            this.lblErrorDevis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblErrorDevis.Location = new System.Drawing.Point(201, 509);
             this.lblErrorDevis.Name = "lblErrorDevis";
-            this.lblErrorDevis.Size = new System.Drawing.Size(290, 25);
+            this.lblErrorDevis.Size = new System.Drawing.Size(242, 20);
             this.lblErrorDevis.TabIndex = 37;
             this.lblErrorDevis.Text = "Veuillez renseigner tous les champs";
             // 
@@ -495,10 +484,10 @@
             this.panel1.Controls.Add(this.textCodeDevis);
             this.panel1.Controls.Add(this.SupprimerDevis);
             this.panel1.Controls.Add(this.ModifierDevis);
-            this.panel1.Location = new System.Drawing.Point(749, 190);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.panel1.Location = new System.Drawing.Point(599, 152);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(766, 760);
+            this.panel1.Size = new System.Drawing.Size(613, 608);
             this.panel1.TabIndex = 28;
             // 
             // dataGridView1
@@ -510,12 +499,11 @@
             this.Prix_Unitaire,
             this.Quantité,
             this.Prix_Total});
-            this.dataGridView1.Location = new System.Drawing.Point(292, 364);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(234, 291);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(465, 246);
+            this.dataGridView1.Size = new System.Drawing.Size(372, 197);
             this.dataGridView1.TabIndex = 45;
             // 
             // Produit
@@ -556,63 +544,57 @@
             // comboClient
             // 
             this.comboClient.FormattingEnabled = true;
-            this.comboClient.Location = new System.Drawing.Point(544, 215);
-            this.comboClient.Margin = new System.Windows.Forms.Padding(4);
+            this.comboClient.Location = new System.Drawing.Point(435, 172);
             this.comboClient.Name = "comboClient";
-            this.comboClient.Size = new System.Drawing.Size(214, 33);
+            this.comboClient.Size = new System.Drawing.Size(172, 28);
             this.comboClient.TabIndex = 44;
             // 
             // comboStatut
             // 
             this.comboStatut.FormattingEnabled = true;
-            this.comboStatut.Location = new System.Drawing.Point(542, 302);
-            this.comboStatut.Margin = new System.Windows.Forms.Padding(4);
+            this.comboStatut.Location = new System.Drawing.Point(434, 242);
             this.comboStatut.Name = "comboStatut";
-            this.comboStatut.Size = new System.Drawing.Size(214, 33);
+            this.comboStatut.Size = new System.Drawing.Size(172, 28);
             this.comboStatut.TabIndex = 43;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(606, 124);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker1.Location = new System.Drawing.Point(485, 99);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(150, 31);
+            this.dateTimePicker1.Size = new System.Drawing.Size(121, 27);
             this.dateTimePicker1.TabIndex = 42;
             // 
             // lblStatut
             // 
             this.lblStatut.AutoSize = true;
-            this.lblStatut.Location = new System.Drawing.Point(544, 274);
-            this.lblStatut.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStatut.Location = new System.Drawing.Point(435, 219);
             this.lblStatut.Name = "lblStatut";
-            this.lblStatut.Size = new System.Drawing.Size(67, 25);
+            this.lblStatut.Size = new System.Drawing.Size(55, 20);
             this.lblStatut.TabIndex = 41;
             this.lblStatut.Text = "Statut :";
             // 
             // lblListClient
             // 
             this.lblListClient.AutoSize = true;
-            this.lblListClient.Location = new System.Drawing.Point(544, 186);
-            this.lblListClient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblListClient.Location = new System.Drawing.Point(435, 149);
             this.lblListClient.Name = "lblListClient";
-            this.lblListClient.Size = new System.Drawing.Size(65, 25);
+            this.lblListClient.Size = new System.Drawing.Size(54, 20);
             this.lblListClient.TabIndex = 40;
             this.lblListClient.Text = "Client :";
             // 
             // FrmListeDevis
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1540, 1004);
+            this.ClientSize = new System.Drawing.Size(1232, 803);
+            this.Controls.Add(this.PanelDeleteDevis);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.actualiserDevis);
             this.Controls.Add(this.retSynt);
             this.Controls.Add(this.lblDevis);
             this.Controls.Add(this.dgvDevis);
-            this.Controls.Add(this.PanelDeleteDevis);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmListeDevis";
             this.Text = "FrmListeDevis";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevis)).EndInit();

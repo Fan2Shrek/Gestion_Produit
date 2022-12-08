@@ -64,5 +64,34 @@ namespace GestionGUI
             comboClient.SelectedIndex = comboClient.FindStringExact(nom_client);
             comboStatut.SelectedIndex = comboStatut.FindStringExact(libelle_statut);
         }
+
+        private void SupprimerDevis_Click(object sender, EventArgs e)
+        {
+            PanelDeleteDevis.Show();
+        }
+
+        private void AnnulerDeleteDevis_Click(object sender, EventArgs e)
+        {
+            PanelDeleteDevis.Hide();
+        }
+
+        private void ConfirmerDeleteDevis_Click(object sender, EventArgs e)
+        {
+            PanelDeleteDevis.Hide();
+
+            int id;
+
+            int.TryParse(textCodeDevis.Text, out id);
+
+            // ProduitBLL.SupprimerProduit(id);
+            int delete = DevisBLL.SupprimerDevis(id);
+
+            this.Hide();
+            FrmListeDevis FrmListeDevis;
+            FrmListeDevis = new FrmListeDevis();
+            FrmListeDevis.Closed += (s, args) => this.Close();
+            FrmListeDevis.ShowDialog(); // ouverture du formulaire list produit
+            this.Close();
+        }
     }
 }

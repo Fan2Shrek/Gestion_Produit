@@ -166,5 +166,21 @@ namespace GestionDAL
             maConnexion.Close();
             return nbEnr;
         }
+
+        public static int DeleteDevis(int id)
+        {
+            int nbEnr;
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "DELETE FROM devis WHERE code_devis = " + id;
+            nbEnr = cmd.ExecuteNonQuery();
+            
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }
     }
 }

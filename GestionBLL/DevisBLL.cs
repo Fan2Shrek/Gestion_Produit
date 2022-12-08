@@ -54,5 +54,10 @@ namespace GestionBLL
         {
             return ProduitDAO.AjoutProduit(ut);
         }
+
+        public static int SupprimerDevis(int id)
+        {
+            return DevisDAO.DeleteDevis(id);
+        }
     }
 }
