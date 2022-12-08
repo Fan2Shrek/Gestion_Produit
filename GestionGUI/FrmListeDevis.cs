@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GestionBLL;
+using GestionBO;
+using GestionDAL;
 
 namespace GestionGUI
 {
@@ -46,9 +49,11 @@ namespace GestionGUI
 
         private void dgvDevis_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            int code_devis;
             string nom_client;
             string libelle_statut;
 
+            int.TryParse(dgvDevis.CurrentRow.Cells[0].Value.ToString(), out code_devis);
             nom_client = dgvDevis.CurrentRow.Cells[3].Value.ToString();
             libelle_statut = dgvDevis.CurrentRow.Cells[4].Value.ToString();
 

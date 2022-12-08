@@ -152,3 +152,4 @@ C:\Users\Etudiant-Sup\Desktop\Gestion_Produit\GestionGUI\obj\Debug\net6.0-window
 C:\Users\Etudiant-Sup\Desktop\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.genruntimeconfig.cache
 C:\Users\Etudiant-Sup\Desktop\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\ref\GestionGUI.dll
 C:\Users\admin\Desktop\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.FrmListeDevis.resources
+C:\Users\Etudiant-Sup\Desktop\Gestion_Produit\GestionGUI\obj\Debug\net6.0-windows\GestionGUI.FrmListeDevis.resources

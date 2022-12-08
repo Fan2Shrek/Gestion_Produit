@@ -91,7 +91,7 @@
             // actualiserDevis
             // 
             this.actualiserDevis.Location = new System.Drawing.Point(26, 190);
-            this.actualiserDevis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.actualiserDevis.Margin = new System.Windows.Forms.Padding(4);
             this.actualiserDevis.Name = "actualiserDevis";
             this.actualiserDevis.Size = new System.Drawing.Size(118, 36);
             this.actualiserDevis.TabIndex = 27;
@@ -108,7 +108,7 @@
             this.Client,
             this.Statut});
             this.dgvDevis.Location = new System.Drawing.Point(26, 255);
-            this.dgvDevis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDevis.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDevis.Name = "dgvDevis";
             this.dgvDevis.RowHeadersWidth = 51;
             this.dgvDevis.RowTemplate.Height = 29;
@@ -154,7 +154,7 @@
             // retSynt
             // 
             this.retSynt.Location = new System.Drawing.Point(26, 914);
-            this.retSynt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.retSynt.Margin = new System.Windows.Forms.Padding(4);
             this.retSynt.Name = "retSynt";
             this.retSynt.Size = new System.Drawing.Size(118, 36);
             this.retSynt.TabIndex = 25;
@@ -378,7 +378,7 @@
             // AjouterDevis
             // 
             this.AjouterDevis.Location = new System.Drawing.Point(79, 700);
-            this.AjouterDevis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AjouterDevis.Margin = new System.Windows.Forms.Padding(4);
             this.AjouterDevis.Name = "AjouterDevis";
             this.AjouterDevis.Size = new System.Drawing.Size(126, 36);
             this.AjouterDevis.TabIndex = 19;
@@ -388,7 +388,7 @@
             // textMontantHTsansTauxRemise
             // 
             this.textMontantHTsansTauxRemise.Location = new System.Drawing.Point(34, 488);
-            this.textMontantHTsansTauxRemise.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textMontantHTsansTauxRemise.Margin = new System.Windows.Forms.Padding(4);
             this.textMontantHTsansTauxRemise.Name = "textMontantHTsansTauxRemise";
             this.textMontantHTsansTauxRemise.Size = new System.Drawing.Size(216, 31);
             this.textMontantHTsansTauxRemise.TabIndex = 20;
@@ -511,7 +511,7 @@
             this.Quantité,
             this.Prix_Total});
             this.dataGridView1.Location = new System.Drawing.Point(292, 364);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
@@ -557,7 +557,7 @@
             // 
             this.comboClient.FormattingEnabled = true;
             this.comboClient.Location = new System.Drawing.Point(544, 215);
-            this.comboClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboClient.Margin = new System.Windows.Forms.Padding(4);
             this.comboClient.Name = "comboClient";
             this.comboClient.Size = new System.Drawing.Size(214, 33);
             this.comboClient.TabIndex = 44;
@@ -566,7 +566,7 @@
             // 
             this.comboStatut.FormattingEnabled = true;
             this.comboStatut.Location = new System.Drawing.Point(542, 302);
-            this.comboStatut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboStatut.Margin = new System.Windows.Forms.Padding(4);
             this.comboStatut.Name = "comboStatut";
             this.comboStatut.Size = new System.Drawing.Size(214, 33);
             this.comboStatut.TabIndex = 43;
@@ -575,7 +575,7 @@
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(606, 124);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(150, 31);
             this.dateTimePicker1.TabIndex = 42;
@@ -606,13 +606,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1540, 1004);
-            this.Controls.Add(this.PanelDeleteDevis);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.actualiserDevis);
             this.Controls.Add(this.retSynt);
             this.Controls.Add(this.lblDevis);
             this.Controls.Add(this.dgvDevis);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.PanelDeleteDevis);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmListeDevis";
             this.Text = "FrmListeDevis";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevis)).EndInit();
