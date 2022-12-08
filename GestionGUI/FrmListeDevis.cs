@@ -30,11 +30,8 @@ namespace GestionGUI
             this.comboStatut.DataSource = (StatutBLL.GetStatut());
             this.comboStatut.DisplayMember = "Libelle";
 
-            this.cbxProduit.DataSource = (ProduitBLL.GetProduit());
-            this.cbxProduit.DisplayMember = "Libelle";
-
-
             PanelDeleteDevis.Hide();
+            panel2.Hide();
         }
 
         private void retSynt_Click(object sender, EventArgs e)
@@ -160,8 +157,8 @@ namespace GestionGUI
 
         private void dgvProduitsDevis_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            textQuantite.Text = dgvProduitsDevis.CurrentRow.Cells[2].Value.ToString();
-            textTauxRemiseDevis.Text = dgvProduitsDevis.CurrentRow.Cells[3].Value.ToString();
+            txtQte.Text = dgvProduitsDevis.CurrentRow.Cells[2].Value.ToString();
+            txtRemise.Text = dgvProduitsDevis.CurrentRow.Cells[3].Value.ToString();
 
             int id;
             int.TryParse(dgvProduitsDevis.CurrentRow.Cells[0].Value.ToString(), out id);
@@ -169,14 +166,10 @@ namespace GestionGUI
             txtQte.Text = dgvProduitsDevis.CurrentRow.Cells[3].Value.ToString();
             txtRemise.Text = dgvProduitsDevis.CurrentRow.Cells[4].Value.ToString();
 
-            foreach (Produit pro in ProduitBLL.GetProduit())
-            {
-                if (pro.Code == id)
-                {
-                    cbxProduit.SelectedItem = cbxProduit.FindStringExact(pro.Libelle);
-                    break;
-                }
-            }
+        }
+
+        private void lblDevis_Click(object sender, EventArgs e)
+        {
 
         }
     }
