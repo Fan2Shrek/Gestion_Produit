@@ -23,16 +23,12 @@ namespace GestionGUI
             {
                 dgvDevis.Rows.Add(dev.Code, dev.Date, dev.Taux_tva, dev.Client.Nom, dev.Statut.Libelle);
             }
+            
+            this.comboClient.DataSource = (ClientBLL.GetClient());
+            this.comboClient.DisplayMember = "Nom";
 
-            foreach (Client cli in ClientBLL.GetClient())
-            {
-                this.comboClient.Items.Add(cli.Nom);
-            }
-
-            foreach (Statut sta in StatutBLL.GetStatut())
-            {
-                this.comboStatut.Items.Add(sta.Libelle);
-            }
+            this.comboStatut.DataSource = (StatutBLL.GetStatut());
+            this.comboStatut.DisplayMember = "Libelle";
 
             PanelDeleteDevis.Hide();
         }
@@ -93,8 +89,41 @@ namespace GestionGUI
             FrmListeDevis FrmListeDevis;
             FrmListeDevis = new FrmListeDevis();
             FrmListeDevis.Closed += (s, args) => this.Close();
-            FrmListeDevis.ShowDialog(); // ouverture du formulaire list produit
+            FrmListeDevis.ShowDialog(); // ouverture du formulaire list devis
             this.Close();
+        }
+
+        private void ModifierDevis_Click(object sender, EventArgs e)
+        {
+            int id;
+            DateTime date = DateTime.Parse(dateTimePicker1.Value.ToString());
+            int.TryParse(textCodeDevis.Text, out id);
+            Client cli = (Client)comboClient.SelectedItem;
+            Statut stat = (Statut)comboStatut.SelectedItem;
+            float tva;
+            float.TryParse(textTauxTVA.Text, out tva);
+
+
+            Devis dev = new Devis(id, date, tva, cli, stat);
+
+            DevisBLL.ModifierDevis(dev);
+
+            this.Hide();
+            FrmListeDevis FrmListeDevis;
+            FrmListeDevis = new FrmListeDevis();
+            FrmListeDevis.Closed += (s, args) => this.Close();
+            FrmListeDevis.ShowDialog(); // ouverture du formulaire list devis
+            this.Close();
+        }
+
+        private void actualiserDevis_Click(object sender, EventArgs e)
+        {
+            dgvDevis.Rows.Clear();
+
+            foreach (Devis dev in DevisBLL.GetDevis())
+            {
+                dgvDevis.Rows.Add(dev.Code, dev.Date, dev.Taux_tva, dev.Client.Nom, dev.Statut.Libelle);
+            }
         }
     }
 }

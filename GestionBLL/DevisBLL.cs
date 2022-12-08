@@ -48,7 +48,7 @@ namespace GestionBLL
             return DevisDAO.SelectStatutDevis(code);
         }
 
-        // Finction qui modifie un devis
+        // Fonction qui modifie un devis
         public static int ModifierDevis(Devis dev)
         {
             return DevisDAO.ModifierDevis(dev);

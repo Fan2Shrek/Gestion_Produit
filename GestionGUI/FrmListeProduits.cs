@@ -220,5 +220,15 @@ namespace GestionGUI
         {
             PanelDelete.Hide();
         }
+
+        private void actualiserProduit_Click(object sender, EventArgs e)
+        {
+            dgvProduit.Rows.Clear();
+
+            foreach (Produit pro in ProduitBLL.GetProduit())
+            {
+                dgvProduit.Rows.Add(pro.Code, pro.Libelle, pro.Prix, pro.Categorie.Libelle);
+            }
+        }
     }
 }

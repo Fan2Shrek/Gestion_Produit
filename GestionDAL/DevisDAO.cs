@@ -176,8 +176,9 @@ namespace GestionDAL
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
 
-            cmd.CommandText = "UPDATE devis date_devis = @date, taux_tav_devis = @taux_tva," +
-                "code_client = @codeClient, codeStatut = @code_statut";
+            cmd.CommandText = "UPDATE devis set date_devis = @date, taux_tva_devis = @taux_tva," +
+                "code_client = @codeClient, code_statut = @codeStatut " +
+                "WHERE code_devis = @code";
             cmd.Parameters.Add(new SqlParameter("@date", System.Data.SqlDbType.DateTime, 255));
             cmd.Parameters["@date"].Value = unDevis.Date;
 
@@ -189,6 +190,9 @@ namespace GestionDAL
 
             cmd.Parameters.Add(new SqlParameter("@codeStatut", System.Data.SqlDbType.Int));
             cmd.Parameters["@codeStatut"].Value = unDevis.Statut.Code;
+
+            cmd.Parameters.Add(new SqlParameter("@code", System.Data.SqlDbType.Int));
+            cmd.Parameters["@code"].Value = unDevis.Code;
 
             nbEnr = cmd.ExecuteNonQuery();
 
@@ -205,6 +209,8 @@ namespace GestionDAL
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
+            cmd.CommandText = "DELETE FROM contenir WHERE code_devis = " + id;
+            nbEnr = cmd.ExecuteNonQuery();
             cmd.CommandText = "DELETE FROM devis WHERE code_devis = " + id;
             nbEnr = cmd.ExecuteNonQuery();
             

@@ -137,6 +137,7 @@
             this.actualiserProduit.TabIndex = 5;
             this.actualiserProduit.Text = "Actualiser";
             this.actualiserProduit.UseVisualStyleBackColor = true;
+            this.actualiserProduit.Click += new System.EventHandler(this.actualiserProduit_Click);
             // 
             // panel1
             // 
@@ -156,7 +157,7 @@
             this.panel1.Controls.Add(this.Supprimer);
             this.panel1.Controls.Add(this.Modifier);
             this.panel1.Location = new System.Drawing.Point(703, 230);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(498, 500);
             this.panel1.TabIndex = 8;
@@ -243,7 +244,7 @@
             this.listCategorie.FormattingEnabled = true;
             this.listCategorie.ItemHeight = 20;
             this.listCategorie.Location = new System.Drawing.Point(326, 302);
-            this.listCategorie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listCategorie.Margin = new System.Windows.Forms.Padding(2);
             this.listCategorie.Name = "listCategorie";
             this.listCategorie.Size = new System.Drawing.Size(103, 44);
             this.listCategorie.TabIndex = 13;
@@ -262,7 +263,7 @@
             // textPrix
             // 
             this.textPrix.Location = new System.Drawing.Point(71, 302);
-            this.textPrix.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textPrix.Margin = new System.Windows.Forms.Padding(2);
             this.textPrix.Name = "textPrix";
             this.textPrix.Size = new System.Drawing.Size(101, 27);
             this.textPrix.TabIndex = 10;
@@ -270,7 +271,7 @@
             // textLibelle
             // 
             this.textLibelle.Location = new System.Drawing.Point(326, 172);
-            this.textLibelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textLibelle.Margin = new System.Windows.Forms.Padding(2);
             this.textLibelle.Name = "textLibelle";
             this.textLibelle.Size = new System.Drawing.Size(103, 27);
             this.textLibelle.TabIndex = 9;
@@ -279,7 +280,7 @@
             // 
             this.textCode.Enabled = false;
             this.textCode.Location = new System.Drawing.Point(71, 172);
-            this.textCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textCode.Margin = new System.Windows.Forms.Padding(2);
             this.textCode.Name = "textCode";
             this.textCode.Size = new System.Drawing.Size(101, 27);
             this.textCode.TabIndex = 8;
@@ -287,7 +288,7 @@
             // Supprimer
             // 
             this.Supprimer.Location = new System.Drawing.Point(326, 444);
-            this.Supprimer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Supprimer.Margin = new System.Windows.Forms.Padding(2);
             this.Supprimer.Name = "Supprimer";
             this.Supprimer.Size = new System.Drawing.Size(103, 26);
             this.Supprimer.TabIndex = 7;
@@ -298,7 +299,7 @@
             // Modifier
             // 
             this.Modifier.Location = new System.Drawing.Point(194, 444);
-            this.Modifier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Modifier.Margin = new System.Windows.Forms.Padding(2);
             this.Modifier.Name = "Modifier";
             this.Modifier.Size = new System.Drawing.Size(101, 26);
             this.Modifier.TabIndex = 6;
@@ -313,7 +314,7 @@
             this.PanelDelete.Controls.Add(this.AnnulerDelete);
             this.PanelDelete.Controls.Add(this.ConfirmerDelete);
             this.PanelDelete.Location = new System.Drawing.Point(451, 352);
-            this.PanelDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelDelete.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDelete.Name = "PanelDelete";
             this.PanelDelete.Size = new System.Drawing.Size(309, 164);
             this.PanelDelete.TabIndex = 22;
@@ -342,7 +343,7 @@
             // AnnulerDelete
             // 
             this.AnnulerDelete.Location = new System.Drawing.Point(178, 112);
-            this.AnnulerDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AnnulerDelete.Margin = new System.Windows.Forms.Padding(2);
             this.AnnulerDelete.Name = "AnnulerDelete";
             this.AnnulerDelete.Size = new System.Drawing.Size(90, 27);
             this.AnnulerDelete.TabIndex = 1;
@@ -353,7 +354,7 @@
             // ConfirmerDelete
             // 
             this.ConfirmerDelete.Location = new System.Drawing.Point(39, 112);
-            this.ConfirmerDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ConfirmerDelete.Margin = new System.Windows.Forms.Padding(2);
             this.ConfirmerDelete.Name = "ConfirmerDelete";
             this.ConfirmerDelete.Size = new System.Drawing.Size(90, 27);
             this.ConfirmerDelete.TabIndex = 0;

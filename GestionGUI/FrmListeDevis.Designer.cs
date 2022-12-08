@@ -96,6 +96,7 @@
             this.actualiserDevis.TabIndex = 27;
             this.actualiserDevis.Text = "Actualiser";
             this.actualiserDevis.UseVisualStyleBackColor = true;
+            this.actualiserDevis.Click += new System.EventHandler(this.actualiserDevis_Click);
             // 
             // dgvDevis
             // 
@@ -296,6 +297,7 @@
             this.ModifierDevis.TabIndex = 6;
             this.ModifierDevis.Text = "Modifier";
             this.ModifierDevis.UseVisualStyleBackColor = true;
+            this.ModifierDevis.Click += new System.EventHandler(this.ModifierDevis_Click);
             // 
             // SupprimerDevis
             // 
