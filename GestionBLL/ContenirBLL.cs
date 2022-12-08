@@ -35,5 +35,10 @@ namespace GestionBLL
         {
             return ContenirDAO.GetContenir(code_devis);
         }
+
+        public static int ModifierContenir(Contenir con)
+        {
+            return ContenirDAO.UpdateContenir(con);
+        }
     }
 }

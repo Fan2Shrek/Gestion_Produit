@@ -129,5 +129,37 @@ namespace GestionDAL
             maConnexion.Close();
             return lesConteneurs;
         }
+
+        public static int UpdateContenir(Contenir con)
+        {
+            int nbEnr;
+
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+
+            cmd.CommandText = "UPDATE contenir set code_devis = @codeDev, code_produit = @codePro, quantite = @qte, remise = @remise) " +
+                "FROM contenir C" +
+                "JOIN produit p ON p.code_produit = C.code_produit" +
+                "WHERE d.code_devis = c.code_devis" +
+                "";
+            cmd.Parameters.Add(new SqlParameter("@codeDev", System.Data.SqlDbType.Int, 255));
+            cmd.Parameters["@codeDev"].Value = con.Devis.Code;
+
+            cmd.Parameters.Add(new SqlParameter("@codePro", System.Data.SqlDbType.Int));
+            cmd.Parameters["@codePro"].Value = con.Produit.Code;
+
+            cmd.Parameters.Add(new SqlParameter("@qte", System.Data.SqlDbType.Int));
+            cmd.Parameters["@qte"].Value = con.Quantite;
+
+            cmd.Parameters.Add(new SqlParameter("@remise", System.Data.SqlDbType.Int));
+            cmd.Parameters["@remise"].Value = con.Remise;
+
+            nbEnr = cmd.ExecuteNonQuery();
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }
     }
 }
