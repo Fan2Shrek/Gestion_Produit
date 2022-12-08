@@ -150,8 +150,8 @@ CREATE TABLE "statut" (
 SET IDENTITY_INSERT statut ON;
 
 INSERT INTO "statut" ("code_statut", "libelle_statut") VALUES
-(1, 'Accepté'),
-(2, 'Refusé'),
+(1, 'AcceptÃ©'),
+(2, 'RefusÃ©'),
 (3, 'En attente');
 
 SET IDENTITY_INSERT statut OFF;
@@ -182,7 +182,7 @@ INSERT INTO "utilisateur" ("code_utilisateur", "login_utilisateur", "mot_de_pass
 
 SET IDENTITY_INSERT utilisateur OFF;
 
---Clés primaires 
+--ClÃ©s primaires 
 
 ALTER TABLE "client"
   ADD PRIMARY KEY ("code_client");
@@ -205,7 +205,7 @@ ALTER TABLE "utilisateur"
 ALTER TABLE "categorie"
   ADD PRIMARY KEY ("code_categorie");
 
---Clés étrangères
+--ClÃ©s Ã©trangÃ¨res
 
 ALTER TABLE "contenir"
   ADD CONSTRAINT "Contenir_Devis_FK" FOREIGN KEY ("code_devis") REFERENCES "devis" ("code_devis");
@@ -219,3 +219,19 @@ ALTER TABLE "devis"
 
 ALTER TABLE "produit"
   ADD CONSTRAINT "Produit_Categorie0_FK" FOREIGN KEY ("code_categorie") REFERENCES "categorie" ("code_categorie");
+  
+CREATE VIEW informations
+AS
+SELECT C.code_client, C.nom_client, C.prenom_client, C.rue_facturation_client, C.cp_facturation_client, C.ville_facturation_client, C.rue_livraison_client, C.cp_livraison_client, C.ville_livraison_client, C.telephone_client, C.fax_client, C.email_client,
+Ca.code_categorie, Ca.libelle_categorie, 
+Co.code_produit, Co.quantite, Co.remise,
+D.code_devis, D.date_devis, D.taux_tva_devis,
+P.libelle_produit, P.prix_vente_ht_produit,
+S.code_statut, S.libelle_statut
+FROM statut S, produit P, devis D, client C, contenir Co, categorie Ca
+WHERE Co.code_devis = D.code_devis
+AND D.code_client = C.code_client
+AND D.code_statut = S.code_statut
+AND Co.code_produit = P.code_produit
+AND P.code_categorie = Ca.code_categorie
+GO
