@@ -78,6 +78,32 @@ namespace GestionDAL
             return lesClients;
         }
 
+        public static int GetCodeClient(string nom)
+        {
+            int code;
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+
+            cmd.CommandText = "SELECT code_client AS client FROM client WHERE nom_client = @nom";
+
+            cmd.Parameters.Add(new SqlParameter("@nom", System.Data.SqlDbType.NVarChar, 255));
+            cmd.Parameters["@nom"].Value = nom;
+
+            //reader
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Read();
+            code = (int)reader["client"];
+            reader.Close();
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            return code;
+        }
+
         // Cette méthode modifie un utilisateur passé en paramètre dans la BD
         public static int UpdateClient(Client unClient)
         {
