@@ -219,6 +219,8 @@ ALTER TABLE "devis"
 
 ALTER TABLE "produit"
   ADD CONSTRAINT "Produit_Categorie0_FK" FOREIGN KEY ("code_categorie") REFERENCES "categorie" ("code_categorie");
+
+GO
   
 CREATE VIEW informations
 AS
