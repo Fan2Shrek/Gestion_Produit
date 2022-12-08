@@ -48,6 +48,12 @@ namespace GestionBLL
             return DevisDAO.SelectStatutDevis(code);
         }
 
+        // Finction qui modifie un devis
+        public static int ModifierDevis(Devis dev)
+        {
+            return DevisDAO.ModifierDevis(dev);
+        }
+
         // Méthode qui renvoi l’objet Produit en l'ajoutant à la
         // BD avec la méthode AjoutProduit de la DAL
         public static int CreerProduit(Produit ut)

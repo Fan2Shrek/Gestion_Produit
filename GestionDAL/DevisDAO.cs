@@ -166,5 +166,35 @@ namespace GestionDAL
             maConnexion.Close();
             return nbEnr;
         }
+
+        // Cette méthode modifie un devis passé en paramètre dans la BD
+        public static int ModifierDevis(Devis unDevis)
+        {
+            int nbEnr;
+
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+
+            cmd.CommandText = "UPDATE devis date = @date, taux_tav = @taux_tva," +
+                "codeClient = @codeClient, codeStatut = @codeStatut";
+            cmd.Parameters.Add(new SqlParameter("@date", System.Data.SqlDbType.DateTime, 255));
+            cmd.Parameters["@date"].Value = unDevis.Date;
+
+            cmd.Parameters.Add(new SqlParameter("@taux_tva", System.Data.SqlDbType.Float));
+            cmd.Parameters["@taux_tva"].Value = unDevis.Taux_tva;
+
+            cmd.Parameters.Add(new SqlParameter("@codeClient", System.Data.SqlDbType.Int));
+            cmd.Parameters["@codeClient"].Value = unDevis.Client.Code;
+
+            cmd.Parameters.Add(new SqlParameter("@codeStatut", System.Data.SqlDbType.Int));
+            cmd.Parameters["@codeStatut"].Value = unDevis.Statut.Code;
+
+            nbEnr = cmd.ExecuteNonQuery();
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }
     }
 }

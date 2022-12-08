@@ -12,7 +12,7 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Etudiant-Sup\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Pierre\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Etudiant-Sup\\.nuget\\packages",
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
