@@ -324,6 +324,7 @@
             // 
             // textTauxTVA
             // 
+            this.textTauxTVA.Enabled = false;
             this.textTauxTVA.Location = new System.Drawing.Point(18, 176);
             this.textTauxTVA.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textTauxTVA.Name = "textTauxTVA";
