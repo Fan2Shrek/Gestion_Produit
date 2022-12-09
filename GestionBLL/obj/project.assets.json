@@ -818,19 +818,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pierre\\.nuget\\packages\\": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj",
       "projectName": "GestionBLL",
-      "projectPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj",
-      "packagesPath": "C:\\Users\\Pierre\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBLL\\obj\\",
+      "projectPath": "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionBLL\\GestionBLL.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionBLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Pierre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -844,11 +844,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {
-              "projectPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionBO\\GestionBO.csproj"
+            "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionBO\\GestionBO.csproj"
             },
-            "C:\\Code\\Project csharp\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj": {
-              "projectPath": "C:\\Code\\Project csharp\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj"
+            "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\Gestion_Produit\\GestionDAL\\GestionDAL.csproj"
             }
           }
         }
