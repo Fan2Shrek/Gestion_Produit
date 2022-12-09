@@ -24,6 +24,21 @@ namespace GestionGUI
                 dgvDevis.Rows.Add(dev.Code, dev.Date, dev.Taux_tva, dev.Client.Nom, dev.Statut.Libelle);
             }
 
+            foreach (Client cli in ClientBLL.GetClient())
+            {
+                this.comboClientAjout.Items.Add(cli.Nom);
+            }
+
+            foreach (Statut sta in StatutBLL.GetStatut())
+            {
+                this.comboStatutAjout.Items.Add(sta.Libelle);
+            }
+
+            foreach (Produit pro in ProduitBLL.GetProduit())
+            {
+                this.comboProduitAjout.Items.Add(pro.Libelle);
+            }
+
             this.comboClient.DataSource = (ClientBLL.GetClient());
             this.comboClient.DisplayMember = "Nom";
 
@@ -31,7 +46,7 @@ namespace GestionGUI
             this.comboStatut.DisplayMember = "Libelle";
 
             PanelDeleteDevis.Hide();
-            panel2.Hide();
+            panelAjoutDevis.Hide();
         }
 
         private void retSynt_Click(object sender, EventArgs e)
@@ -177,6 +192,133 @@ namespace GestionGUI
         private void lblDevis_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AjouterDevis_Click(object sender, EventArgs e)
+        {
+            panelAjoutDevis.Show();
+            textTVAAjout.Text = "20";
+        }
+
+        private void btnFermerAjoutDevis_Click(object sender, EventArgs e)
+        {
+            panelAjoutDevis.Hide();
+        }
+
+        private void btnConfirmerAjoutDevis_Click(object sender, EventArgs e)
+        {
+            string strQuantite = textQuantiteAjout.Text;
+            string strTVA = textTVAAjout.Text;
+            string strRemise = textRemiseAjout.Text;
+            string strProduit = comboProduitAjout.Text;
+            string strClient = comboClientAjout.Text;
+            string strStatut = comboStatutAjout.Text;
+            bool saisie = true;
+
+            if (strQuantite == "")
+            {
+                lblQuantiteVide.ForeColor = Color.Red;
+                saisie = false;
+            }
+            else
+            {
+                lblQuantiteVide.ForeColor = System.Drawing.SystemColors.ControlDark;
+            }
+
+            if (strTVA == "")
+            {
+                lblTVAVide.ForeColor = Color.Red;
+                saisie = false;
+            }
+            else
+            {
+                lblTVAVide.ForeColor = System.Drawing.SystemColors.ControlDark;
+            }
+
+            if (strRemise == "")
+            {
+                lblRemiseVide.ForeColor = Color.Red;
+                saisie = false;
+            }
+            else
+            {
+                lblRemiseVide.ForeColor = System.Drawing.SystemColors.ControlDark;
+            }
+            if (strProduit == "")
+            {
+                lblProduitVide.ForeColor = Color.Red;
+                saisie = false;
+            }
+            else
+            {
+                lblProduitVide.ForeColor = System.Drawing.SystemColors.ControlDark;
+            }
+
+            if (strClient == "")
+            {
+                lblClientVide.ForeColor = Color.Red;
+                saisie = false;
+            }
+            else
+            {
+                lblClientVide.ForeColor = System.Drawing.SystemColors.ControlDark;
+            }
+
+            if (strStatut == "")
+            {
+                lblStatutVide.ForeColor = Color.Red;
+                saisie = false;
+            }
+            else
+            {
+                lblStatutVide.ForeColor = System.Drawing.SystemColors.ControlDark;
+            }
+
+            if (saisie)
+            {
+                int code_devis;
+                DateTime date = DateTime.Parse(dateTimePicker2.Value.ToString());
+                int quantite;
+                int.TryParse(textQuantiteAjout.Text, out quantite);
+                float tauxTVA;
+                float.TryParse(textTVAAjout.Text, out tauxTVA);
+                float remise;
+                float.TryParse(textRemiseAjout.Text, out remise);
+
+                foreach (Client cli in ClientBLL.GetClient())
+                {
+                    if (cli.Nom == comboClientAjout.Text)
+                    {
+                        foreach (Statut sta in StatutBLL.GetStatut())
+                        {
+                            if (sta.Libelle == comboStatutAjout.Text)
+                            {
+                                Devis devis = new Devis(0, date, tauxTVA, cli, sta);
+
+                                DevisBLL.CreerDevis(devis);
+
+                                foreach (Produit pro in ProduitBLL.GetProduit())
+                                {
+                                    if (pro.Libelle == comboProduitAjout.Text)
+                                    {
+                                        //code_devis = DevisBLL.GetCodeDevis(date, tauxTVA, cli, sta);
+                                        Contenir contenir = new Contenir(devis, pro, quantite, remise);
+
+                                        this.Hide();
+                                        FrmListeDevis FrmListeDevis;
+                                        FrmListeDevis = new FrmListeDevis();
+                                        FrmListeDevis.Closed += (s, args) => this.Close();
+                                        FrmListeDevis.ShowDialog(); // ouverture du formulaire list devis
+                                        this.Close();
+
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

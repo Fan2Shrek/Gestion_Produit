@@ -130,6 +130,42 @@ namespace GestionDAL
             return lesConteneurs;
         }
 
+        public static int AjoutContenir(Contenir con)
+        {
+            int nbEnr;
+            int test;
+
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+
+            cmd.CommandText = "SET IDENTITY_INSERT contenir ON;";
+            test = cmd.ExecuteNonQuery();
+
+            cmd.CommandText = "INSERT INTO contenir VALUES (@codeDev, @codePro, @qte, @remise)";
+
+            cmd.Parameters.Add(new SqlParameter("@codeDev", System.Data.SqlDbType.Int, 255));
+            cmd.Parameters["@codeDev"].Value = con.Devis.Code;
+
+            cmd.Parameters.Add(new SqlParameter("@codePro", System.Data.SqlDbType.Int));
+            cmd.Parameters["@codePro"].Value = con.Produit.Code;
+
+            cmd.Parameters.Add(new SqlParameter("@qte", System.Data.SqlDbType.Int));
+            cmd.Parameters["@qte"].Value = con.Quantite;
+
+            cmd.Parameters.Add(new SqlParameter("@remise", System.Data.SqlDbType.Int));
+            cmd.Parameters["@remise"].Value = con.Remise;
+
+            nbEnr = cmd.ExecuteNonQuery();
+
+            cmd.CommandText = "SET IDENTITY_INSERT contenir OFF;";
+            test = cmd.ExecuteNonQuery();
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }
+
         public static int UpdateContenir(Contenir con)
         {
             int nbEnr;

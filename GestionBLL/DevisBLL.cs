@@ -36,6 +36,11 @@ namespace GestionBLL
             return DevisDAO.GetDevis();
         }
 
+        public static int GetCodeDevis(DateTime date, float txTVA, Client client, Statut statut)
+        {
+            return DevisDAO.GetCodeDevis(date, txTVA, client, statut);
+        }
+
         // Méthode qui renvoit le code du client
         public static int ClientDevis(int code)
         {
@@ -54,11 +59,9 @@ namespace GestionBLL
             return DevisDAO.ModifierDevis(dev);
         }
 
-        // Méthode qui renvoi l’objet Produit en l'ajoutant à la
-        // BD avec la méthode AjoutProduit de la DAL
-        public static int CreerProduit(Produit ut)
+        public static int CreerDevis(Devis dev)
         {
-            return ProduitDAO.AjoutProduit(ut);
+            return DevisDAO.AjoutDevis(dev);
         }
 
         public static int SupprimerDevis(int id)
