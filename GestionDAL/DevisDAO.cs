@@ -102,6 +102,32 @@ namespace GestionDAL
             return lesDevis;
         }
 
+        public static int GetCodeDevis(DateTime date, float txTVA, Client client, Statut statut)
+        {
+            int code_client = client.Code;
+            int code_statut = statut.Code;
+            int code_devis;
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = " SELECT code_devis FROM devis" +
+                "WHERE date_devis = " + date +
+                "AND taux_tva_devis = " + txTVA + 
+                "AND code_client = " + code_client +
+                "AND code_statut = " + code_statut;
+
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            monReader.Read();
+            code_devis = (int)monReader["code_devis"];
+            monReader.Close();
+
+            return code_devis;
+        }
+
         public static int SelectClientDevis(int code)
         {
             int nbEnr;

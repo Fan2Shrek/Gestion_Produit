@@ -40,5 +40,10 @@ namespace GestionBLL
         {
             return ContenirDAO.UpdateContenir(con);
         }
+
+        public static int CréerContenir(Contenir con)
+        {
+            return ContenirDAO.AjoutContenir(con);
+        }
     }
 }
