@@ -307,12 +307,18 @@ namespace GestionGUI
 
                                 DevisBLL.CreerDevis(devis);
 
+                                code_devis = DevisBLL.GetCodeDevis(date, tauxTVA, cli, sta);
+
+                                devis = new Devis(code_devis, date, tauxTVA, cli, sta);
+
                                 foreach (Produit pro in ProduitBLL.GetProduit())
                                 {
                                     if (pro.Libelle == comboProduitAjout.Text)
                                     {
                                         //code_devis = DevisBLL.GetCodeDevis(date, tauxTVA, cli, sta);
                                         Contenir contenir = new Contenir(devis, pro, quantite, remise);
+
+                                        ContenirBLL.CreerContenir(contenir);
 
                                         this.Hide();
                                         FrmListeDevis FrmListeDevis;

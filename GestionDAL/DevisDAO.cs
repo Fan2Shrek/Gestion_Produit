@@ -113,17 +113,27 @@ namespace GestionDAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = " SELECT code_devis FROM devis" +
-                "WHERE date_devis = " + date +
-                "AND taux_tva_devis = " + txTVA +
-                "AND code_client = " + code_client +
-                "AND code_statut = " + code_statut;
+            cmd.CommandText = " SELECT code_devis as code_devis FROM devis " +
+                "WHERE taux_tva_devis = @taux_tva " +
+                "AND code_client = @codeClient " +
+                "AND code_statut = @codeStatut";
 
-            SqlDataReader monReader = cmd.ExecuteReader();
+            //cmd.Parameters.Add(new SqlParameter("@date", System.Data.SqlDbType.DateTime, 255));
+            //cmd.Parameters["@date"].Value = date;
 
-            monReader.Read();
-            code_devis = (int)monReader["code_devis"];
-            monReader.Close();
+            cmd.Parameters.Add(new SqlParameter("@taux_tva", System.Data.SqlDbType.Float));
+            cmd.Parameters["@taux_tva"].Value = txTVA;
+
+            cmd.Parameters.Add(new SqlParameter("@codeClient", System.Data.SqlDbType.Int));
+            cmd.Parameters["@codeClient"].Value = code_client;
+
+            cmd.Parameters.Add(new SqlParameter("@codeStatut", System.Data.SqlDbType.Int));
+            cmd.Parameters["@codeStatut"].Value = code_statut;
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Read();
+            code_devis = (int)reader["code_devis"];
+            reader.Close();
 
             return code_devis;
         }

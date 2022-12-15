@@ -133,14 +133,10 @@ namespace GestionDAL
         public static int AjoutContenir(Contenir con)
         {
             int nbEnr;
-            int test;
 
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-
-            cmd.CommandText = "SET IDENTITY_INSERT contenir ON;";
-            test = cmd.ExecuteNonQuery();
 
             cmd.CommandText = "INSERT INTO contenir VALUES (@codeDev, @codePro, @qte, @remise)";
 
@@ -157,9 +153,6 @@ namespace GestionDAL
             cmd.Parameters["@remise"].Value = con.Remise;
 
             nbEnr = cmd.ExecuteNonQuery();
-
-            cmd.CommandText = "SET IDENTITY_INSERT contenir OFF;";
-            test = cmd.ExecuteNonQuery();
 
             // Fermeture de la connexion
             maConnexion.Close();
