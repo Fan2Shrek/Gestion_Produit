@@ -14,6 +14,8 @@ namespace GestionGUI
             {
                 List<Devis> listDevis = cli.LesDevis;
                 int taille = listDevis.Count;
+                int code_devis;
+                double prixTotalDevis = 0;
                 double nbAcc = 0, nbRef = 0, nbAtt = 0;
 
                 foreach (Devis dev in listDevis)
@@ -32,6 +34,16 @@ namespace GestionGUI
                         default:
                             break;
                     }
+
+                    code_devis = dev.Code;
+                    foreach (Contenir con in ContenirBLL.GetConteneurs(code_devis))
+                    {
+                        double prixTotal = con.Produit.Prix * con.Quantite;
+                        // prixTotalDevis = prixTotalDevis + prixTotal;
+                        prixTotalDevis = prixTotalDevis + (prixTotal - (prixTotal * (con.Remise / 100)));
+
+                        prixTotalDevis = Math.Round(prixTotalDevis, 1, MidpointRounding.ToEven);
+                    }
                 }
 
                 double prAcc = 0, prRef = 0, prAtt = 0;
@@ -43,7 +55,7 @@ namespace GestionGUI
                     prAtt = (nbAtt / taille) * 100;
                 }
 
-                dataGridSynthese.Rows.Add(cli.Nom, taille, nbAcc, prAcc + "%", prAtt + "%", prRef + "%", 0);
+                dataGridSynthese.Rows.Add(cli.Nom, taille, nbAcc, prAcc + "%", prAtt + "%", prRef + "%", prixTotalDevis);
             }
 
         }
