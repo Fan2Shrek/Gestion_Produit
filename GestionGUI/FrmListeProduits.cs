@@ -229,6 +229,6 @@ namespace GestionGUI
             {
                 dgvProduit.Rows.Add(pro.Code, pro.Libelle, pro.Prix, pro.Categorie.Libelle);
             }
-        }
+       }
     }
 }

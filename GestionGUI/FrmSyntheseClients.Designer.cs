@@ -117,6 +117,7 @@
             this.dataGridSynthese.RowTemplate.Height = 29;
             this.dataGridSynthese.Size = new System.Drawing.Size(928, 458);
             this.dataGridSynthese.TabIndex = 26;
+            this.dataGridSynthese.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSynthese_CellContentClick);
             // 
             // nomClient
             // 

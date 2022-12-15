@@ -1,10 +1,6 @@
 ﻿using GestionBO;
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net.Sockets;
 
 namespace GestionDAL
 {
@@ -70,6 +66,7 @@ namespace GestionDAL
                 unClient = new Client(code, nom, prenom, rue_facturation, cp_facturation,
                     ville_facturation, rue_livraison, cp_livraison, ville_livraison,
                     telephone, fax, email);
+                getDevisClient(unClient);
                 lesClients.Add(unClient);
             }
 
@@ -256,6 +253,63 @@ namespace GestionDAL
             maConnexion.Close();
             return nbEnr;
         }
+
+        public static void getDevisClient(Client cli)
+        {
+            int exec;
+
+            int code;
+            DateTime date;
+            float taux_tva;
+
+            int code_client;
+            string nom_client;
+            string prenom_client;
+            string rue_fact_client;
+            string cp_fact_client;
+            string ville_fact_client;
+            string rue_liv_client;
+            string cp_liv_client;
+            string ville_liv_client;
+            string telephone_client;
+            string fax_client;
+            string email_client;
+            Client codeClient;
+
+            int code_statut;
+            string lib_statut;
+            Statut codeStatut;
+
+            Devis unDevis;
+
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM devis, statut WHERE code_client = @code_devis AND devis.code_statut = statut.code_statut";
+
+            cmd.Parameters.Add(new SqlParameter("@code_devis", System.Data.SqlDbType.Int));
+            cmd.Parameters["@code_devis"].Value = cli.Code;
+
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            while (monReader.Read())
+            {
+                code = Int32.Parse(monReader["code_devis"].ToString());
+                date = DateTime.Parse(monReader["date_devis"].ToString());
+                taux_tva = float.Parse(monReader["taux_tva_devis"].ToString());
+
+                code_statut = Int32.Parse(monReader["code_statut"].ToString());
+                lib_statut = monReader["libelle_statut"].ToString();
+
+                unDevis = new Devis(code, date, taux_tva,
+                new Client(0, "", "", "", "", "", "", "", "", "", "", ""),
+                new Statut(code_statut, lib_statut));
+                cli.addDevis(unDevis);
+            }
+        }
+
+
     }
 
 }

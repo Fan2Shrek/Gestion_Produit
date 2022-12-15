@@ -20,6 +20,7 @@ namespace GestionBO
         private string telephone;
         private string fax;
         private string email;
+        private List<Devis> lesDevis;
 
         public Client(int code, string nom, string prenom, 
             string rue_facturation, string cp_facturation,
@@ -39,6 +40,7 @@ namespace GestionBO
             this.Telephone = telephone;
             this.Fax = fax;
             this.Email = email;
+            this.LesDevis = new List<Devis>();
         }
 
         public int Code { get => code; set => code = value; }
@@ -53,5 +55,11 @@ namespace GestionBO
         public string Telephone { get => telephone; set => telephone = value; }
         public string Fax { get => fax; set => fax = value; }
         public string Email { get => email; set => email = value; }
+        public List<Devis> LesDevis { get => lesDevis; set => lesDevis = value; }
+
+        public void addDevis(Devis dev)
+        {
+            this.lesDevis.Add(dev);
+        }
     }
 }

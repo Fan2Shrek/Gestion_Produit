@@ -244,5 +244,6 @@ namespace GestionDAL
             maConnexion.Close();
             return nbEnr;
         }
+
     }
 }
