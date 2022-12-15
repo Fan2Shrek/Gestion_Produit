@@ -112,12 +112,13 @@ namespace GestionGUI
         {
             PanelDeleteDevis.Hide();
         }
-
+        
         private void ConfirmerDeleteDevis_Click(object sender, EventArgs e)
         {
             PanelDeleteDevis.Hide();
-
+                
             int id;
+            string temp;
 
             int.TryParse(textCodeDevis.Text, out id);
 
@@ -135,6 +136,7 @@ namespace GestionGUI
         private void ModifierDevis_Click(object sender, EventArgs e)
         {
             int id;
+            string temp;
             DateTime date = DateTime.Parse(dateTimePicker1.Value.ToString());
             int.TryParse(textCodeDevis.Text, out id);
             Client cli = (Client)comboClient.SelectedItem;
@@ -150,12 +152,20 @@ namespace GestionGUI
 
                 Devis dev = new Devis(id, date, tva, cli, stat);
 
-                int qte;
-                int.TryParse(txtQte.Text.ToString(), out qte);
-                int remise;
-                int.TryParse(txtRemise.Text.ToString(), out remise);
-
                 DevisBLL.ModifierDevis(dev);
+
+                // Modification de la table contenir
+
+                Produit pro = new Produit((Int32)dgvProduitsDevis.CurrentRow.Cells[0].Value, dgvProduitsDevis.CurrentRow.Cells[1].Value.ToString(), float.Parse(dgvProduitsDevis.CurrentRow.Cells[2].Value.ToString()), new Categorie(0, dgvProduitsDevis.CurrentRow.Cells[3].Value.ToString()));
+                int qte, remise;
+                temp = txtQte.Text;
+                int.TryParse(temp, out qte);
+                temp = txtRemise.Text;
+                int.TryParse(temp, out remise);
+
+                Contenir con = new Contenir(dev, pro, qte, remise);
+
+                ContenirBLL.ModifierContenir(con);
 
                 this.Hide();
                 FrmListeDevis FrmListeDevis;

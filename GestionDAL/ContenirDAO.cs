@@ -174,11 +174,9 @@ namespace GestionDAL
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
 
-            cmd.CommandText = "UPDATE contenir set code_devis = @codeDev, code_produit = @codePro, quantite = @qte, remise = @remise) " +
-                "FROM contenir C" +
-                "JOIN produit p ON p.code_produit = C.code_produit" +
-                "WHERE d.code_devis = c.code_devis" +
-                "";
+            cmd.CommandText = "UPDATE contenir set quantite = @qte, remise = @remise " +
+                "WHERE code_devis = @codeDev " +
+                "AND code_produit = @codePro";
             cmd.Parameters.Add(new SqlParameter("@codeDev", System.Data.SqlDbType.Int, 255));
             cmd.Parameters["@codeDev"].Value = con.Devis.Code;
 
