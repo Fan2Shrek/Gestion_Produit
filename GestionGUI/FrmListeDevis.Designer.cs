@@ -69,6 +69,11 @@
             this.lblMontantTTCDevis = new System.Windows.Forms.Label();
             this.textMontantTTC = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelDeleteProd = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnAnnulDeleteProd = new System.Windows.Forms.Button();
+            this.btnConfirmerDeleteProd = new System.Windows.Forms.Button();
             this.SupprimerProduit = new System.Windows.Forms.Button();
             this.AjouterProduit = new System.Windows.Forms.Button();
             this.lblErreur = new System.Windows.Forms.Label();
@@ -127,6 +132,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevis)).BeginInit();
             this.PanelDeleteDevis.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panelDeleteProd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduitsDevis)).BeginInit();
             this.panelAjoutDevis.SuspendLayout();
             this.panelAjoutProd.SuspendLayout();
@@ -507,6 +513,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panelDeleteProd);
             this.panel1.Controls.Add(this.SupprimerProduit);
             this.panel1.Controls.Add(this.AjouterProduit);
             this.panel1.Controls.Add(this.lblErreur);
@@ -543,6 +550,61 @@
             this.panel1.Size = new System.Drawing.Size(766, 776);
             this.panel1.TabIndex = 28;
             // 
+            // panelDeleteProd
+            // 
+            this.panelDeleteProd.Controls.Add(this.label2);
+            this.panelDeleteProd.Controls.Add(this.label3);
+            this.panelDeleteProd.Controls.Add(this.btnAnnulDeleteProd);
+            this.panelDeleteProd.Controls.Add(this.btnConfirmerDeleteProd);
+            this.panelDeleteProd.Location = new System.Drawing.Point(328, 114);
+            this.panelDeleteProd.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.panelDeleteProd.Name = "panelDeleteProd";
+            this.panelDeleteProd.Size = new System.Drawing.Size(386, 205);
+            this.panelDeleteProd.TabIndex = 35;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(58, 51);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(264, 25);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "supprimer ce produit du devis ?";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(80, 26);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(222, 25);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Êtes-vous sûr(e) de vouloir";
+            // 
+            // btnAnnulDeleteProd
+            // 
+            this.btnAnnulDeleteProd.Location = new System.Drawing.Point(222, 130);
+            this.btnAnnulDeleteProd.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.btnAnnulDeleteProd.Name = "btnAnnulDeleteProd";
+            this.btnAnnulDeleteProd.Size = new System.Drawing.Size(112, 34);
+            this.btnAnnulDeleteProd.TabIndex = 1;
+            this.btnAnnulDeleteProd.Text = "Non";
+            this.btnAnnulDeleteProd.UseVisualStyleBackColor = true;
+            this.btnAnnulDeleteProd.Click += new System.EventHandler(this.btnAnnulDeleteProd_Click);
+            // 
+            // btnConfirmerDeleteProd
+            // 
+            this.btnConfirmerDeleteProd.Location = new System.Drawing.Point(49, 130);
+            this.btnConfirmerDeleteProd.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.btnConfirmerDeleteProd.Name = "btnConfirmerDeleteProd";
+            this.btnConfirmerDeleteProd.Size = new System.Drawing.Size(112, 34);
+            this.btnConfirmerDeleteProd.TabIndex = 0;
+            this.btnConfirmerDeleteProd.Text = "Oui";
+            this.btnConfirmerDeleteProd.UseVisualStyleBackColor = true;
+            this.btnConfirmerDeleteProd.Click += new System.EventHandler(this.btnConfirmerDeleteProd_Click);
+            // 
             // SupprimerProduit
             // 
             this.SupprimerProduit.Location = new System.Drawing.Point(534, 636);
@@ -552,6 +614,7 @@
             this.SupprimerProduit.TabIndex = 56;
             this.SupprimerProduit.Text = "Supprimer le produit";
             this.SupprimerProduit.UseVisualStyleBackColor = true;
+            this.SupprimerProduit.Click += new System.EventHandler(this.SupprimerProduit_Click);
             // 
             // AjouterProduit
             // 
@@ -1128,6 +1191,8 @@
             this.PanelDeleteDevis.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelDeleteProd.ResumeLayout(false);
+            this.panelDeleteProd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduitsDevis)).EndInit();
             this.panelAjoutDevis.ResumeLayout(false);
             this.panelAjoutDevis.PerformLayout();
@@ -1250,5 +1315,10 @@
         private Label lblAjoutProd1;
         private ComboBox comboAjoutProd;
         private Label titreAjoutProd;
+        private Panel panelDeleteProd;
+        private Label label2;
+        private Label label3;
+        private Button btnAnnulDeleteProd;
+        private Button btnConfirmerDeleteProd;
     }
 }

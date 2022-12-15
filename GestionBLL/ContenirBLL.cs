@@ -45,5 +45,10 @@ namespace GestionBLL
         {
             return ContenirDAO.AjoutContenir(con);
         }
+
+        public static int SupprimerContenir(int code_devis, int code_produit)
+        {
+            return ContenirDAO.DeleteContenir(code_devis, code_produit);
+        }
     }
 }

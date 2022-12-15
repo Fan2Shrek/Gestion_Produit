@@ -49,6 +49,7 @@ namespace GestionGUI
             PanelDeleteDevis.Hide();
             panelAjoutDevis.Hide();
             panelAjoutProd.Hide();
+            panelDeleteProd.Hide();
         }
 
         private void retSynt_Click(object sender, EventArgs e)
@@ -431,6 +432,37 @@ namespace GestionGUI
                     }
                 }
             }
+        }
+
+        private void SupprimerProduit_Click(object sender, EventArgs e)
+        {
+            panelDeleteProd.Show();
+        }
+
+        private void btnConfirmerDeleteProd_Click(object sender, EventArgs e)
+        {
+            panelDeleteProd.Hide();
+
+            int code_devis;
+            int code_produit;
+
+            int.TryParse(textCodeDevis.Text, out code_devis);
+
+            int.TryParse(dgvProduitsDevis.CurrentRow.Cells[0].Value.ToString(), out code_produit);
+
+            int delete = ContenirBLL.SupprimerContenir(code_devis, code_produit);
+
+            this.Hide();
+            FrmListeDevis FrmListeDevis;
+            FrmListeDevis = new FrmListeDevis();
+            FrmListeDevis.Closed += (s, args) => this.Close();
+            FrmListeDevis.ShowDialog(); // ouverture du formulaire list devis
+            this.Close();
+        }
+
+        private void btnAnnulDeleteProd_Click(object sender, EventArgs e)
+        {
+            panelDeleteProd.Hide();
         }
     }
 }

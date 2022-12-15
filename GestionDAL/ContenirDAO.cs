@@ -188,5 +188,30 @@ namespace GestionDAL
             maConnexion.Close();
             return nbEnr;
         }
+
+        public static int DeleteContenir(int code_devis, int code_produit)
+        {
+            int nbEnr;
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "DELETE FROM contenir " +
+                "WHERE code_devis = @codeDev " +
+                "AND code_produit = @codePro";
+
+            cmd.Parameters.Add(new SqlParameter("@codeDev", System.Data.SqlDbType.Int, 255));
+            cmd.Parameters["@codeDev"].Value = code_devis;
+
+            cmd.Parameters.Add(new SqlParameter("@codePro", System.Data.SqlDbType.Int));
+            cmd.Parameters["@codePro"].Value = code_produit;
+
+            nbEnr = cmd.ExecuteNonQuery();
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }
     }
 }
