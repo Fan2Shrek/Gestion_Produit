@@ -36,6 +36,7 @@ namespace GestionGUI
 
             foreach (Produit pro in ProduitBLL.GetProduit())
             {
+                this.comboAjoutProd.Items.Add(pro.Libelle);
                 this.comboProduitAjout.Items.Add(pro.Libelle);
             }
 
@@ -47,6 +48,7 @@ namespace GestionGUI
 
             PanelDeleteDevis.Hide();
             panelAjoutDevis.Hide();
+            panelAjoutProd.Hide();
         }
 
         private void retSynt_Click(object sender, EventArgs e)
@@ -316,6 +318,100 @@ namespace GestionGUI
                                     if (pro.Libelle == comboProduitAjout.Text)
                                     {
                                         //code_devis = DevisBLL.GetCodeDevis(date, tauxTVA, cli, sta);
+                                        Contenir contenir = new Contenir(devis, pro, quantite, remise);
+
+                                        ContenirBLL.CreerContenir(contenir);
+
+                                        this.Hide();
+                                        FrmListeDevis FrmListeDevis;
+                                        FrmListeDevis = new FrmListeDevis();
+                                        FrmListeDevis.Closed += (s, args) => this.Close();
+                                        FrmListeDevis.ShowDialog(); // ouverture du formulaire list devis
+                                        this.Close();
+
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void AjouterProduit_Click(object sender, EventArgs e)
+        {
+            panelAjoutProd.Show();
+        }
+
+        private void btnAnnulAjoutProd_Click(object sender, EventArgs e)
+        {
+            panelAjoutProd.Hide();
+        }
+
+        private void btnAjoutProd_Click(object sender, EventArgs e)
+        {
+            string textQuantite = textQteProd.Text;
+            string textRemise = textRemiseProd.Text;
+            string comboProduit = comboAjoutProd.Text;
+            bool saisie = true;
+
+            if (textQuantite == "")
+            {
+                lblErreurAjoutProd1.ForeColor = Color.Red;
+                saisie = false;
+            }
+            else
+            {
+                lblErreurAjoutProd1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            }
+
+            if (textRemise == "")
+            {
+                lblErreurAjoutProd2.ForeColor = Color.Red;
+                saisie = false;
+            }
+            else
+            {
+                lblErreurAjoutProd2.ForeColor = System.Drawing.SystemColors.ControlDark;
+            }
+            if (comboProduit == "")
+            {
+                lblErreurAjoutProd3.ForeColor = Color.Red;
+                saisie = false;
+            }
+            else
+            {
+                lblErreurAjoutProd3.ForeColor = System.Drawing.SystemColors.ControlDark;
+            }
+
+            if (saisie)
+            {
+                int code_devis;
+                DateTime date = DateTime.Parse(dateTimePicker1.Value.ToString());
+                int quantite;
+                int.TryParse(textQteProd.Text, out quantite);
+                float tauxTVA;
+                float.TryParse(textTauxTVA.Text, out tauxTVA);
+                float remise;
+                float.TryParse(textRemiseProd.Text, out remise);
+
+                foreach (Client cli in ClientBLL.GetClient())
+                {
+                    if (cli.Nom == comboClient.Text)
+                    {
+                        foreach (Statut sta in StatutBLL.GetStatut())
+                        {
+                            if (sta.Libelle == comboStatut.Text)
+                            {
+                                code_devis = DevisBLL.GetCodeDevis(date, tauxTVA, cli, sta);
+
+                                Devis devis = new Devis(code_devis, date, tauxTVA, cli, sta);
+
+                                foreach (Produit pro in ProduitBLL.GetProduit())
+                                {
+                                    if (pro.Libelle == comboAjoutProd.Text)
+                                    {
                                         Contenir contenir = new Contenir(devis, pro, quantite, remise);
 
                                         ContenirBLL.CreerContenir(contenir);
