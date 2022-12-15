@@ -211,6 +211,7 @@
             this.btnRecherche.TabIndex = 47;
             this.btnRecherche.Text = "Recherche";
             this.btnRecherche.UseVisualStyleBackColor = true;
+            this.btnRecherche.Click += new System.EventHandler(this.btnRecherche_Click);
             // 
             // FrmSyntheseClients
             // 

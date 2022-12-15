@@ -1,5 +1,6 @@
 ﻿using GestionBLL;
 using GestionBO;
+using System.Windows.Forms;
 
 namespace GestionGUI
 {
@@ -11,11 +12,11 @@ namespace GestionGUI
 
             foreach (Client cli in ClientBLL.GetClient())
             {
-                List < Devis > listDevis = cli.LesDevis;
+                List<Devis> listDevis = cli.LesDevis;
                 int taille = listDevis.Count;
-                double nbAcc =0, nbRef=0, nbAtt = 0;
+                double nbAcc = 0, nbRef = 0, nbAtt = 0;
 
-                foreach(Devis dev in listDevis)
+                foreach (Devis dev in listDevis)
                 {
                     switch (dev.Statut.Libelle)
                     {
@@ -90,7 +91,15 @@ namespace GestionGUI
 
         private void dataGridSynthese_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
+        }
+
+        private void btnRecherche_Click(object sender, EventArgs e)
+        {
+            DateTime date1 = DateTime.Parse(dateTimeSynth.Value.ToString());
+            DateTime date2 = DateTime.Parse(dateTimeSynth2.Value.ToString());
+
+
         }
     }
 }
