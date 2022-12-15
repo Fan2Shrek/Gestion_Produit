@@ -64,13 +64,11 @@ SET IDENTITY_INSERT categorie OFF;
 --Contenir
 
 CREATE TABLE "contenir" (
-  "code_devis" int IDENTITY(1,1) NOT NULL,
+  "code_devis" int NOT NULL,
   "code_produit" int NOT NULL,
   "quantite" int NOT NULL,
   "remise" float NOT NULL,
 );
-
-SET IDENTITY_INSERT contenir ON;
 
 INSERT INTO "contenir" ("code_devis", "code_produit", "quantite", "remise") VALUES
 (1, 11, 10, 5),
@@ -83,8 +81,6 @@ INSERT INTO "contenir" ("code_devis", "code_produit", "quantite", "remise") VALU
 (6, 12, 30, 5),
 (7, 10, 1, 0),
 (9, 9, 20, 20);
-
-SET IDENTITY_INSERT contenir OFF;
 
 --Devis
 
